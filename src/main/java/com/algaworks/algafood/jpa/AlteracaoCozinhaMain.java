@@ -7,7 +7,7 @@ import org.springframework.context.ApplicationContext;
 import com.algaworks.algafood.AlgafoodApiApplication;
 import com.algaworks.algafood.domain.model.Cozinha;
 
-public class BuscarCozinhaMain {
+public class AlteracaoCozinhaMain {
 	
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = new SpringApplicationBuilder(AlgafoodApiApplication.class)
@@ -16,7 +16,11 @@ public class BuscarCozinhaMain {
 		
 		CadastroCozinha cadastroCozinha = applicationContext.getBean(CadastroCozinha.class);
 		
-		Cozinha cozinha = cadastroCozinha.buscar(1L);
+		Cozinha cozinha = new Cozinha();
+		cozinha.setId(1L);
+		cozinha.setNome("Brasileira");
+		
+		cozinha = cadastroCozinha.salvar(cozinha);
 		
 		System.out.printf("%d - %s \n", cozinha.getId(), cozinha.getNome());
 	}
