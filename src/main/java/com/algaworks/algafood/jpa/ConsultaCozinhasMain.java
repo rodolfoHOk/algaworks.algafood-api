@@ -17,11 +17,11 @@ public class ConsultaCozinhasMain {
 				.web(WebApplicationType.NONE)
 				.run(args);
 		
-		CozinhaRepository cozinhaRepository = applicationContext.getBean(CozinhaRepository.class);
+		CozinhaRepository cozinhas= applicationContext.getBean(CozinhaRepository.class);
 		
-		List<Cozinha> cozinhas = cozinhaRepository.listar();
+		List<Cozinha> todasCozinhas = cozinhas.todas();
 		
-		for (Cozinha cozinha : cozinhas) {
+		for (Cozinha cozinha : todasCozinhas) {
 			System.out.println(cozinha.getNome());
 		}
 	}
