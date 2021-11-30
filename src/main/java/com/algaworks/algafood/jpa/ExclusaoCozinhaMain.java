@@ -15,11 +15,11 @@ public class ExclusaoCozinhaMain {
 				.web(WebApplicationType.NONE)
 				.run(args);
 		
-		CozinhaRepository cozinhas = applicationContext.getBean(CozinhaRepository.class);
+		CozinhaRepository cozinhaRepository = applicationContext.getBean(CozinhaRepository.class);
 		
 		Cozinha cozinha = new Cozinha();
 		cozinha.setId(1L);
 		
-		cozinhas.remover(cozinha);
+		cozinhaRepository.remover(cozinha);
 	}
 }
