@@ -42,16 +42,37 @@ public class TesteController {
 		return ResponseEntity.notFound().build();
 	}
 	
+	@GetMapping("/cozinhas/existe-por-nome")
+	public boolean existeCozinhaPorNome(String nome) {
+		return cozinhaRepository.existsByNome(nome);
+	}
+	
 	@GetMapping("/restaurantes/por-taxa-frete")
 	public List<Restaurante> restaurantesPorTaxaFrete(
 			@RequestParam("inicial") BigDecimal taxaInicial, @RequestParam("final") BigDecimal taxaFinal) {
-		return restauranteRepository.findByTaxaFreteBetween(taxaInicial, taxaFinal);
+		return restauranteRepository.queryByTaxaFreteBetween(taxaInicial, taxaFinal);
 	}
 	
 	@GetMapping("/restaurantes/por-nome-e-cozinha")
-	public List<Restaurante> restaurantesPorTaxaFrete(
+	public List<Restaurante> restaurantesPorNomeECozinha(
 			String nome, Long cozinha) {
 		return restauranteRepository.findByNomeContainingAndCozinhaId(nome, cozinha);
+	}
+	
+	@GetMapping("/restaurantes/top-por-nome")
+	public List<Restaurante> restaurantesTop2PorNome(
+			String nome, Long cozinha) {
+		return restauranteRepository.findTop2ByNomeContaining(nome);
+	}
+	
+	@GetMapping("/restaurantes/primeiro-por-nome")
+	public Optional<Restaurante> primeiroRestaurantePorNome(String nome) {
+		return restauranteRepository.findFirstByNomeContaining(nome);
+	}
+	
+	@GetMapping("/restaurantes/contar-por-cozinha")
+	public int contarRestaurantePorCozinhaId(Long cozinhaId) {
+		return restauranteRepository.countByCozinhaId(cozinhaId);
 	}
 
 }
