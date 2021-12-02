@@ -23,20 +23,17 @@ public class CadastroCidadeService {
 	
 	public Cidade salvar(Cidade cidade) {
 		Long estadoId = cidade.getEstado().getId();
-		Estado estado = estadoRepository.buscar(estadoId);
-		
-		if (estado == null) {
-			throw new EntidadeNaoEncontradaException("Não existe cadastro de estado com o id " + estadoId);
-		}
+		Estado estado = estadoRepository.findById(estadoId)
+				.orElseThrow(() -> new EntidadeNaoEncontradaException("Não existe cadastro de estado com o id " + estadoId));
 		
 		cidade.setEstado(estado);
 		
-		return cidadeRepository.salvar(cidade);
+		return cidadeRepository.save(cidade);
 	}
 	
 	public void excluir(Long cidadeId) {
 		try {
-			cidadeRepository.remover(cidadeId);
+			cidadeRepository.deleteById(cidadeId);
 		
 		} catch (EmptyResultDataAccessException e) {
 			throw new EntidadeNaoEncontradaException("Não existe cadastro de cidade com o cógido " + cidadeId);
