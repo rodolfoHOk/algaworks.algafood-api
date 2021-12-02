@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.algaworks.algafood.domain.model.Permissao;
 import com.algaworks.algafood.domain.repository.PermissaoRepository;
@@ -27,11 +28,13 @@ public class PermissaoRepositoryImpl implements PermissaoRepository{
 	}
 
 	@Override
+	@Transactional
 	public Permissao salvar(Permissao permissao) {
 		return manager.merge(permissao);
 	}
 
 	@Override
+	@Transactional
 	public void remover(Permissao permissao) {
 		permissao = buscar(permissao.getId());
 		manager.remove(permissao);

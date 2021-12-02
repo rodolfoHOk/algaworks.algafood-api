@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.algaworks.algafood.domain.model.Restaurante;
 import com.algaworks.algafood.domain.repository.RestauranteRepository;
@@ -27,11 +28,13 @@ public class RestauranteRepositoryImpl implements RestauranteRepository {
 	}
 
 	@Override
+	@Transactional
 	public Restaurante salvar(Restaurante restaurante) {
 		return manager.merge(restaurante);
 	}
 
 	@Override
+	@Transactional
 	public void remover(Restaurante restaurante) {
 		restaurante = buscar(restaurante.getId());
 		manager.remove(restaurante);
