@@ -4,7 +4,7 @@
 
 ### 1 - Spring e Injeção de Dependências:
 
-Conteúdo no repositório: https://github.com/rodolfoHOk/algaworks.esr.injecaodependencias
+- Conteúdo no repositório: https://github.com/rodolfoHOk/algaworks.esr.injecaodependencias
 
 ### 2 - Introdução ao JPA e Hibernate:
 
@@ -153,6 +153,8 @@ Conteúdo no repositório: https://github.com/rodolfoHOk/algaworks.esr.injecaode
 - Testando e analisando o impacto da incorporação de classe na REST API
 
 - Mapeando propriedades com @CreationTimestamp e @UpdateTimestampI
+
+- 
 
 
 ## Links úteis: 
