@@ -10,7 +10,6 @@ Conteúdo no repositório: https://github.com/rodolfoHOk/algaworks.esr.injecaode
 
 Adicionando JPA e configurando o Data SourceMapeando entidades com JP
 
-
 Criando as tabelas do banco a partir das entidades
 
 Mapeando o id da entidade para autoincremento
@@ -149,11 +148,10 @@ Mapeando relacionamento bidirecional com @OneToMany
 Mapeando relacionamento muitos-para-muitos com @ManyToMany
 
 Analisando o impacto do relacionamento muitos-para-muitos na REST API
-I
-Mapeando classes incorporáveis com @Embedded e @Embeddable
-e
-Testando e analisando o impacto da incorporação de classe na REST API
 
+Mapeando classes incorporáveis com @Embedded e @Embeddable
+
+Testando e analisando o impacto da incorporação de classe na REST API
 
 Mapeando propriedades com @CreationTimestamp e @UpdateTimestampI
 
