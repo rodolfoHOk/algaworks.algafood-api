@@ -15,6 +15,8 @@ import com.algaworks.algafood.domain.model.Cozinha;
 import com.algaworks.algafood.domain.model.Restaurante;
 import com.algaworks.algafood.domain.repository.CozinhaRepository;
 import com.algaworks.algafood.domain.repository.RestauranteRepository;
+import com.algaworks.algafood.infrastructure.repository.spec.RestauranteComFreteGratisSpec;
+import com.algaworks.algafood.infrastructure.repository.spec.RestauranteComNomeSemelhanteSpec;
 
 @RestController
 @RequestMapping("/teste")
@@ -71,6 +73,14 @@ public class TesteController {
 		return restauranteRepository.find(nome, taxaFreteInicial, taxaFreteFinal);
 	}
 	
+	@GetMapping("/restaurantes/com-frete-gratis")
+	public List<Restaurante> restaurantesComFreteGratis(String nome) {
+		var comFreteGratis = new RestauranteComFreteGratisSpec();
+		var comNomeSemelhante = new RestauranteComNomeSemelhanteSpec(nome);
+		
+		return restauranteRepository.findAll(comFreteGratis.and(comNomeSemelhante));
+	}
+	
 	@GetMapping("/restaurantes/primeiro-por-nome")
 	public Optional<Restaurante> primeiroRestaurantePorNome(String nome) {
 		return restauranteRepository.findFirstByNomeContaining(nome);
@@ -80,5 +90,5 @@ public class TesteController {
 	public int contarRestaurantePorCozinhaId(Long cozinhaId) {
 		return restauranteRepository.countByCozinhaId(cozinhaId);
 	}
-
+	
 }
