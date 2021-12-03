@@ -154,7 +154,9 @@
 
 - Mapeando propriedades com @CreationTimestamp e @UpdateTimestampI
 
-- 
+- Mapeando relacionamento muitos-para-um - Produto Restaurante
+
+- Mapeando relacionamento um-para-muitos - Restaurante Produto
 
 
 ## Links úteis: 
