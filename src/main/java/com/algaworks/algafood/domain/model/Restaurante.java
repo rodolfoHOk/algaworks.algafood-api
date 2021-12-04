@@ -22,7 +22,6 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -43,8 +42,8 @@ public class Restaurante {
 	@Column(name = "taxa_frete", nullable = false)
 	private BigDecimal taxaFrete;
 	
-//	@JsonIgnore
-	@JsonIgnoreProperties({"hibernateLazyInitializer"})
+//	@JsonIgnoreProperties({"hibernateLazyInitializer"})
+	@JsonIgnore
 	@ManyToOne(fetch = FetchType.LAZY) // termina em ToOne o padrão é fetch EAGER
 	@JoinColumn(name = "cozinha_id", nullable = false)
 	private Cozinha cozinha;

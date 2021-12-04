@@ -164,6 +164,10 @@
 
 - Alterando a estratégia de fetching para Lazy Loading - @JsonIgnoreProperties({"hibernateLazyInitializer"})
 
+- Alterando a estratégia de fetching para Lazy Loading
+
+- 
+
 
 ## Links úteis: 
 
