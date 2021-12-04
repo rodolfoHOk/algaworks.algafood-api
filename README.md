@@ -166,6 +166,8 @@
 
 - Alterando a estratégia de fetching para Lazy Loading
 
+- Alterando a estratégia de fetching para Eager Loading
+
 - 
 
 
