@@ -160,7 +160,9 @@
 
 - Mapeando relacionamentos muitos-para-muitos - Grupo Permissao e Usuario Permissao
 
--
+- Alterando a estratégia de fetching para Lazy Loading - Exemplo no RestauranteController da busca Lazy
+
+- Alterando a estratégia de fetching para Lazy Loading - @JsonIgnoreProperties({"hibernateLazyInitializer"})
 
 
 ## Links úteis: 
