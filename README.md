@@ -158,6 +158,10 @@
 
 - Mapeando relacionamento um-para-muitos - Restaurante Produto
 
+- Mapeando relacionamentos muitos-para-muitos - Grupo Permissao e Usuario Permissao
+
+-
+
 
 ## Links úteis: 
 
