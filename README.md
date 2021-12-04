@@ -168,7 +168,9 @@
 
 - Alterando a estratégia de fetching para Eager Loading
 
-- 
+- Resolvendo o Problema do N+1 com fetch join na JPQL
+
+### 
 
 
 ## Links úteis: 
