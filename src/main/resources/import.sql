@@ -38,3 +38,9 @@ insert into produto (nome, descricao, preco, ativo, restaurante_id) values ('Esp
 
 insert into permissao (nome, descricao) values ('CONSULTAR_COZINHAS', 'Permite consultar cozinhas');
 insert into permissao (nome, descricao) values ('EDITAR_COZINHAS', 'Permite editar cozinhas');
+
+insert into cidade (nome_cidade, nome_estado) values ('Uberlândia', 'Minas Gerais');
+insert into cidade (nome_cidade, nome_estado) values ('Belo Hozironte', 'Minas Gerais');
+insert into cidade (nome_cidade, nome_estado) values ('São Paulo', 'São Paulo');
+insert into cidade (nome_cidade, nome_estado) values ('Recife', 'Pernambuco');
+

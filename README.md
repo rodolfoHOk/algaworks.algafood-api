@@ -180,6 +180,10 @@
 
 - Evoluindo o banco de dados com novas migrações
 
+- Criando migrações complexas com remanejamento de dados
+
+- 
+
 
 ## Links úteis: 
 
