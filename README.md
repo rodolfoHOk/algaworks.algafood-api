@@ -170,7 +170,9 @@
 
 - Resolvendo o Problema do N+1 com fetch join na JPQL
 
-### 
+### 6 - Pool de conexões e Flyway:
+
+- Configurando o pool de conexões do Hikari
 
 
 ## Links úteis: 
