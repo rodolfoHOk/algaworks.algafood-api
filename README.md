@@ -182,6 +182,8 @@
 
 - Criando migrações complexas com remanejamento de dados
 
+- Criando migração a partir de DDL gerado por schema generation
+
 - 
 
 
