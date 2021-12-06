@@ -174,6 +174,10 @@
 
 - Configurando o pool de conexões do Hikari
 
+- Adicionando o Flyway, ferramenta de versionamento de schemas de banco de dados, no projeto
+
+- Criando a primeira migração
+
 
 ## Links úteis: 
 
