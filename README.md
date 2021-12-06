@@ -178,6 +178,8 @@
 
 - Criando a primeira migração
 
+- Evoluindo o banco de dados com novas migrações
+
 
 ## Links úteis: 
 
