@@ -186,7 +186,9 @@
 
 - Adicionando dados de testes com callback do Flyway
 
-- 
+- Reparando migrações com erros
+
+-
 
 
 ## Links úteis: 
