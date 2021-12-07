@@ -190,7 +190,11 @@
 
 - Criando migrações e mapeando as entidades Pedido e ItemPedido
 
-### 7 - 
+### 7 - Tratamento e modelagem de erros da API 
+
+- Lançando exceções customizadas anotadas com @ResponseStatus
+
+- 
 
 
 ## Links úteis: 
