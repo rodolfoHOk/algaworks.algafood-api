@@ -79,10 +79,6 @@
 
 - Refatorando a atualizacao de cozinha para usar domain services
 
-- Removendo suporte a requisicoes XML
-
-- Removendo pacote jpa usado nos estudos para testar a aplicacao
-
 - Modelando e implementando a consulta de recursos de restaurantes
 
 - Modelando e implementando a inclusão de recursos de restaurantes
@@ -205,6 +201,10 @@
 - Criando a exception NegocioException
 
 - Usando a exception NegocioException
+
+- Afinando a granularidade e definindo a hierarquia das exceptions de negócios
+
+- 
 
 
 ## Links úteis: 
