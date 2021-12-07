@@ -204,6 +204,8 @@
 
 - Afinando a granularidade e definindo a hierarquia das exceptions de negócios
 
+- Lançando exceptions de granularidade fina
+
 - 
 
 
