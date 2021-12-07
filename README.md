@@ -184,6 +184,8 @@
 
 - Criando migração a partir de DDL gerado por schema generation
 
+- Adicionando dados de testes com callback do Flyway
+
 - 
 
 

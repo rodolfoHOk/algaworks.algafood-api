@@ -61,7 +61,7 @@ public class Restaurante {
 	@Column(nullable = false, columnDefinition = "datetime")
 	private LocalDateTime dataAtualizacao;
 	
-//	@JsonIgnore
+	@JsonIgnore
 	@ManyToMany // (fetch = FetchType.EAGER) // termina em ToMany o padrão é fetch LAZY
 	@JoinTable(name = "restaurante_forma_pagamento",
 		joinColumns = @JoinColumn (name = "restaurante_id"),
