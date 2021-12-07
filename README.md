@@ -202,7 +202,9 @@
 
 - Refatorando os serviços REST
 
-- 
+- Criando a exception NegocioException
+
+-
 
 
 ## Links úteis: 
