@@ -200,6 +200,8 @@
 
 - Simplificando o código com o uso de @ResponseStatus em exceptions
 
+- Refatorando os serviços REST
+
 - 
 
 
