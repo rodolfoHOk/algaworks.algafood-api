@@ -210,6 +210,8 @@
 
 - Tratando exceções globais com @ExceptionHandler e @ControllerAdvice
 
+- Implementando exception handler - EntidadeEmUsoException
+
 -
 
 
