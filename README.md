@@ -188,7 +188,9 @@
 
 - Reparando migrações com erros
 
--
+- Criando migrações e mapeando as entidades Pedido e ItemPedido
+
+### 7 - 
 
 
 ## Links úteis: 
