@@ -206,7 +206,9 @@
 
 - Lançando exceptions de granularidade fina
 
-- 
+- Tratando exceções em nível de controlador com @ExceptionHandler
+
+-
 
 
 ## Links úteis: 
