@@ -204,7 +204,7 @@
 
 - Criando a exception NegocioException
 
--
+- Usando a exception NegocioException
 
 
 ## Links úteis: 
