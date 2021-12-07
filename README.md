@@ -196,6 +196,8 @@
 
 - Lançando exceções do tipo ResponseStatusException
 
+- Estendendo ResponseStatusException
+
 -
 
 
