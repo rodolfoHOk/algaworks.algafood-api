@@ -194,7 +194,9 @@
 
 - Lançando exceções customizadas anotadas com @ResponseStatus
 
-- 
+- Lançando exceções do tipo ResponseStatusException
+
+-
 
 
 ## Links úteis: 
