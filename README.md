@@ -208,6 +208,8 @@
 
 - Tratando exceções em nível de controlador com @ExceptionHandler
 
+- Tratando exceções globais com @ExceptionHandler e @ControllerAdvice
+
 -
 
 
