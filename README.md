@@ -212,6 +212,8 @@
 
 - Implementando exception handler - EntidadeEmUsoException
 
+- Criando um exception handler global com ResponseEntityExceptionHandler
+
 -
 
 
