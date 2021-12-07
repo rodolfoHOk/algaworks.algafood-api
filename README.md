@@ -198,7 +198,9 @@
 
 - Estendendo ResponseStatusException
 
--
+- Simplificando o código com o uso de @ResponseStatus em exceptions
+
+- 
 
 
 ## Links úteis: 
