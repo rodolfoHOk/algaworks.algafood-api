@@ -238,7 +238,9 @@
 
 - Estendendo o formato do problema para adicionar novas propriedades
 
--
+- Estendendo o formato do problema para todos os handles
+
+### 8 -
 
 
 ## Links úteis: 
