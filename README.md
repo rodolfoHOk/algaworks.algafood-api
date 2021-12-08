@@ -244,7 +244,9 @@
 
 - Adicionando o spring-boot-starter-validation
 
-- 
+- Adicionando constraints e validando no controller com @Valid
+
+-
 
 
 ## Links úteis: 
