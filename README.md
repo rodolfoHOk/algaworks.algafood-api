@@ -224,6 +224,8 @@
 
 - Tratando a exception InvalidFormatException na desserialização
 
+- Habilitando erros na desserialização de propriedades inexistentes ou ignoradas
+
 -
 
 
