@@ -236,6 +236,8 @@
 
 - Tratando outras exceções não capturadas
 
+- Estendendo o formato do problema para adicionar novas propriedades
+
 -
 
 
