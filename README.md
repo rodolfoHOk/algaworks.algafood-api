@@ -220,6 +220,8 @@
 
 - Usando o formato de problemas no corpo de respostas
 
+- Customizando exception handlers de ResponseEntityExceptionHandler
+
 -
 
 
