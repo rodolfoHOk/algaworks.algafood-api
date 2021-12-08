@@ -1,6 +1,6 @@
 # AlgaFood API - Curso Especialista Spring Rest da AlgaWorks
 
-## Conteúdo (histórico de commits em ordem cronológica):
+## Conteúdo (histórico de commits em ordem cronológica - temporário):
 
 ### 1 - Spring e Injeção de Dependências:
 
@@ -240,7 +240,11 @@
 
 - Estendendo o formato do problema para todos os handles
 
-### 8 -
+### 8 - Validações com Bean Validation
+
+- Adicionando o spring-boot-starter-validation
+
+- 
 
 
 ## Links úteis: 
