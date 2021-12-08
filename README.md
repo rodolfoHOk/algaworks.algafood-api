@@ -248,6 +248,8 @@
 
 - Tratando exception de violação de constraints de validação
 
+- Estendendo o Problem Details para adicionar as propriedades com constraints violadas
+
 -
 
 
