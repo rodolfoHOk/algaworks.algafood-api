@@ -246,6 +246,8 @@
 
 - Adicionando constraints e validando no controller com @Valid
 
+- Tratando exception de violação de constraints de validação
+
 -
 
 
