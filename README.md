@@ -232,7 +232,9 @@
 
 - Tratando exception de parâmetro de URL inválido
 
--
+- Tratando a exceção NoHandlerFoundException
+
+
 
 
 ## Links úteis: 
