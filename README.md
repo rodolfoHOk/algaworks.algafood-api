@@ -234,7 +234,9 @@
 
 - Tratando a exceção NoHandlerFoundException
 
+- Tratando outras exceções não capturadas
 
+-
 
 
 ## Links úteis: 
