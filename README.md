@@ -250,7 +250,9 @@
 
 - Estendendo o Problem Details para adicionar as propriedades com constraints violadas
 
--
+- Conhecendo e adicionando mais constraints de validação no modelo
+
+- 
 
 
 ## Links úteis: 
@@ -262,3 +264,7 @@ https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-me
 ### Estrutura do arquivo orm.xml
 
 https://gist.github.com/thiagofa/35d5a651a39cb0b26f050dc3b1ce8f9b
+
+### Constraints do Bean Validation
+
+https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#section-builtin-constraints
