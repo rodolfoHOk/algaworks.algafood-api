@@ -216,6 +216,8 @@
 
 - Customizando o corpo da resposta padrão de ResponseEntityExceptionHandler
 
+- Padronizando o formato de problemas no corpo de respostas com a RFC 7807
+
 - 
 
 
