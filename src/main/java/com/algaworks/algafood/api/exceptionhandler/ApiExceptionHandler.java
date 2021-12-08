@@ -103,8 +103,7 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 	
 	private ResponseEntity<Object> handleInvalidFormatException(InvalidFormatException ex,
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
-		
-		// String path = ex.getPath().stream().map(ref -> ref.getFieldName()).collect(Collectors.joining("."));
+
 		String path = joinPath(ex.getPath());
 		
 		ProblemType problemType = ProblemType.MENSAGEM_INCOMPREENSIVEL;		
@@ -119,8 +118,7 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 	
 	private ResponseEntity<Object> handlePropertyBindingException(PropertyBindingException ex,
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
-		
-		// String path = ex.getPath().stream().map(ref -> ref.getFieldName()).collect(Collectors.joining("."));
+
 		String path = joinPath(ex.getPath());
 		
 		ProblemType problemType = ProblemType.MENSAGEM_INCOMPREENSIVEL;

@@ -228,6 +228,8 @@
 
 - Tratando a PropertyBindingException na desserialização
 
+- Lançando exception de desserialização na atualização parcial PATCH
+
 -
 
 
