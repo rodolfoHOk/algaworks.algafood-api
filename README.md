@@ -218,7 +218,9 @@
 
 - Padronizando o formato de problemas no corpo de respostas com a RFC 7807
 
-- 
+- Usando o formato de problemas no corpo de respostas
+
+-
 
 
 ## Links úteis: 
