@@ -222,6 +222,8 @@
 
 - Customizando exception handlers de ResponseEntityExceptionHandler
 
+- Tratando a exception InvalidFormatException na desserialização
+
 -
 
 
