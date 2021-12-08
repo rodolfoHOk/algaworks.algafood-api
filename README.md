@@ -260,7 +260,9 @@
 
 - Adicionando constraints de validação nos modelos Estado Cidade
 
-- 
+- Customizando mensagens de validação na anotação da constraint
+
+-
 
 
 ## Links úteis: 
