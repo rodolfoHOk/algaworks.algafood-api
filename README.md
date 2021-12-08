@@ -226,6 +226,8 @@
 
 - Habilitando erros na desserialização de propriedades inexistentes ou ignoradas
 
+- Tratando a PropertyBindingException na desserialização
+
 -
 
 
