@@ -252,7 +252,9 @@
 
 - Conhecendo e adicionando mais constraints de validação no modelo
 
-- 
+- Validando as associações de uma entidade em cascata
+
+-
 
 
 ## Links úteis: 
