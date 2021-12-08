@@ -214,7 +214,9 @@
 
 - Criando um exception handler global com ResponseEntityExceptionHandler
 
--
+- Customizando o corpo da resposta padrão de ResponseEntityExceptionHandler
+
+- 
 
 
 ## Links úteis: 
