@@ -258,7 +258,9 @@
 
 - Convertendo grupos de constraints para validação em cascata com @ConvertGroup
 
--
+- Adicionando constraints de validação nos modelos Estado Cidade
+
+- 
 
 
 ## Links úteis: 
