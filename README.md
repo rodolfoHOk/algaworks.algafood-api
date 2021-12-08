@@ -254,6 +254,8 @@
 
 - Validando as associações de uma entidade em cascata
 
+- Agrupando e restringindo constraints que devem ser usadas na validação
+
 -
 
 
