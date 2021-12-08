@@ -256,6 +256,8 @@
 
 - Agrupando e restringindo constraints que devem ser usadas na validação
 
+- Convertendo grupos de constraints para validação em cascata com @ConvertGroup
+
 -
 
 
