@@ -230,6 +230,8 @@
 
 - Lançando exception de desserialização na atualização parcial PATCH
 
+- Tratando exception de parâmetro de URL inválido
+
 -
 
 
