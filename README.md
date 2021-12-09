@@ -280,7 +280,9 @@
 
 - Executando processo de validação programaticamente
 
-- 
+- Tratando a exception customizada de validações programáticas
+
+### 9 - 
 
 
 ## Links úteis: 
