@@ -272,6 +272,8 @@
 
 - Criando constraints de validação customizadas usando composição
 
+- Criando constraints de validação customizadas com implementação de ConstraintValidator
+
 -
 
 
