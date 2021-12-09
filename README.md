@@ -266,6 +266,8 @@
 
 - Customizando mensagens de validação
 
+- Resolvendo mensagens de validação com Resource Bundle do Bean Validation
+
 -
 
 
