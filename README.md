@@ -274,6 +274,8 @@
 
 - Criando constraints de validação customizadas com implementação de ConstraintValidator
 
+- Criando constraints de validação customizadas em nível de classe
+
 -
 
 
