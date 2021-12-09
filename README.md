@@ -264,6 +264,8 @@
 
 - Customizando e resolvendo mensagens de validação globais em Resource Bundle
 
+- Customizando mensagens de validação
+
 -
 
 
