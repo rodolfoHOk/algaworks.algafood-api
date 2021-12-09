@@ -270,7 +270,9 @@
 
 - Usando o Resource Bundle do Spring como Resource Bundle do Bean Validation
 
-- 
+- Criando constraints de validação customizadas usando composição
+
+-
 
 
 ## Links úteis: 
