@@ -268,7 +268,9 @@
 
 - Resolvendo mensagens de validação com Resource Bundle do Bean Validation
 
--
+- Usando o Resource Bundle do Spring como Resource Bundle do Bean Validation
+
+- 
 
 
 ## Links úteis: 
