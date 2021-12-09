@@ -278,7 +278,9 @@
 
 - Ajustando Exception Handler para adicionar mensagens de validação em nível de classe
 
--
+- Executando processo de validação programaticamente
+
+- 
 
 
 ## Links úteis: 
