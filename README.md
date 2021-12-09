@@ -262,6 +262,8 @@
 
 - Customizando mensagens de validação na anotação da constraint
 
+- Customizando e resolvendo mensagens de validação globais em Resource Bundle
+
 -
 
 
