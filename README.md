@@ -276,6 +276,8 @@
 
 - Criando constraints de validação customizadas em nível de classe
 
+- Ajustando Exception Handler para adicionar mensagens de validação em nível de classe
+
 -
 
 
