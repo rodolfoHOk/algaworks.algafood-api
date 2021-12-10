@@ -332,7 +332,9 @@
 
 - Refatorando o código para usar OffsetDateTime
 
--
+- Isolando o Domain Model do Representation Model com o padrão DTO
+
+- 
 
 
 ## Links úteis: 
