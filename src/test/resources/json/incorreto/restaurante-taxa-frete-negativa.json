@@ -1,0 +1,7 @@
+{
+	"nome": "Churrascaria Boi Nobre",
+	"taxaFrete": -9.90,
+	"cozinha": {
+		"id": 1
+	}
+}

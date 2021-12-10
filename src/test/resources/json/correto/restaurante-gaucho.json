@@ -1,0 +1,7 @@
+{
+	"nome": "Restaurante Gaucho",
+	"taxaFrete": 10.25,
+	"cozinha": {
+		"id": 1
+	}
+}

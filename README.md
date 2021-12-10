@@ -312,7 +312,9 @@
 
 - Refatorando o código de testes
 
--
+- Escrevendo testes de API
+
+### 10 -
 
 
 ## Links úteis: 
