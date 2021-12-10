@@ -330,6 +330,8 @@
 
 - Configurando e refatorando o projeto para usar UTC
 
+- Refatorando o código para usar OffsetDateTime
+
 -
 
 
