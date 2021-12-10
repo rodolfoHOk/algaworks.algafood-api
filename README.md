@@ -300,6 +300,8 @@
 
 - Criando um método para fazer setup dos testes
 
+- Entendendo o problema da ordem de execução dos testes
+
 -
 
 
