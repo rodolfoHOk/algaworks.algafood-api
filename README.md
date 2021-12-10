@@ -324,6 +324,10 @@
 
 - Usando @JsonIgnoreProperties e Jackson Mixin
 
+- Boas práticas para trabalhar com data e hora em REST APIs
+
+- Desconfigurando data e hora
+
 -
 
 
