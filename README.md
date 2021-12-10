@@ -310,7 +310,9 @@
 
 - Testando endpoint passando parâmetro de URL
 
-- 
+- Refatorando o código de testes
+
+-
 
 
 ## Links úteis: 
