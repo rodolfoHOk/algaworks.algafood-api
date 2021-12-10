@@ -320,6 +320,8 @@
 
 - Refinando o payload de cadastro com @JsonIgnoreProperties
 
+- Criando classes de mixin para usar as anotações do Jackson
+
 -
 
 
