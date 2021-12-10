@@ -282,7 +282,11 @@
 
 - Tratando a exception customizada de validações programáticas
 
-### 9 - 
+### 9 - Testes de integração
+
+- Criando e rodando um teste de integração com Spring Boot, JUnit e AssertJ
+
+-
 
 
 ## Links úteis: 
