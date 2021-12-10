@@ -322,6 +322,8 @@
 
 - Criando classes de mixin para usar as anotações do Jackson
 
+- Usando @JsonIgnoreProperties e Jackson Mixin
+
 -
 
 
