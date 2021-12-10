@@ -318,7 +318,9 @@
 
 - Analisando e definindo melhor o escopo das transações - usar @Transactional em métodos com mais de uma alteração no banco de dados
 
-- 
+- Refinando o payload de cadastro com @JsonIgnoreProperties
+
+-
 
 
 ## Links úteis: 
