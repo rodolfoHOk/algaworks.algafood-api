@@ -1,6 +1,7 @@
 package com.algaworks.algafood;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasSize;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -46,8 +47,6 @@ class CadastroCozinhaIT {
 	
 	@Test
 	public void deveRetornarStatus200_QuandoConsultarCozinha() {
-		RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
-		
 		given()
 			.accept(ContentType.JSON)
 		.when()
@@ -58,8 +57,6 @@ class CadastroCozinhaIT {
 	
 	@Test
 	public void deveConter2Cozinhas_QuandoConsultarCozinha() {
-		RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
-		
 		given()
 			.accept(ContentType.JSON)
 		.when()
@@ -78,6 +75,29 @@ class CadastroCozinhaIT {
 			.post()
 		.then()
 			.statusCode(HttpStatus.CREATED.value());
+	}
+	
+	@Test
+	public void deveRetornarRespostaEStatusCorretos_QuandoConsultarCozinhaExistente() {
+		given()
+			.pathParam("cozinhaId", 2)
+			.accept(ContentType.JSON)
+		.when()
+			.get("/{cozinhaId}")
+		.then()
+			.statusCode(HttpStatus.OK.value())
+			.body("nome", equalTo("Americana"));
+	}
+	
+	@Test
+	public void deveRetornarStatus404_QuandoConsultarCozinhaInexistente() {
+		given()
+			.pathParam("cozinhaId", 3)
+			.accept(ContentType.JSON)
+		.when()
+			.get("/{cozinhaId}")
+		.then()
+			.statusCode(HttpStatus.NOT_FOUND.value());
 	}
 	
 	private void prepararDados() {

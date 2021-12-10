@@ -308,7 +308,9 @@
 
 - Limpando e populando o banco de dados de teste
 
--
+- Testando endpoint passando parâmetro de URL
+
+- 
 
 
 ## Links úteis: 
