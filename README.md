@@ -296,7 +296,11 @@
 
 - Implementando Testes de API com REST Assured e validando o código de status HTTP
 
-- 
+- Validando o corpo da resposta HTTP
+
+- Criando um método para fazer setup dos testes
+
+-
 
 
 ## Links úteis: 
