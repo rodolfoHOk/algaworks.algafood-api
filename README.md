@@ -326,7 +326,9 @@
 
 - Boas práticas para trabalhar com data e hora em REST APIs
 
-- Desconfigurando data e hora
+- Desconfigurando data e hora - para implementar do zero na próxima
+
+- Configurando e refatorando o projeto para usar UTC
 
 -
 
