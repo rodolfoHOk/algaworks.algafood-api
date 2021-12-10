@@ -21,8 +21,12 @@ class CadastroCozinhaIntegrationTest {
 	@Autowired
 	private CadastroCozinhaService cadastroCozinha;
 	
+	// convenção 1: givenPrecondicoes_WhenEstadoEmTeste_ThenComportamentoEsperado = 
+	// 				dadoPrecondicoes_QuandoEstadoEmTeste_EntaoComportamentoEsperado
+	// convenção 2: shouldComportamentoEsperado_WhenEstadoEmTeste
+	//				deveComportamentoEsperado_QuandoEstadoEmTeste
 	@Test
-	public void testarCadastroCozinhaComSucesso() {
+	public void deveDeveAtribuirId_QuandoCadastrarCozinhaComDadosCorretos() {
 		// cenário
 		Cozinha novaCozinha = new Cozinha();
 		novaCozinha.setNome("Chinesa");
@@ -36,7 +40,7 @@ class CadastroCozinhaIntegrationTest {
 	}
 	
 	@Test
-	public void testarCadastroCozinhaSemNome() {
+	public void deveFalhar_QuandoCadastrarCozinhaSemNome() {
 		Cozinha novaCozinha = new Cozinha();
 		novaCozinha.setNome(null);
 		

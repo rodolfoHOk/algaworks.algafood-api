@@ -286,7 +286,9 @@
 
 - Criando e rodando um teste de integração com Spring Boot, JUnit e AssertJ
 
--
+- Escrevendo bons nomes de testes
+
+- 
 
 
 ## Links úteis: 
