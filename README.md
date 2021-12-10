@@ -300,9 +300,11 @@
 
 - Criando um método para fazer setup dos testes
 
-- Entendendo o problema da ordem de execução dos testes
+- Entendendo o problema da ordem de execução dos testes (um teste não pode depender de outro teste para passar)
 
--
+- Voltando o estado inicial do banco de dados para cada execução de teste com callback do Flyway
+
+- 
 
 
 ## Links úteis: 
