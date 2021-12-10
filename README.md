@@ -304,7 +304,9 @@
 
 - Voltando o estado inicial do banco de dados para cada execução de teste com callback do Flyway
 
-- 
+- Configurando um banco de testes e usando @TestPropertySource
+
+-
 
 
 ## Links úteis: 
