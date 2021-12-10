@@ -294,7 +294,9 @@
 
 - Configurando Maven Failsafe Plugin no projeto (./mvnw verify)
 
--
+- Implementando Testes de API com REST Assured e validando o código de status HTTP
+
+- 
 
 
 ## Links úteis: 
