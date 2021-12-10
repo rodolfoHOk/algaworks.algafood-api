@@ -290,6 +290,10 @@
 
 - Escrevendo testes de integração
 
+- Rodando os testes pelo Maven (./mvnw test)
+
+- Configurando Maven Failsafe Plugin no projeto (./mvnw verify)
+
 -
 
 

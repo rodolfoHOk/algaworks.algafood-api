@@ -18,7 +18,7 @@ import com.algaworks.algafood.domain.service.CadastroCozinhaService;
 
 @ExtendWith(SpringExtension.class) // do junit 5 (jupiter.api) - similar ao @RunWith(SpringRunner.class) do junit 4
 @SpringBootTest
-class CadastroCozinhaIntegrationTest {
+class CadastroCozinhaIT {
 	
 	@Autowired
 	private CadastroCozinhaService cadastroCozinha;
