@@ -288,7 +288,9 @@
 
 - Escrevendo bons nomes de testes
 
-- 
+- Escrevendo testes de integração
+
+-
 
 
 ## Links úteis: 
