@@ -314,7 +314,11 @@
 
 - Escrevendo testes de API
 
-### 10 -
+### 10 - Boas práticas e técnicas para APIs
+
+- Analisando e definindo melhor o escopo das transações - usar @Transactional em métodos com mais de uma alteração no banco de dados
+
+- 
 
 
 ## Links úteis: 
