@@ -334,7 +334,9 @@
 
 - Isolando o Domain Model do Representation Model com o padrão DTO
 
-- 
+- Implementando a conversão de entidade para DTO
+
+-
 
 
 ## Links úteis: 
