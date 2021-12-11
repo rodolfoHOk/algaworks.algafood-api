@@ -346,6 +346,8 @@
 
 - Customizando o mapeamento de propriedades com ModelMapper
 
+- Mapeando para uma instância destino (e não um tipo) com ModelMapper
+
 -
 
 
