@@ -348,6 +348,8 @@
 
 - Mapeando para uma instância destino (e não um tipo) com ModelMapper
 
+- Revisando e ajustando as mensagens de validação com o uso de DTOs
+
 -
 
 
