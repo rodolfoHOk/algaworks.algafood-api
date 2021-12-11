@@ -336,7 +336,9 @@
 
 - Implementando a conversão de entidade para DTO
 
--
+- Criando DTOs para entrada de dados na API
+
+- 
 
 
 ## Links úteis: 
