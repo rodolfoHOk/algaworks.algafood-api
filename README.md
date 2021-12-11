@@ -352,7 +352,9 @@
 
 - Estratégias de nomes de propriedades: snake case vs lower camel case
 
-- 
+- Usando DTOs como representation model
+
+-
 
 
 ## Links úteis: 

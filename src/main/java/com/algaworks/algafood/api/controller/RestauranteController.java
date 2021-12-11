@@ -69,8 +69,6 @@ public class RestauranteController {
 	@PutMapping("/{restauranteId}")
 	public RestauranteModel atualizar(@PathVariable Long restauranteId, @RequestBody @Valid RestauranteInput restauranteInput) {
 		try {	
-//			Restaurante restaurante = restauranteInputDisassembler.toDomainObject(restauranteInput);
-
 			Restaurante restauranteAtual = cadastroRestaurante.buscar(restauranteId);
 							
 			restauranteInputDisassembler.copyToDomainObject(restauranteInput, restauranteAtual);
