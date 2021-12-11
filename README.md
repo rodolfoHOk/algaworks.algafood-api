@@ -344,7 +344,9 @@
 
 - Adicionando e usando o ModelMapper
 
-- 
+- Customizando o mapeamento de propriedades com ModelMapper
+
+-
 
 
 ## Links úteis: 
