@@ -354,7 +354,9 @@
 
 - Usando DTOs como representation model
 
--
+- Corrigindo bug de tratamento de exception de integridade de dados com flush do JPA
+
+### 11 - 
 
 
 ## Links úteis: 
