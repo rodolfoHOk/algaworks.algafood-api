@@ -342,6 +342,8 @@
 
 - Refatorando e criando um disassembler do DTO
 
+- Adicionando e usando o ModelMapper
+
 - 
 
 
