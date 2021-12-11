@@ -338,6 +338,8 @@
 
 - Criando DTOs para entrada de dados na API
 
+- Refatorando e criando um assembler de DTO
+
 - 
 
 
