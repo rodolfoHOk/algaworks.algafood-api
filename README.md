@@ -340,6 +340,8 @@
 
 - Refatorando e criando um assembler de DTO
 
+- Refatorando e criando um disassembler do DTO
+
 - 
 
 
