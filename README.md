@@ -350,7 +350,9 @@
 
 - Revisando e ajustando as mensagens de validação com o uso de DTOs
 
--
+- Estratégias de nomes de propriedades: snake case vs lower camel case
+
+- 
 
 
 ## Links úteis: 
