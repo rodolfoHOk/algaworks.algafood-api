@@ -356,7 +356,13 @@
 
 - Corrigindo bug de tratamento de exception de integridade de dados com flush do JPA
 
-### 11 - 
+### 11 - Modelagem avançada e implementação da API 
+
+- Implementando os endpoints de ativação e inativação de restaurantes
+
+- Implementando os endpoints de formas de pagamento
+
+- 
 
 
 ## Links úteis: 
