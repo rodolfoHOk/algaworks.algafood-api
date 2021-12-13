@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.algaworks.algafood.domain.exception.EntidadeEmUsoException;
 import com.algaworks.algafood.domain.exception.RestauranteNaoEncontradoException;
+import com.algaworks.algafood.domain.model.Cidade;
 import com.algaworks.algafood.domain.model.Cozinha;
 import com.algaworks.algafood.domain.model.Restaurante;
 import com.algaworks.algafood.domain.repository.RestauranteRepository;
@@ -23,10 +24,17 @@ public class CadastroRestauranteService {
 	@Autowired
 	private CadastroCozinhaService cadastroCozinha;
 	
+	@Autowired
+	private CadastroCidadeService cadastroCidade;
+	
 	@Transactional
 	public Restaurante salvar(Restaurante restaurante) {
 		Long cozinhaId = restaurante.getCozinha().getId();
 		Cozinha cozinha = cadastroCozinha.buscar(cozinhaId);
+		
+		Long cidadeId = restaurante.getEndereco().getCidade().getId();
+		Cidade cidade = cadastroCidade.buscar(cidadeId);
+		restaurante.getEndereco().setCidade(cidade);
 		
 		restaurante.setCozinha(cozinha);
 		

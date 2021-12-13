@@ -364,7 +364,9 @@
 
 - Adicionando endereço no modelo da representação do recurso de restaurante
 
--
+- Refatorando serviço de cadastro de restaurante para incluir endereço
+
+- 
 
 
 ## Links úteis: 
