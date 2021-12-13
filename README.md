@@ -362,7 +362,9 @@
 
 - Implementando os endpoints de formas de pagamento
 
-- 
+- Adicionando endereço no modelo da representação do recurso de restaurante
+
+-
 
 
 ## Links úteis: 
