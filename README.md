@@ -372,7 +372,9 @@
 
 - Um pouco mais sobre JPA: objeto alterado fora da transação é sincronizado com o banco de dados
 
-- 
+- Implementando regra de negócio para evitar usuários com e-mails duplicados
+
+-
 
 
 ## Links úteis: 
