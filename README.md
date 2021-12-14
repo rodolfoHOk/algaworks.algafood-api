@@ -384,6 +384,8 @@
 
 - Implementando os endpoints de associação de usuários com grupos
 
+- Implementando endpoints de associação de usuários responsáveis com restaurantes
+
 - 
 
 
