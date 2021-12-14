@@ -388,7 +388,9 @@
 
 - Implementando ativação e inativação em massa de restaurantes
 
-- 
+- Implementando os endpoints de consulta de pedidos
+
+-
 
 
 ## Links úteis: 
