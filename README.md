@@ -376,6 +376,8 @@
 
 - Implementando os endpoints de associação de formas de pagamento em restaurantes
 
+- Implementando os endpoints de produtos
+
 -
 
 
