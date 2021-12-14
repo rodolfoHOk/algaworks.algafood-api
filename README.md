@@ -382,6 +382,8 @@
 
 - Implementando os endpoints de associação de grupos com permissões
 
+- Implementando os endpoints de associação de usuários com grupos
+
 - 
 
 
