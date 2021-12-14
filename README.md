@@ -380,7 +380,9 @@
 
 - Implementando os endpoints de abertura e fechamento de restaurantes
 
--
+- Implementando os endpoints de associação de grupos com permissões
+
+- 
 
 
 ## Links úteis: 
