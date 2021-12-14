@@ -378,6 +378,8 @@
 
 - Implementando os endpoints de produtos
 
+- Implementando os endpoints de abertura e fechamento de restaurantes
+
 -
 
 
