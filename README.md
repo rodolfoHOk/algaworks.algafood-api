@@ -374,6 +374,8 @@
 
 - Implementando regra de negócio para evitar usuários com e-mails duplicados
 
+- Implementando os endpoints de associação de formas de pagamento em restaurantes
+
 -
 
 
