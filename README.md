@@ -368,7 +368,9 @@
 
 - Implementando os endpoints de grupos
 
-- 
+- Implementando os endpoints de usuarios
+
+-
 
 
 ## Links úteis: 
