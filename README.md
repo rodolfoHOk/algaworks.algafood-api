@@ -386,6 +386,8 @@
 
 - Implementando endpoints de associação de usuários responsáveis com restaurantes
 
+- Implementando ativação e inativação em massa de restaurantes
+
 - 
 
 
