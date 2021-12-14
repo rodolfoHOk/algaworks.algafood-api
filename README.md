@@ -366,6 +366,8 @@
 
 - Refatorando serviço de cadastro de restaurante para incluir endereço
 
+- Implementando os endpoints de grupos
+
 - 
 
 

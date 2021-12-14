@@ -65,3 +65,5 @@ insert into produto (nome, descricao, preco, ativo, restaurante_id) values ('Esp
 
 insert into permissao (nome, descricao) values ('CONSULTAR_COZINHAS', 'Permite consultar cozinhas');
 insert into permissao (nome, descricao) values ('EDITAR_COZINHAS', 'Permite editar cozinhas');
+
+insert into grupo (nome) values ('Gerente'), ('Vendedor'), ('Secretária'), ('Cadastrador');
