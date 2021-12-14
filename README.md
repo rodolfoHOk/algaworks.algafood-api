@@ -370,7 +370,9 @@
 
 - Implementando os endpoints de usuarios
 
--
+- Um pouco mais sobre JPA: objeto alterado fora da transação é sincronizado com o banco de dados
+
+- 
 
 
 ## Links úteis: 
