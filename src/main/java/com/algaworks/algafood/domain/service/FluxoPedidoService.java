@@ -13,22 +13,22 @@ public class FluxoPedidoService {
 	private EmissaoPedidoService emissaoPedido;
 
 	@Transactional
-	public void confirmar(Long pedidoId) {
-		Pedido pedido = emissaoPedido.buscar(pedidoId);
+	public void confirmar(String codigo) {
+		Pedido pedido = emissaoPedido.buscar(codigo);
 		
 		pedido.confirmar();
 	}
 	
 	@Transactional
-	public void cancelar(Long pedidoId) {
-		Pedido pedido = emissaoPedido.buscar(pedidoId);
+	public void cancelar(String codigo) {
+		Pedido pedido = emissaoPedido.buscar(codigo);
 		
 		pedido.cancelar();
 	}
 	
 	@Transactional
-	public void entregue(Long pedidoId) {
-		Pedido pedido = emissaoPedido.buscar(pedidoId);
+	public void entregue(String codigo) {
+		Pedido pedido = emissaoPedido.buscar(codigo);
 		
 		pedido.entregue();
 	}

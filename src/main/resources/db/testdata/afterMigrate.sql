@@ -88,10 +88,10 @@ insert into usuario (id, nome, email, senha, data_cadastro) values
 
 insert into restaurante_usuario_responsavel (restaurante_id, usuario_id) values (1, 5), (3, 5);
 
-insert into pedido (id, restaurante_id, usuario_cliente_id, forma_pagamento_id, endereco_cidade_id, endereco_cep, 
+insert into pedido (id, codigo, restaurante_id, usuario_cliente_id, forma_pagamento_id, endereco_cidade_id, endereco_cep, 
     endereco_logradouro, endereco_numero, endereco_complemento, endereco_bairro,
     status, data_criacao, subtotal, taxa_frete, valor_total)
-values (1, 1, 1, 1, 1, '38400-000', 'Rua Floriano Peixoto', '500', 'Apto 801', 'Brasil',
+values (1, '69fb5eb8-5dbf-11ec-bf63-0242ac130002', 1, 1, 1, 1, '38400-000', 'Rua Floriano Peixoto', '500', 'Apto 801', 'Brasil',
 'CRIADO', utc_timestamp, 298.90, 10, 308.90);
 
 insert into item_pedido (id, pedido_id, produto_id, quantidade, preco_unitario, preco_total, observacao)
@@ -101,10 +101,10 @@ insert into item_pedido (id, pedido_id, produto_id, quantidade, preco_unitario, 
 values (2, 1, 2, 2, 110, 220, 'Menos picante, por favor');
 
 
-insert into pedido (id, restaurante_id, usuario_cliente_id, forma_pagamento_id, endereco_cidade_id, endereco_cep, 
+insert into pedido (id, codigo, restaurante_id, usuario_cliente_id, forma_pagamento_id, endereco_cidade_id, endereco_cep, 
         endereco_logradouro, endereco_numero, endereco_complemento, endereco_bairro,
         status, data_criacao, subtotal, taxa_frete, valor_total)
-values (2, 4, 1, 2, 1, '38400-111', 'Rua Acre', '300', 'Casa 2', 'Centro',
+values (2, '78000806-5dbf-11ec-bf63-0242ac130002', 4, 1, 2, 1, '38400-111', 'Rua Acre', '300', 'Casa 2', 'Centro',
 'CRIADO', utc_timestamp, 79, 0, 79);
 
 insert into item_pedido (id, pedido_id, produto_id, quantidade, preco_unitario, preco_total, observacao)

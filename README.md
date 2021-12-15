@@ -398,7 +398,9 @@
 
 - Refatorando o código de regras para transição de status de pedidos
 
--
+- Usando IDs vs UUIDs nas URIs de recursos
+
+### 12 - 
 
 
 ## Links úteis: 
