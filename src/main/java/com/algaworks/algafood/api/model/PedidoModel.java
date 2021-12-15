@@ -18,8 +18,8 @@ public class PedidoModel {
 	private String status;
 	private OffsetDateTime dataCriacao;
 	private OffsetDateTime dataConfirmacao;
-	private OffsetDateTime dataCancelamento;
 	private OffsetDateTime dataEntrega;
+	private OffsetDateTime dataCancelamento;
 	private EnderecoModel endereco;
 	private RestauranteResumoModel restaurante;
 	private UsuarioModel cliente;

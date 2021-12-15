@@ -396,6 +396,8 @@
 
 - Implementando endpoint de transição de status de pedidos
 
+- Refatorando o código de regras para transição de status de pedidos
+
 -
 
 
