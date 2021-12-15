@@ -23,7 +23,7 @@ import com.algaworks.algafood.domain.exception.NegocioException;
 import com.algaworks.algafood.domain.model.Pedido;
 import com.algaworks.algafood.domain.model.Usuario;
 import com.algaworks.algafood.domain.repository.PedidoRepository;
-import com.algaworks.algafood.domain.service.CadastroPedidoService;
+import com.algaworks.algafood.domain.service.EmissaoPedidoService;
 
 @RestController
 @RequestMapping("/pedidos")
@@ -33,7 +33,7 @@ public class PedidoController {
 	private PedidoRepository pedidoRepository;
 	
 	@Autowired
-	private CadastroPedidoService cadastroPedido;
+	private EmissaoPedidoService emissaoPedido;
 	
 	@Autowired
 	private PedidoModelAssembler pedidoModelAssembler;
@@ -51,7 +51,7 @@ public class PedidoController {
 	
 	@GetMapping("/{pedidoId}")
 	public PedidoModel buscar(@PathVariable Long pedidoId) {
-		return pedidoModelAssembler.toModel(cadastroPedido.buscar(pedidoId));
+		return pedidoModelAssembler.toModel(emissaoPedido.buscar(pedidoId));
 	}
 	
 	@PostMapping
@@ -63,7 +63,7 @@ public class PedidoController {
 			pedido.setCliente(new Usuario()); // será pego o usuário autenticado
 			pedido.getCliente().setId(1L); // será pego o usuário autenticado
 		
-			return pedidoModelAssembler.toModel(cadastroPedido.emitir(pedido));
+			return pedidoModelAssembler.toModel(emissaoPedido.emitir(pedido));
 		
 		} catch (EntidadeNaoEncontradaException e) {
 			throw new NegocioException(e.getMessage(), e);

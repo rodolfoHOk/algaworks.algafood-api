@@ -394,6 +394,8 @@
 
 - Implementando o endpoint de emissão de pedidos
 
+- Implementando endpoint de transição de status de pedidos
+
 -
 
 
