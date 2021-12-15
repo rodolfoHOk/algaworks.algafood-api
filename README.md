@@ -390,7 +390,9 @@
 
 - Implementando os endpoints de consulta de pedidos
 
--
+- Otimizando a query de pedidos e retornando model resumido na listagem
+
+- 
 
 
 ## Links úteis: 
