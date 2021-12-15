@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -52,7 +53,7 @@ public class Pedido {
 	private OffsetDateTime dataEntrega;
 	
 	@Enumerated(EnumType.STRING)
-	private StatusPedido status;
+	private StatusPedido status = StatusPedido.CRIADO;
 	
 	@Embedded
 	private Endereco endereco;
@@ -69,6 +70,15 @@ public class Pedido {
 	@JoinColumn(nullable = false)
 	private FormaPagamento formaPagamento;
 	
-	@OneToMany(mappedBy = "pedido")
+	@OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL) // para cadastrar em cascata os itens
 	private List<ItemPedido> itens;
+	
+	public void calcularSubtotalETotal() {
+		this.subtotal = getItens().stream()
+				.map(item -> item.getPrecoTotal())
+				.reduce(BigDecimal.ZERO, BigDecimal::add);
+		
+		this.valorTotal = this.subtotal.add(this.taxaFrete);
+	}
+	
 }

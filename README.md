@@ -392,7 +392,9 @@
 
 - Otimizando a query de pedidos e retornando model resumido na listagem
 
-- 
+- Implementando o endpoint de emissão de pedidos
+
+-
 
 
 ## Links úteis: 
