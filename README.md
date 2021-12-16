@@ -410,7 +410,11 @@
 
 - Implementando pesquisas simples na API
 
--  
+- Modelando pesquisas complexas na API
+
+- Implementando pesquisas complexas na API
+
+- 
 
 
 ## Links úteis: 
