@@ -422,6 +422,8 @@
 
 - Implementando JsonSerializer para customizar representação de paginação
 
+- Implementando um conversor de propriedades de ordenação
+
 - 
 
 
