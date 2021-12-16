@@ -408,7 +408,9 @@
 
 - Limitando os campos retornados pela API com Squiggly
 
-- 
+- Implementando pesquisas simples na API
+
+-  
 
 
 ## Links úteis: 
