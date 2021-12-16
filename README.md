@@ -420,6 +420,8 @@
 
 - Implementando paginação e ordenação de pedidos
 
+- Implementando JsonSerializer para customizar representação de paginação
+
 - 
 
 
