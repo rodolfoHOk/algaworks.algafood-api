@@ -418,6 +418,8 @@
 
 - Implementando paginação e ordenação em recursos de coleção da API
 
+- Implementando paginação e ordenação de pedidos
+
 - 
 
 
