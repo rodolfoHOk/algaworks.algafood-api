@@ -400,7 +400,11 @@
 
 - Usando IDs vs UUIDs nas URIs de recursos
 
-### 12 - 
+### 12 - Modelagem de projeções, pesquisas e relatórios
+
+- Fazendo projeção de recursos com @JsonView do Jackson
+
+- 
 
 
 ## Links úteis: 
