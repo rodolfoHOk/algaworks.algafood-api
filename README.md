@@ -416,7 +416,9 @@
 
 - Tratando BindException ao enviar parâmetros de URL inválidos
 
--
+- Implementando paginação e ordenação em recursos de coleção da API
+
+- 
 
 
 ## Links úteis: 
