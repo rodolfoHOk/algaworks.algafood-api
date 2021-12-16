@@ -424,6 +424,8 @@
 
 - Implementando um conversor de propriedades de ordenação
 
+- Modelando endpoints e implementando consulta com dados agregados (ideal para gráficos e dashboards) vendas diárias
+
 - 
 
 
