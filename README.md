@@ -404,6 +404,8 @@
 
 - Fazendo projeção de recursos com @JsonView do Jackson
 
+- Limitando os campos retornados pela API com @JsonFilter do Jackson
+
 - 
 
 
