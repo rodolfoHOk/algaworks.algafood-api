@@ -3,12 +3,11 @@ package com.algaworks.algafood.api.model;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 
-import com.fasterxml.jackson.annotation.JsonFilter;
-
 import lombok.Getter;
 import lombok.Setter;
 
-@JsonFilter("pedidoFilter")
+// Limitando os campos retornados pela API com @JsonFilter do Jackson
+// @JsonFilter("pedidoFilter") 
 @Getter
 @Setter
 public class PedidoResumoModel {

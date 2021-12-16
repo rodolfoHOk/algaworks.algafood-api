@@ -406,6 +406,8 @@
 
 - Limitando os campos retornados pela API com @JsonFilter do Jackson
 
+- Limitando os campos retornados pela API com Squiggly
+
 - 
 
 

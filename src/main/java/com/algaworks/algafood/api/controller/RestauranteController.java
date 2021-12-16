@@ -57,7 +57,9 @@ public class RestauranteController {
 	public List<RestauranteModel> listarApenasNomes() {
 		return listar();
 	}
-	
+
+//  Fazendo projeção de recursos com @JsonView do Jackson
+//
 //	@GetMapping
 //	public MappingJacksonValue listar(@RequestParam(required = false) String projecao) {
 //		List<Restaurante> restaurantes = restauranteRepository.findAll();
@@ -76,7 +78,7 @@ public class RestauranteController {
 //		
 //		return restaurantesWrapper;
 //	}
-	
+//	
 //	@GetMapping
 //	public List<RestauranteModel> listar() {
 //		return restauranteModelAssembler.toCollectionModel(restauranteRepository.findAll());
