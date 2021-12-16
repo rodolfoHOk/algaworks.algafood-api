@@ -1,6 +1,7 @@
 package com.algaworks.algafood.api.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.validation.Valid;
 
@@ -30,7 +31,6 @@ import com.algaworks.algafood.domain.repository.PedidoRepository;
 import com.algaworks.algafood.domain.repository.filter.PedidoFilter;
 import com.algaworks.algafood.domain.service.EmissaoPedidoService;
 import com.algaworks.algafood.infrastructure.repository.spec.PedidoSpecs;
-import com.google.common.collect.ImmutableMap;
 
 @RestController
 @RequestMapping("/pedidos")
@@ -105,11 +105,17 @@ public class PedidoController {
 	
 	private Pageable traduzirPageable(Pageable apiPageable) {
 	
-		var mapeamento = ImmutableMap.of(
+		var mapeamento = Map.of(
 				"codigo", "codigo",
+				"subtotal", "subtotal",
+				"taxaFrete", "taxaFrete",
+				"valorTotal", "valorTotal",
+				"status", "status",
+				"dataCriacao", "dataCriacao",
+				"restaurante.id", "restaurante.id",
 				"restaurante.nome", "restaurante.nome",
-				"nomeCliente", "cliente.nome",
-				"valorTotal", "valorTotal"
+				"cliente.id", "cliente.id",
+				"cliente.nome", "cliente.nome"
 			);
 		
 		return PageableTranslator.translate(apiPageable, mapeamento);
