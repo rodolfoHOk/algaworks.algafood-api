@@ -414,7 +414,9 @@
 
 - Implementando pesquisas complexas na API
 
-- 
+- Tratando BindException ao enviar parâmetros de URL inválidos
+
+-
 
 
 ## Links úteis: 
