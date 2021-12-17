@@ -434,7 +434,9 @@
 
 - Estruturando endpoint e serviço de emissão de relatório em PDF
 
-- 
+- Preenchendo um relatório JasperReports com JavaBeans e gerando bytes do PDF
+
+### 13 - 
 
 
 ## Links úteis: 
