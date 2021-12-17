@@ -428,6 +428,8 @@
 
 - Adicionando os filtros na consulta de vendas diárias
 
+- Tratando time offset na agregação de vendas diárias por data
+
 - 
 
 
