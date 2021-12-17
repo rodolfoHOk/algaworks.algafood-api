@@ -436,7 +436,13 @@
 
 - Preenchendo um relatório JasperReports com JavaBeans e gerando bytes do PDF
 
-### 13 - 
+### 13 - Upload e download de arquivos
+
+- Conhecendo soluções para upload de arquivos em REST APIs
+
+- Implementando upload de arquivo com multipart/form-data
+
+- 
 
 
 ## Links úteis: 
