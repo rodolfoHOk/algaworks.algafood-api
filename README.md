@@ -450,6 +450,8 @@
 
 - Implementando serviço de cadastro de foto de produto
 
+- Excluindo e substituindo cadastro de foto de produto
+
 - 
 
 
