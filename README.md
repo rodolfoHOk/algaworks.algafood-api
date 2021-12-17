@@ -444,6 +444,8 @@
 
 - Validando o tamanho máximo do arquivo
 
+- Validando o content type do arquivo
+
 - 
 
 
