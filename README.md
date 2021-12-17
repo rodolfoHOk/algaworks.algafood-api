@@ -430,6 +430,10 @@
 
 - Tratando time offset na agregação de vendas diárias por data
 
+- Conhecendo o JasperSoft Studio e Criando um layout do relatório JasperReports de vendas diárias
+
+- Estruturando endpoint e serviço de emissão de relatório em PDF
+
 - 
 
 
