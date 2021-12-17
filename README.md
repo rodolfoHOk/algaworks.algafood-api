@@ -446,6 +446,8 @@
 
 - Validando o content type do arquivo
 
+- Mapeando entidade FotoProduto e relacionamento um-para-um
+
 - 
 
 
