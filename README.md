@@ -448,6 +448,8 @@
 
 - Mapeando entidade FotoProduto e relacionamento um-para-um
 
+- Implementando serviço de cadastro de foto de produto
+
 - 
 
 
@@ -464,3 +466,7 @@ https://gist.github.com/thiagofa/35d5a651a39cb0b26f050dc3b1ce8f9b
 ### Constraints do Bean Validation
 
 https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#section-builtin-constraints
+
+### Lazy loading com mapeamento OneToOne
+
+https://blog.algaworks.com/lazy-loading-com-mapeamento-onetoone/
