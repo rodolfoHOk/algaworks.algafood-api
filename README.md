@@ -426,6 +426,8 @@
 
 - Modelando endpoints e implementando consulta com dados agregados (ideal para gráficos e dashboards) vendas diárias
 
+- Adicionando os filtros na consulta de vendas diárias
+
 - 
 
 
