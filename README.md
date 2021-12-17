@@ -442,6 +442,8 @@
 
 - Implementando upload de arquivo com multipart/form-data
 
+- Validando o tamanho máximo do arquivo
+
 - 
 
 
