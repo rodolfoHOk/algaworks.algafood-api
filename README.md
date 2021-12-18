@@ -456,6 +456,8 @@
 
 - Integrando o serviço de catálogo de fotos com o serviço de armazenagem
 
+- Implementando a remoção e substituição de arquivos de fotos no serviço de armazenagem
+
 -
 
 
