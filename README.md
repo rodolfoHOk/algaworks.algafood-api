@@ -468,7 +468,9 @@
 
 - Implementando endpoint de exclusão de foto de produto
 
--
+- Corrigindo exception handler de media type não aceita
+
+- 
 
 
 ## Links úteis: 
