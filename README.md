@@ -462,7 +462,9 @@
 
 - Implementando endpoint de consulta de foto de produto
 
--
+- Servindo arquivos de fotos pela API
+
+- 
 
 
 ## Links úteis: 
