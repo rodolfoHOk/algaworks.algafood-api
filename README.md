@@ -460,6 +460,8 @@
 
 - Implementando recuperação de foto no serviço de armazenagem
 
+- Implementando endpoint de consulta de foto de produto
+
 -
 
 
