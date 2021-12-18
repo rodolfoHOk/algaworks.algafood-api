@@ -458,6 +458,8 @@
 
 - Implementando a remoção e substituição de arquivos de fotos no serviço de armazenagem
 
+- Implementando recuperação de foto no serviço de armazenagem
+
 -
 
 
