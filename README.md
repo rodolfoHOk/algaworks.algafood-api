@@ -454,6 +454,8 @@
 
 - Implementando o serviço de armazenagem de fotos no disco local
 
+- Integrando o serviço de catálogo de fotos com o serviço de armazenagem
+
 -
 
 
