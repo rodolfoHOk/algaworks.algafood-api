@@ -464,7 +464,11 @@
 
 - Servindo arquivos de fotos pela API
 
-- 
+- Checando media type ao servir arquivos de fotos
+
+- Implementando endpoint de exclusão de foto de produto
+
+-
 
 
 ## Links úteis: 
