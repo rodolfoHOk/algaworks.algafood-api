@@ -452,7 +452,9 @@
 
 - Excluindo e substituindo cadastro de foto de produto
 
-- 
+- Implementando o serviço de armazenagem de fotos no disco local
+
+-
 
 
 ## Links úteis: 

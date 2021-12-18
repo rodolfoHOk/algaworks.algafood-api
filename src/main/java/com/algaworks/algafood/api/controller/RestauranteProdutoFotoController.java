@@ -50,18 +50,5 @@ public class RestauranteProdutoFotoController {
 		
 		return fotoProdutoModelAssembler.toModel(fotoSalva);		
 		
-//		Implementando upload de arquivo com multipart/form-data
-//
-//		var nomeArquivo = UUID.randomUUID().toString() + "_" + fotoProdutoInput.getArquivo().getOriginalFilename();
-//		
-//		var arquivoFoto = Path.of("/home/rodolfo/algafood/catalogo", nomeArquivo);
-//		
-//		try {
-//			fotoProdutoInput.getArquivo().transferTo(arquivoFoto);
-//		
-//		} catch (IllegalStateException | IOException e) {
-//			throw new RuntimeException(e);
-//		}
-		
 	}
 }
