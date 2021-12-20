@@ -482,7 +482,9 @@
 
 - Implementando a recuperação de foto no serviço de storage do S3
 
-- 
+- Selecionando a implementação do serviço de storage de fotos
+
+### 14 - 
 
 
 ## Links úteis: 
