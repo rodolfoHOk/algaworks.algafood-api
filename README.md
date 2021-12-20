@@ -490,7 +490,9 @@
 
 - Configurando o projeto para envio de e-mails usando servidor SMTP
 
-- 
+- Implementando o serviço de infraestrutura de envio de e-mails com Spring
+
+-
 
 
 ## Links úteis: 
