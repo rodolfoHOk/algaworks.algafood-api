@@ -478,6 +478,8 @@
 
 - Implementando a inclusão de objetos no bucket da Amazon S3
 
+- Implementando a exclusão de objetos do bucket da Amazon S3
+
 - 
 
 
