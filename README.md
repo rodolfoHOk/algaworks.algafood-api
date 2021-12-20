@@ -484,7 +484,13 @@
 
 - Selecionando a implementação do serviço de storage de fotos
 
-### 14 - 
+- Adicionando condição para a criação do bean amazonS3 para não serem necessárias id-chave-acesso e chave-acesso-secreta quando em armazenamento local
+
+### 14 - E-mails transacionais e Domain Events
+
+- Configurando o projeto para envio de e-mails usando servidor SMTP
+
+- 
 
 
 ## Links úteis: 
