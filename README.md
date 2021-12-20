@@ -480,6 +480,8 @@
 
 - Implementando a exclusão de objetos do bucket da Amazon S3
 
+- Implementando a recuperação de foto no serviço de storage do S3
+
 - 
 
 
