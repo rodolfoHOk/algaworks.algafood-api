@@ -470,7 +470,9 @@
 
 - Corrigindo exception handler de media type não aceita
 
-- 
+- Criando bean de propriedades de configuração dos serviços de storage
+
+-
 
 
 ## Links úteis: 
