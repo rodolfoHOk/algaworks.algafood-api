@@ -474,7 +474,9 @@
 
 - Adicionando o SDK Java da Amazon S3 no projeto e criando classe do serviço de storage
 
-- 
+- Definindo bean do client da Amazon S3 e configurando credenciais
+
+-
 
 
 ## Links úteis: 
