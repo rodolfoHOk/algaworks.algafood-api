@@ -476,7 +476,9 @@
 
 - Definindo bean do client da Amazon S3 e configurando credenciais
 
--
+- Implementando a inclusão de objetos no bucket da Amazon S3
+
+- 
 
 
 ## Links úteis: 
