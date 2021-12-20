@@ -472,7 +472,9 @@
 
 - Criando bean de propriedades de configuração dos serviços de storage
 
--
+- Adicionando o SDK Java da Amazon S3 no projeto e criando classe do serviço de storage
+
+- 
 
 
 ## Links úteis: 
