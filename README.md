@@ -512,7 +512,9 @@
 
 - Reagindo a Domain Events em fases específicas da transação
 
-- 
+- Enviando e-mails no cancelamento de pedidos
+
+### 15 - 
 
 
 ## Links úteis: 
