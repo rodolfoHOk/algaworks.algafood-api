@@ -496,7 +496,9 @@
 
 - Processando template do corpo de e-mails com Apache FreeMarker
 
--
+- Melhorando o texto do e-mail com FTL (FreeMarker Template Language)
+
+- 
 
 
 ## Links úteis: 
@@ -516,3 +518,7 @@ https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#s
 ### Lazy loading com mapeamento OneToOne
 
 https://blog.algaworks.com/lazy-loading-com-mapeamento-onetoone/
+
+### Boas práticas de HTML para e-mails
+
+https://ajuda.locaweb.com.br/wiki/boas-praticas-de-html-para-email-marketing-ajuda-locaweb/
