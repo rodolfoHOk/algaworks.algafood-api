@@ -14,7 +14,7 @@ public interface EnvioEmailService {
 	
 	@Builder
 	@Getter
-	class Mensagem {
+	public class Mensagem {
 		
 		@Singular
 		private Set<String> destinatarios;

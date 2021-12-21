@@ -508,6 +508,8 @@
 
 - Publicando Domain Events a partir do Aggregate Root
 
+- Observando e reagindo a Domain Events
+
 -
 
 
