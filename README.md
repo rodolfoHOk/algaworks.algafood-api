@@ -526,6 +526,8 @@
 
 - Entendendo o funcionamento de preflight do CORS
 
+- Habilitando CORS globalmente no projeto da API
+
 -
 
 
