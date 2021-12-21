@@ -430,7 +430,7 @@
 
 - Tratando time offset na agregação de vendas diárias por data
 
-- Conhecendo o JasperSoft Studio e Criando um layout do relatório JasperReports de vendas diárias
+- [Conhecendo o JasperSoft Studio e Criando um layout do relatório JasperReports de vendas diárias](https://github.com/rodolfoHOk/algaworks.algafood-reports)
 
 - Estruturando endpoint e serviço de emissão de relatório em PDF
 
@@ -514,7 +514,15 @@
 
 - Enviando e-mails no cancelamento de pedidos
 
-### 15 - 
+### 15 - CORS e consumo da API com JavaScript e Java
+
+- [Implementando uma chamada na REST API com JavaScript](https://github.com/rodolfoHOk/algaworks.algafood-js-client)
+
+- Testando a requisição na API com JavaScript e entendendo a Same Origin Policy
+
+- Entendendo o funcionamento básico de CORS e habilitando na API
+
+-
 
 
 ## Links úteis: 
