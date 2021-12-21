@@ -492,7 +492,9 @@
 
 - Implementando o serviço de infraestrutura de envio de e-mails com Spring
 
--
+- Usando o serviço de envio de e-mails na confirmação de pedidos
+
+- 
 
 
 ## Links úteis: 
