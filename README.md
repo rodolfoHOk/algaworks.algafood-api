@@ -504,7 +504,11 @@
 
 - Implementando serviço de envio de e-mail sandbox
 
-- 
+- Conhecendo o padrão Domain Events do DDD
+
+- Publicando Domain Events a partir do Aggregate Root
+
+-
 
 
 ## Links úteis: 
