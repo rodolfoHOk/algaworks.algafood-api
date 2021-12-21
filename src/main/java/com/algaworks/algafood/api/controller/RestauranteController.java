@@ -31,8 +31,8 @@ import com.algaworks.algafood.domain.repository.RestauranteRepository;
 import com.algaworks.algafood.domain.service.CadastroRestauranteService;
 import com.fasterxml.jackson.annotation.JsonView;
 
-// @CrossOrigin(origins = "http://localhost:8000/") // permite o cors para uma origem definida
-@CrossOrigin // permite o cors para todas as origens. igual ao CrossOrigin("*")
+
+@CrossOrigin(origins = "http://localhost:8000", maxAge = 10)
 @RestController
 @RequestMapping("/restaurantes")
 public class RestauranteController {
@@ -49,7 +49,6 @@ public class RestauranteController {
 	@Autowired
 	private RestauranteInputDisassembler restauranteInputDisassembler;
 	
-	// @CrossOrigin // permite o cors para todas as origens apenas para o método
 	@JsonView(RestauranteView.Resumo.class)
 	@GetMapping()
 	public List<RestauranteModel> listar() {

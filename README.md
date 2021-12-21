@@ -524,7 +524,9 @@
 
 - Habilitando CORS em controladores e métodos com @CrossOrigin
 
-- 
+- Entendendo o funcionamento de preflight do CORS
+
+-
 
 
 ## Links úteis: 
@@ -548,3 +550,7 @@ https://blog.algaworks.com/lazy-loading-com-mapeamento-onetoone/
 ### Boas práticas de HTML para e-mails
 
 https://ajuda.locaweb.com.br/wiki/boas-praticas-de-html-para-email-marketing-ajuda-locaweb/
+
+### Definição de requisição simples, de acordo com CORS
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests
