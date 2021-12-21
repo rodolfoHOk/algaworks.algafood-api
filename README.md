@@ -502,6 +502,8 @@
 
 - Implementando serviço de envio de e-mail fake
 
+- Implementando serviço de envio de e-mail sandbox
+
 - 
 
 
