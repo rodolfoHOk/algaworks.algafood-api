@@ -494,7 +494,9 @@
 
 - Usando o serviço de envio de e-mails na confirmação de pedidos
 
-- 
+- Processando template do corpo de e-mails com Apache FreeMarker
+
+-
 
 
 ## Links úteis: 
