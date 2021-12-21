@@ -522,7 +522,9 @@
 
 - Entendendo o funcionamento básico de CORS e habilitando na API
 
--
+- Habilitando CORS em controladores e métodos com @CrossOrigin
+
+- 
 
 
 ## Links úteis: 

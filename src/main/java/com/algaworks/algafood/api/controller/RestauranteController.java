@@ -5,9 +5,8 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,6 +31,8 @@ import com.algaworks.algafood.domain.repository.RestauranteRepository;
 import com.algaworks.algafood.domain.service.CadastroRestauranteService;
 import com.fasterxml.jackson.annotation.JsonView;
 
+// @CrossOrigin(origins = "http://localhost:8000/") // permite o cors para uma origem definida
+@CrossOrigin // permite o cors para todas as origens. igual ao CrossOrigin("*")
 @RestController
 @RequestMapping("/restaurantes")
 public class RestauranteController {
@@ -48,23 +49,18 @@ public class RestauranteController {
 	@Autowired
 	private RestauranteInputDisassembler restauranteInputDisassembler;
 	
+	// @CrossOrigin // permite o cors para todas as origens apenas para o método
 	@JsonView(RestauranteView.Resumo.class)
 	@GetMapping()
-	public ResponseEntity<List<RestauranteModel>> listar() {
-		List<RestauranteModel> restaurantesModel = restauranteModelAssembler
-				.toCollectionModel(restauranteRepository.findAll());
-		
-		return ResponseEntity.ok()
-//				.header(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "http://localhost:8000") // liberando acesso cors para o endereço
-				.header(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "*") // liberando acesso cors para todos
-				.body(restaurantesModel);
+	public List<RestauranteModel> listar() {
+		return restauranteModelAssembler.toCollectionModel(restauranteRepository.findAll());
 	}
 	
-//	@JsonView(RestauranteView.ApenasNome.class)
-//	@GetMapping(params = "projecao=apenas-nome")
-//	public List<RestauranteModel> listarApenasNomes() {
-//		return listar();
-//	}
+	@JsonView(RestauranteView.ApenasNome.class)
+	@GetMapping(params = "projecao=apenas-nome")
+	public List<RestauranteModel> listarApenasNomes() {
+		return listar();
+	}
 
 	@GetMapping("/{restauranteId}")
 	public RestauranteModel buscar (@PathVariable Long restauranteId) {
