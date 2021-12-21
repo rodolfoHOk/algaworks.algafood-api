@@ -498,7 +498,9 @@
 
 - Melhorando o texto do e-mail com FTL (FreeMarker Template Language)
 
-- 
+- Formatando valores monetários com FTL
+
+-
 
 
 ## Links úteis: 
