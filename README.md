@@ -500,7 +500,9 @@
 
 - Formatando valores monetários com FTL
 
--
+- Implementando serviço de envio de e-mail fake
+
+- 
 
 
 ## Links úteis: 
