@@ -510,7 +510,9 @@
 
 - Observando e reagindo a Domain Events
 
--
+- Reagindo a Domain Events em fases específicas da transação
+
+- 
 
 
 ## Links úteis: 
