@@ -538,6 +538,8 @@
 
 - Entendendo a validação de representações em cache com ETags e Implementando requisições condicionais com Shallow ETags
 
+- Adicionando outras diretivas de Cache-Control na resposta HTTP
+
 -
 
 

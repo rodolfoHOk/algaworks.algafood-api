@@ -49,7 +49,11 @@ public class FormaPagamentoController {
 				.toCollectionModel(formaPagamentoRepository.findAll());
 		
 		return ResponseEntity.ok()
-				.cacheControl(CacheControl.maxAge(10, TimeUnit.SECONDS))
+//				.cacheControl(CacheControl.maxAge(10, TimeUnit.SECONDS))
+//				.cacheControl(CacheControl.maxAge(10, TimeUnit.SECONDS).cachePrivate()) // private permitido somente cache local (cache compartilhado não permitido)
+				.cacheControl(CacheControl.maxAge(10, TimeUnit.SECONDS).cachePublic()) // permitido tanto local quanto compartilhado
+//				.cacheControl(CacheControl.noCache()) // sempre é obrigatória a validação do cache (ex: verificar ETag sempre)
+//				.cacheControl(CacheControl.noStore()) // nenhum cache pode armazenar a resposta
 				.body(formasPagamento);
 	}
 	
