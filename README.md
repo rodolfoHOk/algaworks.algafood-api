@@ -540,6 +540,10 @@
 
 - Adicionando outras diretivas de Cache-Control na resposta HTTP
 
+- Usando a diretiva no-cache no cabeçalho Cache-Control da requisição
+
+- Entendendo e preparando a implementação de Deep ETags
+
 -
 
 
