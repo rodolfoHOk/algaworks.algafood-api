@@ -544,7 +544,9 @@
 
 - Entendendo e preparando a implementação de Deep ETags
 
--
+- Implementando requisições condicionais com Deep ETags
+
+- 
 
 
 ## Links úteis: 
