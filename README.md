@@ -534,7 +534,7 @@
 
 - Habilitando o cache com o cabeçalho Cache-Control e a diretiva max-age
 
-- 
+- Adicionando o cabeçalho Cache-Control na resposta
 
 
 ## Links úteis: 
