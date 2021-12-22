@@ -546,7 +546,9 @@
 
 - Implementando requisições condicionais com Deep ETags
 
-- 
+- Implementando requisições condicionais com Deep ETags no recurso unico
+
+### 17 - 
 
 
 ## Links úteis: 
