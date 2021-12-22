@@ -536,6 +536,10 @@
 
 - Adicionando o cabeçalho Cache-Control na resposta
 
+- Entendendo a validação de representações em cache com ETags e Implementando requisições condicionais com Shallow ETags
+
+-
+
 
 ## Links úteis: 
 
@@ -562,3 +566,7 @@ https://ajuda.locaweb.com.br/wiki/boas-praticas-de-html-para-email-marketing-aju
 ### Definição de requisição simples, de acordo com CORS
 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests
+
+### Wireshark - software para análise de tráfego de rede
+
+https://www.wireshark.org/
