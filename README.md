@@ -528,7 +528,9 @@
 
 - Habilitando CORS globalmente no projeto da API
 
--
+- [Implementando um client da REST API com Java e Spring (RestTemplate)](https://github.com/rodolfoHOk/algaworks.algafood-java-client)
+
+### 16 -
 
 
 ## Links úteis: 
