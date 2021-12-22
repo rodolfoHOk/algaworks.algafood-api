@@ -530,7 +530,11 @@
 
 - [Implementando um client da REST API com Java e Spring (RestTemplate)](https://github.com/rodolfoHOk/algaworks.algafood-java-client)
 
-### 16 -
+### 16 - Cache de HTTP
+
+- Habilitando o cache com o cabeçalho Cache-Control e a diretiva max-age
+
+- 
 
 
 ## Links úteis: 
