@@ -576,6 +576,8 @@
 
 - Referenciando modelo de representação de problema com códigos de status de erro
 
+- Descrevendo códigos de status de respostas em endpoints específicos
+
 -
 
 ## Documentação da API
