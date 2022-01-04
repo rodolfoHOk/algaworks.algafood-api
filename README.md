@@ -558,6 +558,8 @@
 
 - Descrevendo informações da API na documentação
 
+- Descrevendo tags na documentação e associando com controllers
+
 - 
 
 ## Documentação da API
