@@ -554,6 +554,8 @@
 
 - Gerando a documentação da API em HTML com Swagger UI e SpringFox
 
+- Selecionando os endpoints da API para gerar a documentação
+
 -
 
 ## Documentação da API
