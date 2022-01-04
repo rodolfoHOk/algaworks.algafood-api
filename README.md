@@ -568,6 +568,8 @@
 
 - Descrevendo restrições de validação de propriedades do modelo
 
+- Descrevendo códigos de status de respostas de forma global
+
 -
 
 ## Documentação da API
