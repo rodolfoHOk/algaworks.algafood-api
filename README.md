@@ -562,6 +562,8 @@
 
 - Descrevendo as operações de endpoints na documentação
 
+- Descrevendo parâmetros de entrada na documentação
+
 - 
 
 ## Documentação da API
