@@ -564,7 +564,9 @@
 
 - Descrevendo parâmetros de entrada na documentação
 
-- 
+- Descrevendo modelos de representações e suas propriedades
+
+-
 
 ## Documentação da API
 
