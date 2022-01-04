@@ -560,6 +560,8 @@
 
 - Descrevendo tags na documentação e associando com controllers
 
+- Descrevendo as operações de endpoints na documentação
+
 - 
 
 ## Documentação da API
