@@ -546,9 +546,13 @@
 
 - Implementando requisições condicionais com Deep ETags
 
-- Implementando requisições condicionais com Deep ETags no recurso unico
+- Implementando requisições condicionais com Deep ETags no recurso único
 
-### 17 - 
+### 17 - Documentação da API com OpenAPI, Swagger UI e SpringFox
+
+- Gerando a definição OpenAPI em JSON com SpringFox
+
+- 
 
 
 ## Links úteis: 
