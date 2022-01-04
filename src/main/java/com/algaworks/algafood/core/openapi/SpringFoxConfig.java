@@ -14,6 +14,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.util.ReflectionUtils;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping;
 
+import com.algaworks.algafood.api.exceptionhandler.Problem;
+import com.fasterxml.classmate.TypeResolver;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -23,6 +27,7 @@ import springfox.documentation.service.Contact;
 import springfox.documentation.service.Response;
 import springfox.documentation.service.Tag;
 import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.json.JacksonModuleRegistrar;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.spring.web.plugins.WebFluxRequestHandlerProvider;
 import springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider;
@@ -30,6 +35,11 @@ import springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider;
 @Configuration
 // @Import(BeanValidatorPluginsConfiguration.class) springfox 3.0.0 não é mais necessário já é padrâo
 public class SpringFoxConfig {
+	
+	@Bean // Para resolver o problema de serialização de OffsetDateTime
+	public JacksonModuleRegistrar springfoxJacksonConfig() {
+		return objectMapper -> objectMapper.registerModule(new JavaTimeModule());
+	}	
 	
 	@Bean // bean necessário springfox 3.0.0 issues in springboot 2.6.0+
 	public static BeanPostProcessor springfoxHandlerProviderBeanPostProcessor() {
@@ -66,6 +76,9 @@ public class SpringFoxConfig {
 	
 	@Bean
 	public Docket apiDocket() {
+		var typeResolver = new TypeResolver();
+		
+		
 		return new Docket(DocumentationType.OAS_30)
 				.select()
 					.apis(RequestHandlerSelectors.basePackage("com.algaworks.algafood.api"))
@@ -76,6 +89,7 @@ public class SpringFoxConfig {
 				.globalResponses(HttpMethod.POST, globalPutResponses())
 				.globalResponses(HttpMethod.PUT, globalPutResponses())
 				.globalResponses(HttpMethod.DELETE, globalDeleteResponses())
+				.additionalModels(typeResolver.resolve(Problem.class))
 				.apiInfo(apiInfo())
 				.tags(new Tag("Cidades", "Gerencia as cidades"));
 	}

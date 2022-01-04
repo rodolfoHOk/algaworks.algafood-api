@@ -570,7 +570,11 @@
 
 - Descrevendo códigos de status de respostas de forma global
 
--
+- Descrevendo códigos de status de respostas de forma global outros métodos
+
+- Descrevendo o modelo de representação (adicional) de problema
+
+- 
 
 ## Documentação da API
 
