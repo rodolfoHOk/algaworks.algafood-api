@@ -72,12 +72,49 @@ public class SpringFoxConfig {
 					.paths(PathSelectors.any())
 					.build()
 				.useDefaultResponseMessages(false)
-				.globalResponses(HttpMethod.GET, globalGetResponseMessages())
+				.globalResponses(HttpMethod.GET, globalGetResponses())
+				.globalResponses(HttpMethod.POST, globalPutResponses())
+				.globalResponses(HttpMethod.PUT, globalPutResponses())
+				.globalResponses(HttpMethod.DELETE, globalDeleteResponses())
 				.apiInfo(apiInfo())
 				.tags(new Tag("Cidades", "Gerencia as cidades"));
 	}
 	
-	private List<Response> globalGetResponseMessages() {
+	private List<Response> globalDeleteResponses() {
+		return Arrays.asList(
+					new ResponseBuilder()
+						.code(String.valueOf(HttpStatus.BAD_REQUEST.value()))
+						.description("Requisição inválida (erro do cliente)")
+						.build(),
+					new ResponseBuilder()
+						.code(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()))
+						.description("Erro interno do servidor")
+						.build()
+				);
+	}
+
+	private List<Response> globalPutResponses() {
+		return Arrays.asList(
+					new ResponseBuilder()
+						.code(String.valueOf(HttpStatus.BAD_REQUEST.value()))
+						.description("Requisição inválida (erro do cliente)")
+						.build(),
+					new ResponseBuilder()
+						.code(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()))
+						.description("Erro interno do servidor")
+						.build(),
+					new ResponseBuilder()
+						.code(String.valueOf(HttpStatus.NOT_ACCEPTABLE.value()))
+						.description("Recurso não possui representação que possa ser aceita pelo consumidor")
+						.build(),
+					new ResponseBuilder()
+						.code(String.valueOf(HttpStatus.UNSUPPORTED_MEDIA_TYPE.value()))
+						.description("Requisição recusada porque o corpo está em um formato não suportado")
+						.build()
+				);
+	}
+
+	private List<Response> globalGetResponses() {
 		return Arrays.asList(
 					new ResponseBuilder()
 						.code(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()))
