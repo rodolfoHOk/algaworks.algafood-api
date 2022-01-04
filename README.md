@@ -556,7 +556,9 @@
 
 - Selecionando os endpoints da API para gerar a documentação
 
--
+- Descrevendo informações da API na documentação
+
+- 
 
 ## Documentação da API
 
