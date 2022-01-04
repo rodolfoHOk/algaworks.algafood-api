@@ -574,7 +574,9 @@
 
 - Descrevendo o modelo de representação (adicional) de problema
 
-- 
+- Referenciando modelo de representação de problema com códigos de status de erro
+
+-
 
 ## Documentação da API
 
