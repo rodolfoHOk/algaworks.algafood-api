@@ -134,6 +134,7 @@
 	        <artifactId>springfox-boot-starter</artifactId>
 	        <version>${springfox.version}</version>
 	    </dependency>
+	    
 	</dependencies>
 
 	<build>

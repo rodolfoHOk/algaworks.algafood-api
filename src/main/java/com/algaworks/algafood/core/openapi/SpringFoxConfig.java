@@ -23,6 +23,7 @@ import springfox.documentation.spring.web.plugins.WebFluxRequestHandlerProvider;
 import springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider;
 
 @Configuration
+// @Import(BeanValidatorPluginsConfiguration.class) springfox 3.0.0 não é mais necessário já é padrâo
 public class SpringFoxConfig {
 	
 	@Bean // bean necessário springfox 3.0.0 issues in springboot 2.6.0+

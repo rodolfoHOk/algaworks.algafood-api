@@ -566,6 +566,8 @@
 
 - Descrevendo modelos de representações e suas propriedades
 
+- Descrevendo restrições de validação de propriedades do modelo
+
 -
 
 ## Documentação da API
