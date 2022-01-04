@@ -578,7 +578,9 @@
 
 - Descrevendo códigos de status de respostas em endpoints específicos
 
--
+- Desacoplando anotações do Swagger dos controladores
+
+- 
 
 ## Documentação da API
 
