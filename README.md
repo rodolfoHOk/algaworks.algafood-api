@@ -552,7 +552,13 @@
 
 - Gerando a definição OpenAPI em JSON com SpringFox
 
-- 
+- Gerando a documentação da API em HTML com Swagger UI e SpringFox
+
+-
+
+## Documentação da API
+
+http://localhost:8080/swagger-ui/index.html
 
 
 ## Links úteis: 
