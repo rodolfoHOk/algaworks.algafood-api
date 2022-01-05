@@ -596,7 +596,9 @@
 
 - Descrevendo parâmetros globais em operações
 
--
+- Descrevendo parâmetros implícitos em operações
+
+- 
 
 ## Documentação da API
 
