@@ -584,7 +584,9 @@
 
 - Descrevendo media type da resposta nos endpoints
 
--
+- Corrigindo documentação com substituição de Pageable
+
+- 
 
 ## Documentação da API
 
