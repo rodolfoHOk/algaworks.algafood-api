@@ -608,7 +608,9 @@
 
 - Descrevendo documentação de endpoints de fluxo de pedidos
 
--
+- Descrevendo documentação de endpoints de associação de restaurantes com formas de pagamento
+
+- 
 
 ## Documentação da API
 
