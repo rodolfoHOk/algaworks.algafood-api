@@ -604,6 +604,10 @@
 
 - Descrevendo documentação de endpoints de restaurantes
 
+- Descrevendo documentação de endpoints de estados
+
+- Descrevendo documentação de endpoints de fluxo de pedidos
+
 -
 
 ## Documentação da API
