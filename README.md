@@ -580,7 +580,9 @@
 
 - Desacoplando anotações do Swagger dos controladores
 
-- 
+- Descrevendo documentação de endpoints de grupos
+
+-
 
 ## Documentação da API
 
