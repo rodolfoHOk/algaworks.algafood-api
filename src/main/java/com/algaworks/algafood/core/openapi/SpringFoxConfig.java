@@ -16,6 +16,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.util.ReflectionUtils;
+import org.springframework.web.context.request.ServletWebRequest;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping;
 
 import com.algaworks.algafood.api.exceptionhandler.Problem;
@@ -99,6 +100,7 @@ public class SpringFoxConfig {
 				.globalResponses(HttpMethod.PUT, globalPutResponses())
 				.globalResponses(HttpMethod.DELETE, globalDeleteResponses())
 				.additionalModels(typeResolver.resolve(Problem.class))
+				.ignoredParameterTypes(ServletWebRequest.class)
 				.directModelSubstitute(Pageable.class, PageableModelOpenApi.class)
 				.alternateTypeRules(AlternateTypeRules.newRule(
 						typeResolver.resolve(Page.class, CozinhaModel.class), CozinhasModelOpenApi.class))

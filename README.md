@@ -590,6 +590,8 @@
 
 - Descrevendo documentação de endpoints de cozinhas
 
+- Ignorando tipos de parâmetros de operações na documentação
+
 -
 
 ## Documentação da API
