@@ -592,6 +592,8 @@
 
 - Ignorando tipos de parâmetros de operações na documentação
 
+- Descrevendo documentação de endpoints de formas de pagamento
+
 -
 
 ## Documentação da API

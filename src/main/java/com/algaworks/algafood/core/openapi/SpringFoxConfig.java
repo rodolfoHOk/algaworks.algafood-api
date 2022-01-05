@@ -107,7 +107,8 @@ public class SpringFoxConfig {
 				.apiInfo(apiInfo())
 				.tags(new Tag("Cidades", "Gerencia as cidades"),
 						new Tag("Grupos", "Gerencia os grupos de usuários"),
-						new Tag("Cozinhas", "Gerencia as cozinhas"));
+						new Tag("Cozinhas", "Gerencia as cozinhas"),
+						new Tag("Formas de Pagamento", "Gerencia as formas de pagamento"));
 	}
 	
 	private List<Response> globalDeleteResponses() {
