@@ -598,7 +598,9 @@
 
 - Descrevendo parâmetros implícitos em operações
 
-- 
+- Descrevendo documentação de endpoints de pedidos
+
+-
 
 ## Documentação da API
 
