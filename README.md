@@ -610,7 +610,9 @@
 
 - Descrevendo documentação de endpoints de associação de restaurantes com formas de pagamento
 
-- 
+- Descrevendo documentação de endpoints de associação de restaurantes com usuários
+
+-
 
 ## Documentação da API
 
