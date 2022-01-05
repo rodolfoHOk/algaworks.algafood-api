@@ -588,6 +588,8 @@
 
 - Corrigindo documentação com substituição de Page
 
+- Descrevendo documentação de endpoints de cozinhas
+
 -
 
 ## Documentação da API
