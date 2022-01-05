@@ -582,6 +582,8 @@
 
 - Descrevendo documentação de endpoints de grupos
 
+- Descrevendo media type da resposta nos endpoints
+
 -
 
 ## Documentação da API
