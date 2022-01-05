@@ -602,6 +602,8 @@
 
 - Descrevendo parâmetros de projeções em endpoints de consultas
 
+- Descrevendo documentação de endpoints de restaurantes
+
 -
 
 ## Documentação da API

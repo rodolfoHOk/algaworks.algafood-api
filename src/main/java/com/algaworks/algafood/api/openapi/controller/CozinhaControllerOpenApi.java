@@ -9,6 +9,7 @@ import com.algaworks.algafood.api.model.input.CozinhaInput;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -27,13 +28,13 @@ public interface CozinhaControllerOpenApi {
 		@ApiResponse(responseCode = "404", description = "Cozinha não encontrada",
 				content = @Content(schema = @Schema(implementation = Problem.class)))
 	})
-	CozinhaModel buscar(Long cozinhaId);
+	CozinhaModel buscar(@ApiParam(value = "ID de uma cozinha", example = "1", required = true) Long cozinhaId);
 
 	@ApiOperation("Cadastra uma cozinha")
 	@ApiResponses({
 		@ApiResponse(responseCode = "201", description = "Cozinha cadastrada"),
 	})
-	CozinhaModel adicionar(CozinhaInput cozinhaInput);
+	CozinhaModel adicionar(@ApiParam(value = "Representação de uma nova cozinha", name = "corpo", required = true) CozinhaInput cozinhaInput);
 
 	@ApiOperation("Atualiza uma cozinha por ID")
 	@ApiResponses({
@@ -41,7 +42,8 @@ public interface CozinhaControllerOpenApi {
 		@ApiResponse(responseCode = "404", description = "Cozinha não encontrada",
 				content = @Content(schema = @Schema(implementation = Problem.class)))
 	})
-	CozinhaModel atualizar(Long cozinhaId, CozinhaInput cozinhaInput);
+	CozinhaModel atualizar(@ApiParam(value = "ID de uma cozinha", example = "1", required = true) Long cozinhaId,
+			@ApiParam(value = "Representação de uma cozinha com os novos dados", name = "corpo", required = true) CozinhaInput cozinhaInput);
 
 	@ApiOperation("Exclui uma cozinha por ID")
 	@ApiResponses({
@@ -49,6 +51,6 @@ public interface CozinhaControllerOpenApi {
 		@ApiResponse(responseCode = "404", description = "Cozinha não encontrada",
 				content = @Content(schema = @Schema(implementation = Problem.class)))
 	})
-	void remover(Long cozinhaId);
+	void remover(@ApiParam(value = "ID de uma cozinha", example = "1", required = true) Long cozinhaId);
 
 }
