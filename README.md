@@ -600,6 +600,8 @@
 
 - Descrevendo documentação de endpoints de pedidos
 
+- Descrevendo parâmetros de projeções em endpoints de consultas
+
 -
 
 ## Documentação da API
