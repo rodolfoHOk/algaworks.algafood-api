@@ -614,7 +614,9 @@
 
 - Descrevendo documentação de endpoints de produtos
 
-- 
+- Descrevendo documentação de endpoints de fotos de produtos
+
+-
 
 ## Documentação da API
 

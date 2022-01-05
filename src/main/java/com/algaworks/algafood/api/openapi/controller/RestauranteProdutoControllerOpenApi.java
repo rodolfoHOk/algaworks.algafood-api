@@ -33,7 +33,7 @@ public interface RestauranteProdutoControllerOpenApi {
 	@ApiResponses({
 		@ApiResponse(responseCode = "400", description = "ID do restaurante ou do produto inválido",
 				content = @Content(schema = @Schema(implementation = Problem.class))),
-		@ApiResponse(responseCode = "404", description = "Produto de restaurante ou restaurante não encontrado",
+		@ApiResponse(responseCode = "404", description = "Produto de restaurante não encontrado",
 				content = @Content(schema = @Schema(implementation = Problem.class))),
 	})
 	ProdutoModel buscar(
@@ -54,7 +54,7 @@ public interface RestauranteProdutoControllerOpenApi {
 	@ApiOperation("Atualiza um produto de um restaurante")
 	@ApiResponses({
 		@ApiResponse(responseCode = "200", description = "Produto atualizado"),
-		@ApiResponse(responseCode = "404", description = "Produto de restaurante ou restaurante não encontrado",
+		@ApiResponse(responseCode = "404", description = "Produto de restaurante não encontrado",
 				content = @Content(schema = @Schema(implementation = Problem.class))),
 	})
 	ProdutoModel atualizar(
