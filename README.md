@@ -594,6 +594,8 @@
 
 - Descrevendo documentação de endpoints de formas de pagamento
 
+- Descrevendo parâmetros globais em operações
+
 -
 
 ## Documentação da API
