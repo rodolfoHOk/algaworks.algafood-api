@@ -586,7 +586,9 @@
 
 - Corrigindo documentação com substituição de Pageable
 
-- 
+- Corrigindo documentação com substituição de Page
+
+-
 
 ## Documentação da API
 
