@@ -612,7 +612,9 @@
 
 - Descrevendo documentação de endpoints de associação de restaurantes com usuários
 
--
+- Descrevendo documentação de endpoints de produtos
+
+- 
 
 ## Documentação da API
 

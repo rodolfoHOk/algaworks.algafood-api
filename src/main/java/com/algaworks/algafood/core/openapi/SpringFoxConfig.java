@@ -124,7 +124,8 @@ public class SpringFoxConfig {
 						new Tag("Formas de Pagamento", "Gerencia as formas de pagamento"),
 						new Tag("Pedidos", "Gerencia os pedidos"),
 						new Tag("Restaurantes", "Gerencia os restaurantes"),
-						new Tag("Estados", "Gerencia os estados"));
+						new Tag("Estados", "Gerencia os estados"),
+						new Tag("Produtos", "Gerencia os produtos de um restaurante"));
 	}
 	
 	private List<Response> globalDeleteResponses() {
