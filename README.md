@@ -620,7 +620,7 @@
 
 - Descrevendo documentação de endpoints de associação de permissões com grupos
 
--
+- Descrevendo documentação de endpoints de usuários
 
 ## Documentação da API
 
