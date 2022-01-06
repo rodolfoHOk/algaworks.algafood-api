@@ -618,6 +618,8 @@
 
 - Corrigindo documentação no Swagger UI para upload de arquivos
 
+- Descrevendo documentação de endpoints de associação de permissões com grupos
+
 -
 
 ## Documentação da API
