@@ -1,5 +1,6 @@
 package com.algaworks.algafood.api.openapi.controller;
 
+import java.time.OffsetDateTime;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
@@ -18,11 +19,11 @@ public interface EstatisticasControllerOpenApi {
 
 	@ApiOperation("Consulta estatísticas de vendas diárias")
 	@ApiImplicitParams({
-		@ApiImplicitParam(name = "restauranteId", value = "ID do restaurante", example = "1", dataType = "int"),
+		@ApiImplicitParam(name = "restauranteId", value = "ID do restaurante", example = "1", dataTypeClass = Integer.class),
 		@ApiImplicitParam(name = "dataCriacaoInicio", value = "Data/hora inicial da criação do pedido",
-				example = "2021-12-01T00:00:00Z", dataType = "date-time"),
+				example = "2021-12-01T00:00:00Z", dataTypeClass = OffsetDateTime.class),
 		@ApiImplicitParam(name = "dataCriacaoFim", value = "Data/hora final da criação do pedido",
-				example = "2021-12-01T00:00:00Z", dataType = "date-time")
+				example = "2021-12-01T00:00:00Z", dataTypeClass = OffsetDateTime.class)
 	})
 	List<VendaDiaria> consultarVendasDiarias(
 			VendaDiariaFilter filtro,

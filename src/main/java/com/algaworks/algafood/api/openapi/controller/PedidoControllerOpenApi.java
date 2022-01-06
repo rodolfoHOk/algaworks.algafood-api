@@ -25,14 +25,14 @@ public interface PedidoControllerOpenApi {
 	@ApiOperation("Pesquisa os pedidos")
 	@ApiImplicitParams({
 		@ApiImplicitParam(value = "Nomes das propriedades para filtrar na resposta, separados por vírgula",
-				name = "campos", paramType = "query", type = "string")
+				name = "campos", paramType = "query", dataTypeClass = String.class)
 	})
 	Page<PedidoResumoModel> pesquisar(PedidoFilter filtro, Pageable pageable);
 
 	@ApiOperation("Busca um pedido pelo código")
 	@ApiImplicitParams({
 		@ApiImplicitParam(value = "Nomes das propriedades para filtrar na resposta, separados por vírgula",
-				name = "campos", paramType = "query", type = "string")
+				name = "campos", paramType = "query", dataTypeClass = String.class)
 	})
 	@ApiResponses({
 		@ApiResponse(responseCode = "404", description = "Pedido não encontrado",
