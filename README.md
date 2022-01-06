@@ -630,6 +630,8 @@
 
 - Adicionando a URI do recurso criado no header da resposta
 
+- Adicionando o Spring HATEOAS no projeto
+
 -
 
 ## Documentação da API
