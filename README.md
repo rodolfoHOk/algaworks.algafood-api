@@ -622,6 +622,10 @@
 
 - Descrevendo documentação de endpoints de usuários
 
+- Descrevendo documentação de endpoints de associação de grupos com usuários
+
+-
+
 ## Documentação da API
 
 http://localhost:8080/swagger-ui/index.html
