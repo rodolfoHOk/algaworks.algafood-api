@@ -616,6 +616,8 @@
 
 - Descrevendo documentação de endpoints de fotos de produtos
 
+- Corrigindo documentação no Swagger UI para upload de arquivos
+
 -
 
 ## Documentação da API
