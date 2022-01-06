@@ -626,7 +626,11 @@
 
 - Descrevendo documentação de endpoint de estatísticas
 
-### 18 -
+### 18 - Discoverability e HATEOAS: A Glória do REST
+
+- Adicionando a URI do recurso criado no header da resposta
+
+-
 
 ## Documentação da API
 
