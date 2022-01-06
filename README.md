@@ -624,7 +624,9 @@
 
 - Descrevendo documentação de endpoints de associação de grupos com usuários
 
--
+- Descrevendo documentação de endpoint de estatísticas
+
+### 18 -
 
 ## Documentação da API
 
