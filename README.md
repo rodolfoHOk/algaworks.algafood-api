@@ -660,6 +660,8 @@
 
 - Refatorando construção e inclusão de links em representation model
 
+- Refatorando construção e inclusão de links
+
 - 
 
 ## Documentação da API
