@@ -640,7 +640,9 @@
 
 - Adicionando hypermedia na representação de recursos de coleção
 
-- 
+- Montando modelo de representação com RepresentationModelAssembler
+
+-
 
 ## Documentação da API
 
