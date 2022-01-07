@@ -664,7 +664,9 @@
 
 - Adicionando links de transições de status de pedidos
 
--
+- Adicionando links condicionalmente
+
+- 
 
 ## Documentação da API
 
