@@ -636,6 +636,8 @@
 
 - Construindo links dinâmicos com WebMvcLinkBuilder
 
+- Construindo links que apontam para métodos
+
 - 
 
 ## Documentação da API
