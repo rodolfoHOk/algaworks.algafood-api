@@ -666,7 +666,9 @@
 
 - Adicionando links condicionalmente
 
-- 
+- Adicionando hypermedia nos recursos de restaurantes
+
+-
 
 ## Documentação da API
 
