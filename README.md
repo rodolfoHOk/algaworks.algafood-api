@@ -658,7 +658,9 @@
 
 - Adicionando template variables do filtro de pedidos
 
--
+- Refatorando construção e inclusão de links em representation model
+
+- 
 
 ## Documentação da API
 
