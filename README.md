@@ -662,7 +662,9 @@
 
 - Refatorando construção e inclusão de links
 
-- 
+- Adicionando links de transições de status de pedidos
+
+-
 
 ## Documentação da API
 
