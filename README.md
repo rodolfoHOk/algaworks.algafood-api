@@ -634,6 +634,8 @@
 
 - Adicionando hypermedia na representação de recurso único com HAL
 
+- Construindo links dinâmicos com WebMvcLinkBuilder
+
 - 
 
 ## Documentação da API
