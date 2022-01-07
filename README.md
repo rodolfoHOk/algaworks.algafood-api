@@ -654,7 +654,9 @@
 
 - Corrigindo links de paginação com ordenação
 
--
+- Adicionando links com template variables
+
+- 
 
 ## Documentação da API
 
