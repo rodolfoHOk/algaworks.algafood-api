@@ -646,7 +646,9 @@
 
 - Corrigindo link de coleção de recurso de responsáveis por restaurante
 
--
+- Adicionando hypermedia nos recursos de estados
+
+- 
 
 ## Documentação da API
 
