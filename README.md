@@ -648,6 +648,8 @@
 
 - Adicionando hypermedia nos recursos de estados
 
+- Adicionando hypermedia em recursos com paginação
+
 - 
 
 ## Documentação da API
