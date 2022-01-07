@@ -638,6 +638,8 @@
 
 - Construindo links que apontam para métodos
 
+- Adicionando hypermedia na representação de recursos de coleção
+
 - 
 
 ## Documentação da API
