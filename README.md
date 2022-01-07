@@ -642,6 +642,10 @@
 
 - Montando modelo de representação com RepresentationModelAssembler
 
+- Adicionando hypermedia nos recursos de usuários
+
+- Corrigindo link de coleção de recurso de responsáveis por restaurante
+
 -
 
 ## Documentação da API

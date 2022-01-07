@@ -30,11 +30,6 @@ public class CidadeModelAssembler extends RepresentationModelAssemblerSupport<Ci
 		
 		modelMapper.map(cidade, cidadeModel);
 		
-//		CidadeModel cidadeModel = modelMapper.map(cidade, CidadeModel.class);
-		
-//		createModelWithId já cria o cidadeModel com o link self
-//		cidadeModel.add(linkTo(methodOn(CidadeController.class).buscar(cidadeModel.getId())).withSelfRel());
-		
 		cidadeModel.add(linkTo(methodOn(CidadeController.class).listar()).withRel("cidades"));
 		
 		cidadeModel.getEstado().add(linkTo(methodOn(EstadoController.class)
@@ -42,14 +37,6 @@ public class CidadeModelAssembler extends RepresentationModelAssemblerSupport<Ci
 		
 		return cidadeModel;
 	}
-	
-// Já existe implementação para toCollectionModel no RepresentationModelAssemblerSupport
-//
-//	public List<CidadeModel> toCollectionModel (List<Cidade> cidades) {
-//		return cidades.stream()
-//				.map(cidade -> toModel(cidade))
-//				.toList();
-//	}
 	
 	@Override
 	public CollectionModel<CidadeModel> toCollectionModel(Iterable<? extends Cidade> entities) {
