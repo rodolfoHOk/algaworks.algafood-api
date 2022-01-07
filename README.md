@@ -650,7 +650,9 @@
 
 - Adicionando hypermedia em recursos com paginação
 
-- 
+- Adicionando hypermedia em recursos de pedidos (paginação)
+
+-
 
 ## Documentação da API
 
