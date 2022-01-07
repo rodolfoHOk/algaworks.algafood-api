@@ -5,6 +5,8 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.Link;
+import org.springframework.hateoas.LinkRelation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -52,7 +54,18 @@ public class CidadeController implements CidadeControllerOpenApi {
 	
 	@GetMapping("/{cidadeId}")
 	public CidadeModel buscar(@PathVariable Long cidadeId) {
-		return cidadeModelAssembler.toModel(cadastroCidade.buscar(cidadeId));
+		CidadeModel cidadeModel = cidadeModelAssembler.toModel(cadastroCidade.buscar(cidadeId));
+		
+		cidadeModel.add(Link.of("http://localhost:8080/cidades/" + cidadeId));
+//		cidadeModel.add(Link.of("http://localhost:8080/cidades/" + cidadeId, IanaLinkRelations.SELF));
+		
+//		cidadeModel.add(Link.of("http://localhost:8080/cidades", IanaLinkRelations.COLLECTION));
+		cidadeModel.add(Link.of("http://localhost:8080/cidades", LinkRelation.of("cidades")));
+		
+		cidadeModel.getEstado().add(Link.of("http://localhost:8080/estados/" + cidadeModel.getEstado().getId()));
+		cidadeModel.getEstado().add(Link.of("http://localhost:8080/estados", LinkRelation.of("estados")));
+		
+		return cidadeModel;
 	}
 	
 	@PostMapping

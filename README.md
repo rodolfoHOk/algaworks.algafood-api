@@ -632,7 +632,9 @@
 
 - Adicionando o Spring HATEOAS no projeto
 
--
+- Adicionando hypermedia na representação de recurso único com HAL
+
+- 
 
 ## Documentação da API
 
@@ -668,3 +670,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests
 ### Wireshark - software para análise de tráfego de rede
 
 https://www.wireshark.org/
+
+### HAL - Hypertext Application Language
+
+https://stateless.group/hal_specification.html
