@@ -652,6 +652,8 @@
 
 - Adicionando hypermedia em recursos de pedidos (paginação)
 
+- Corrigindo links de paginação com ordenação
+
 -
 
 ## Documentação da API
