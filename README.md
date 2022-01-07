@@ -670,6 +670,8 @@
 
 - Adicionando links condicionais no recurso de restaurante
 
+- Adicionando template variable de projeção de restaurantes
+
 - 
 
 ## Documentação da API
