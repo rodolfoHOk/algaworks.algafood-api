@@ -656,7 +656,9 @@
 
 - Adicionando links com template variables
 
-- 
+- Adicionando template variables do filtro de pedidos
+
+-
 
 ## Documentação da API
 

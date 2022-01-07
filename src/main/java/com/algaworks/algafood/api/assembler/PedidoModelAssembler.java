@@ -40,15 +40,22 @@ public class PedidoModelAssembler extends RepresentationModelAssemblerSupport<Pe
 		
 //		pedidoModel.add(linkTo(PedidoController.class).withRel("pedidos"));
 		
-		TemplateVariables templateVariables = new TemplateVariables(
+		TemplateVariables pageVariables = new TemplateVariables(
 					new TemplateVariable("page", VariableType.REQUEST_PARAM),
 					new TemplateVariable("size", VariableType.REQUEST_PARAM),
 					new TemplateVariable("sort", VariableType.REQUEST_PARAM)
 				);
 		
+		TemplateVariables filterVariables = new TemplateVariables(
+				new TemplateVariable("clienteId", VariableType.REQUEST_PARAM),
+				new TemplateVariable("restauranteId", VariableType.REQUEST_PARAM),
+				new TemplateVariable("dataCriacaoInicio", VariableType.REQUEST_PARAM),
+				new TemplateVariable("dataCriacaoFim", VariableType.REQUEST_PARAM)
+			);
+		
 		String pedidosUrl = linkTo(PedidoController.class).toString();
 		
-		pedidoModel.add(Link.of(UriTemplate.of(pedidosUrl, templateVariables), "pedidos"));
+		pedidoModel.add(Link.of(UriTemplate.of(pedidosUrl, pageVariables.concat(filterVariables)), "pedidos"));
 		
 		pedidoModel.getEndereco().getCidade().add(linkTo(methodOn(CidadeController.class)
 				.buscar(pedidoModel.getEndereco().getCidade().getId())).withSelfRel());
