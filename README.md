@@ -676,6 +676,8 @@
 
 - Adicionando links para desassociação de formas de pagamento com restaurante
 
+- Adicionando links com template variable de caminho de formas de pagamento do restaurante
+
 - 
 
 ## Documentação da API
