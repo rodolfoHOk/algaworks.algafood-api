@@ -678,6 +678,8 @@
 
 - Adicionando links com template variable de caminho de formas de pagamento do restaurante
 
+- Adicionando links de associação de restaurantes com responsáveis
+
 - 
 
 ## Documentação da API
