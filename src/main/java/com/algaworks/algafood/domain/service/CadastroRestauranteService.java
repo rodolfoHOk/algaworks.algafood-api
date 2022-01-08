@@ -130,7 +130,7 @@ public class CadastroRestauranteService {
 		Restaurante restaurante = buscar(restauranteId);
 		Usuario usuario = cadastroUsuario.buscar(usuarioId);
 		
-		restaurante.adicionarUsuarioResponsavel(usuario);
+		restaurante.adicionarResponsavel(usuario);
 	}
 	
 	@Transactional
@@ -138,7 +138,7 @@ public class CadastroRestauranteService {
 		Restaurante restaurante = buscar(restauranteId);
 		Usuario usuario = cadastroUsuario.buscar(usuarioId);
 		
-		restaurante.removerUsuarioResponsavel(usuario);
+		restaurante.removerResponsavel(usuario);
 	}
 	
 }

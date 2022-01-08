@@ -680,6 +680,8 @@
 
 - Adicionando links de associação de restaurantes com responsáveis
 
+- Adicionando hypermedia nos recursos de produtos
+
 - 
 
 ## Documentação da API

@@ -6,6 +6,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.CollectionModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.algaworks.algafood.api.AlgaLinks;
 import com.algaworks.algafood.api.assembler.ProdutoInputDisassembler;
 import com.algaworks.algafood.api.assembler.ProdutoModelAssembler;
 import com.algaworks.algafood.api.model.ProdutoModel;
@@ -47,11 +49,14 @@ public class RestauranteProdutoController implements RestauranteProdutoControlle
 	
 	@Autowired
 	private ProdutoInputDisassembler produtoInputDisassembler;
+	
+	@Autowired
+	private AlgaLinks algaLinks;
 
 	@Override
 	@GetMapping
-	public List<ProdutoModel> listar(@PathVariable Long restauranteId, 
-			@RequestParam(name = "incluir-inativos", required = false) boolean incluirInativos) {
+	public CollectionModel<ProdutoModel> listar(@PathVariable Long restauranteId,
+			@RequestParam(required = false, defaultValue = "false") Boolean incluirInativos) {
 		Restaurante restaurante = cadastroRestaurante.buscar(restauranteId);
 		
 		List<Produto> produtos = new ArrayList<Produto>();
@@ -62,13 +67,16 @@ public class RestauranteProdutoController implements RestauranteProdutoControlle
 			produtos = produtoRepository.findAtivosByRestaurante(restaurante);
 		}
 		
-		return produtoModelAssembler.toCollectionModel(produtos);
+		return produtoModelAssembler.toCollectionModel(produtos)
+				.add(algaLinks.linkToRestauranteProdutos(restauranteId));
 	}
 	
 	@Override
 	@GetMapping("/{produtoId}")
 	public ProdutoModel buscar(@PathVariable Long restauranteId, @PathVariable Long produtoId) {
-		return produtoModelAssembler.toModel(cadastroProduto.buscar(restauranteId, produtoId));
+		Produto produto = cadastroProduto.buscar(restauranteId, produtoId);
+		
+		return produtoModelAssembler.toModel(produto);
 	}
 	
 	@Override

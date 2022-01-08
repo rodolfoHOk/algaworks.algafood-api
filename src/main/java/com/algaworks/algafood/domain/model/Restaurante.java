@@ -29,7 +29,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
 public class Restaurante {
-	
+
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,18 +40,16 @@ public class Restaurante {
 	
 	@Column(name = "taxa_frete", nullable = false)
 	private BigDecimal taxaFrete;
-
+	
 	@ManyToOne
 	@JoinColumn(name = "cozinha_id", nullable = false)
 	private Cozinha cozinha;
-
+	
 	@Embedded
 	private Endereco endereco;
 	
-	@Column(nullable = false)
 	private Boolean ativo = Boolean.TRUE;
 	
-	@Column(nullable = false)
 	private Boolean aberto = Boolean.FALSE;
 	
 	@CreationTimestamp
@@ -64,18 +62,18 @@ public class Restaurante {
 	
 	@ManyToMany
 	@JoinTable(name = "restaurante_forma_pagamento",
-		joinColumns = @JoinColumn (name = "restaurante_id"),
-		inverseJoinColumns = @JoinColumn(name = "forma_pagamento_id"))
-	private Set<FormaPagamento> formasPagamento = new HashSet<FormaPagamento>();
+			joinColumns = @JoinColumn(name = "restaurante_id"),
+			inverseJoinColumns = @JoinColumn(name = "forma_pagamento_id"))
+	private Set<FormaPagamento> formasPagamento = new HashSet<>();
 	
 	@ManyToMany
 	@JoinTable(name = "restaurante_usuario_responsavel",
-		joinColumns = @JoinColumn(name = "restaurante_id"),
-		inverseJoinColumns = @JoinColumn(name = "usuario_id"))
-	private Set<Usuario> responsaveis = new HashSet<Usuario>();
+			joinColumns = @JoinColumn(name = "restaurante_id"),
+			inverseJoinColumns = @JoinColumn(name = "usuario_id"))
+	private Set<Usuario> responsaveis = new HashSet<>();
 	
 	@OneToMany(mappedBy = "restaurante")
-	private List<Produto> produtos = new ArrayList<Produto>();
+	private List<Produto> produtos = new ArrayList<>();
 	
 	public void ativar() {
 		setAtivo(true);
@@ -85,36 +83,32 @@ public class Restaurante {
 		setAtivo(false);
 	}
 	
-	public boolean adicionarFormaPagamento(FormaPagamento formaPagamento) {
-		return getFormasPagamento().add(formaPagamento);
-	}
-	
-	public boolean removerFormaPagamento(FormaPagamento formaPagamento) {
-		return getFormasPagamento().remove(formaPagamento);
+	public void abrir() {
+		setAberto(true);
 	}
 	
 	public void fechar() {
 		setAberto(false);
 	}
 	
-	public void abrir() {
-		setAberto(true);
+	public boolean isAberto() {
+		return this.aberto;
 	}
-	
+
+	public boolean isFechado() {
+		return !isAberto();
+	}
+
+	public boolean isInativo() {
+		return !isAtivo();
+	}
+
 	public boolean isAtivo() {
 		return this.ativo;
 	}
 	
-	public boolean isInativo() {
-		return !isAtivo();
-	}
-	
-	public boolean isAberto() {
-		return this.aberto;
-	}
-	
-	public boolean isFechado() {
-		return !isAberto();
+	public boolean aberturaPermitida() {
+		return isAtivo() && isFechado();
 	}
 	
 	public boolean ativacaoPermitida() {
@@ -125,20 +119,16 @@ public class Restaurante {
 		return isAtivo();
 	}
 	
-	public boolean aberturaPermitida() {
-		return isAtivo() && isFechado();
-	}
-	
 	public boolean fechamentoPermitido() {
 		return isAberto();
 	}
 	
-	public boolean adicionarUsuarioResponsavel(Usuario usuario) {
-		return getResponsaveis().add(usuario);
+	public boolean removerFormaPagamento(FormaPagamento formaPagamento) {
+		return getFormasPagamento().remove(formaPagamento);
 	}
 	
-	public boolean removerUsuarioResponsavel(Usuario usuario) {
-		return getResponsaveis().remove(usuario);
+	public boolean adicionarFormaPagamento(FormaPagamento formaPagamento) {
+		return getFormasPagamento().add(formaPagamento);
 	}
 	
 	public boolean aceitaFormaPagamento(FormaPagamento formaPagamento) {
@@ -147,6 +137,14 @@ public class Restaurante {
 	
 	public boolean naoAceitaFormaPagamento(FormaPagamento formaPagamento) {
 		return !aceitaFormaPagamento(formaPagamento);
+	}
+	
+	public boolean removerResponsavel(Usuario usuario) {
+		return getResponsaveis().remove(usuario);
+	}
+	
+	public boolean adicionarResponsavel(Usuario usuario) {
+		return getResponsaveis().add(usuario);
 	}
 	
 }

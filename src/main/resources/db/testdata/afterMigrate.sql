@@ -88,8 +88,8 @@ insert into usuario (id, nome, email, senha, data_cadastro) values
 (3, 'José Souza', 'jose.aux@algafood.com.br', '123', utc_timestamp),
 (4, 'Sebastião Martins', 'sebastiao.cad@algafood.com.br', '123', utc_timestamp),
 (5, 'Manoel Lima', 'manoel.loja@gmail.com', '123', utc_timestamp),
-(6, 'Débora Mendonça', 'testes.dev.hiok+debora@gmail.com', '123', utc_timestamp),
-(7, 'Carlos Lima', 'testes.dev.hiok+carlos@gmail.com', '123', utc_timestamp);
+(6, 'Débora Mendonça', 'email.teste.aw+debora@gmail.com', '123', utc_timestamp),
+(7, 'Carlos Lima', 'email.teste.aw+carlos@gmail.com', '123', utc_timestamp);
 
 insert into usuario_grupo (usuario_id, grupo_id) values (1, 1), (1, 2), (2, 2);
 
@@ -147,3 +147,4 @@ values (5, '8d774bcf-b238-42f3-aef1-5fb388754d63', 1, 3, 2, 1, '38400-200', 'Rua
 
 insert into item_pedido (id, pedido_id, produto_id, quantidade, preco_unitario, preco_total, observacao)
 values (6, 5, 3, 1, 87.2, 87.2, null);
+

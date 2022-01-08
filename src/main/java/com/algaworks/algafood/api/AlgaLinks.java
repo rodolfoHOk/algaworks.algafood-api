@@ -118,6 +118,15 @@ public class AlgaLinks {
 		return Link.of(UriTemplate.of(restaurantesUrl, PROJECAO_VARIABLES), rel);
 	}
 	
+	public Link linkToRestauranteProdutos(Long restauranteId) {
+		return linkToRestauranteProdutos(restauranteId, IanaLinkRelations.SELF_VALUE);
+	}
+	
+	public Link linkToRestauranteProdutos(Long restauranteId, String rel) {
+		return linkTo(methodOn(RestauranteProdutoController.class).listar(restauranteId, null))
+				.withRel(rel);
+	}
+	
 	public Link linkToUsuarios() {
 		return linkTo(UsuarioController.class)
 				.withRel(IanaLinkRelations.SELF);
