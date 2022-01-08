@@ -672,6 +672,8 @@
 
 - Adicionando template variable de projeção de restaurantes
 
+- Adicionando hypermedia nos recursos de formas de pagamento
+
 - 
 
 ## Documentação da API
