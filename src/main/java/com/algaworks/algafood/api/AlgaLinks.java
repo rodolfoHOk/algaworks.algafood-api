@@ -9,6 +9,7 @@ import org.springframework.hateoas.TemplateVariable;
 import org.springframework.hateoas.TemplateVariables;
 import org.springframework.hateoas.UriTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.web.HttpMediaTypeNotAcceptableException;
 import org.springframework.hateoas.TemplateVariable.VariableType;
 
 import com.algaworks.algafood.api.controller.CidadeController;
@@ -20,6 +21,7 @@ import com.algaworks.algafood.api.controller.PedidoController;
 import com.algaworks.algafood.api.controller.RestauranteController;
 import com.algaworks.algafood.api.controller.RestauranteFormasPagamentoController;
 import com.algaworks.algafood.api.controller.RestauranteProdutoController;
+import com.algaworks.algafood.api.controller.RestauranteProdutoFotoController;
 import com.algaworks.algafood.api.controller.RestauranteResponsavelController;
 import com.algaworks.algafood.api.controller.UsuarioController;
 import com.algaworks.algafood.api.controller.UsuarioGrupoController;
@@ -176,6 +178,24 @@ public class AlgaLinks {
 	public Link linkToRestauranteFormaPagamentoDesassociacao(Long restauranteId, Long formaPagamentoId, String rel) {
 		return linkTo(methodOn(RestauranteFormasPagamentoController.class)
 				.desassociar(restauranteId, formaPagamentoId))
+				.withRel(rel);
+	}
+	
+	public Link linkToRestauranteFotoProduto(Long restauranteId, Long produtoId) 
+			throws HttpMediaTypeNotAcceptableException {
+		return linkToRestauranteFotoProduto(restauranteId, produtoId, IanaLinkRelations.SELF_VALUE);
+	}
+	
+	public Link linkToRestauranteFotoProduto(Long restauranteId, Long produtoId, String rel) 
+			throws HttpMediaTypeNotAcceptableException {
+		return linkTo(methodOn(RestauranteProdutoFotoController.class)
+				.buscar(restauranteId, produtoId, null))
+				.withRel(rel);
+	}
+	
+	public Link linkToRestauranteProduto(Long restauranteId, Long produtoId, String rel) {
+		return linkTo(methodOn(RestauranteProdutoController.class)
+				.buscar(restauranteId, produtoId))
 				.withRel(rel);
 	}
 	

@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
 import org.springframework.stereotype.Component;
+import org.springframework.web.HttpMediaTypeNotAcceptableException;
 
 import com.algaworks.algafood.api.AlgaLinks;
 import com.algaworks.algafood.api.controller.RestauranteProdutoController;
@@ -30,6 +31,13 @@ public class ProdutoModelAssembler extends RepresentationModelAssemblerSupport<P
 		modelMapper.map(produto, produtoModel);
 		
 		produtoModel.add(algaLinks.linkToRestauranteProdutos(produto.getRestaurante().getId(), "produtos"));
+		
+		try {
+			produtoModel.add(algaLinks.linkToRestauranteFotoProduto(
+					produto.getRestaurante().getId(), produto.getId(), "foto"));
+		} catch (HttpMediaTypeNotAcceptableException e) {
+			e.printStackTrace();
+		}
 		
 		return produtoModel;
 	}

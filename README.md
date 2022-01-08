@@ -682,6 +682,8 @@
 
 - Adicionando hypermedia nos recursos de produtos
 
+- Adicionando links para recurso de foto de produto
+
 - 
 
 ## Documentação da API
