@@ -674,6 +674,8 @@
 
 - Adicionando hypermedia nos recursos de formas de pagamento
 
+- Adicionando links para desassociação de formas de pagamento com restaurante
+
 - 
 
 ## Documentação da API
