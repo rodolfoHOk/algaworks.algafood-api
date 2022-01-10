@@ -14,6 +14,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.Links;
+import org.springframework.hateoas.PagedModel;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -28,6 +29,7 @@ import com.algaworks.algafood.api.model.EstadoModel;
 import com.algaworks.algafood.api.model.PedidoResumoModel;
 import com.algaworks.algafood.api.openapi.model.CidadeModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.CidadesModelOpenApi;
+import com.algaworks.algafood.api.openapi.model.CozinhaModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.CozinhasModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.EstadoModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.LinksModelOpenApi;
@@ -114,8 +116,9 @@ public class SpringFoxConfig {
 				.directModelSubstitute(Links.class, LinksModelOpenApi.class)
 				.directModelSubstitute(CidadeModel.class, CidadeModelOpenApi.class)
 				.directModelSubstitute(EstadoModel.class, EstadoModelOpenApi.class)
+				.directModelSubstitute(CozinhaModel.class, CozinhaModelOpenApi.class)
 				.alternateTypeRules(AlternateTypeRules.newRule(
-						typeResolver.resolve(Page.class, CozinhaModel.class), CozinhasModelOpenApi.class))
+						typeResolver.resolve(PagedModel.class, CozinhaModel.class), CozinhasModelOpenApi.class))
 				.alternateTypeRules(AlternateTypeRules.newRule(
 						typeResolver.resolve(Page.class, PedidoResumoModel.class), PedidosResumoModelOpenApi.class))
 				.alternateTypeRules(AlternateTypeRules.newRule(

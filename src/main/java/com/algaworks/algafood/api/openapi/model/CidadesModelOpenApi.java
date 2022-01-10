@@ -5,17 +5,20 @@ import java.util.List;
 import org.springframework.hateoas.Links;
 
 import io.swagger.annotations.ApiModel;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @ApiModel("CidadesModel")
-@Data
+@Getter
+@Setter
 public class CidadesModelOpenApi {
 	
 	private CidadeEmbeddedModelOpenApi _embedded;
 	private Links _links;
 
 	@ApiModel("CidadesEmbeddedModel")
-	@Data
+	@Getter
+	@Setter
 	public class CidadeEmbeddedModelOpenApi {
 		
 		private List<CidadeModelOpenApi> cidades;

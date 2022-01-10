@@ -7,19 +7,17 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-@ApiModel(value = "CidadeModel")
+@ApiModel("CozinhaModel")
 @Getter
 @Setter
-public class CidadeModelOpenApi {
+public class CozinhaModelOpenApi {
 	
 	@ApiModelProperty(example = "1")
 	private Long id;
 	
-	@ApiModelProperty(example = "Uberlândia")
+	@ApiModelProperty(example = "Brasileira")
 	private String nome;
-	
-	private EstadoModelOpenApi estado;
-	
+
 	private Links _links;
 	
 }

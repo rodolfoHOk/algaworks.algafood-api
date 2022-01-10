@@ -702,7 +702,9 @@
 
 - Corrigindo a documentação links para _links de cidades
 
-- 
+- Corrigindo a paginação na documentação
+
+-
 
 ## Documentação da API
 
