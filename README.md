@@ -694,6 +694,8 @@
 
 - Implementando endpoint com links de recursos de estatísticas
 
+- Comprimindo as respostas HTTP com Gzip
+
 - 
 
 ## Documentação da API
