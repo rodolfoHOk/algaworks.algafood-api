@@ -4,8 +4,6 @@ import java.util.List;
 
 import org.springframework.hateoas.Links;
 
-import com.algaworks.algafood.api.model.CidadeModel;
-
 import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
@@ -20,7 +18,7 @@ public class CidadesModelOpenApi {
 	@Data
 	public class CidadeEmbeddedModelOpenApi {
 		
-		private List<CidadeModel> cidades;
+		private List<CidadeModelOpenApi> cidades;
 		
 	}
 }

@@ -700,6 +700,8 @@
 
 - Corrigindo a documentação dos endpoints de cidades
 
+- Corrigindo a documentação links para _links de cidades
+
 - 
 
 ## Documentação da API
