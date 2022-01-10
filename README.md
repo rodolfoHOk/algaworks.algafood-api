@@ -696,6 +696,10 @@
 
 - Comprimindo as respostas HTTP com Gzip
 
+- Corrigindo as propriedades de links na documentação
+
+- Corrigindo a documentação dos endpoints de cidades
+
 - 
 
 ## Documentação da API
