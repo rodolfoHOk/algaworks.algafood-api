@@ -686,7 +686,9 @@
 
 - Adicionando hypermedia nos recursos de grupos
 
-- 
+- Adicionando links de associação de grupos com permissões
+
+-
 
 ## Documentação da API
 
