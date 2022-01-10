@@ -1,6 +1,5 @@
 package com.algaworks.algafood.api;
 
-
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
@@ -121,6 +120,11 @@ public class AlgaLinks {
 	public Link linkToPermissoes() {
 		return linkTo(PermissaoController.class)
 				.withRel(IanaLinkRelations.SELF_VALUE);
+	}
+	
+	public Link linkToPermissoes(String rel) {
+		return linkTo(PermissaoController.class)
+				.withRel(rel);
 	}
 	
 	public Link linkToPermissoesGrupo(Long grupoId) {

@@ -690,7 +690,9 @@
 
 - Adicionando links de associação de usuários com grupos
 
--
+- Implementando o Root Entry Point da API
+
+- 
 
 ## Documentação da API
 
