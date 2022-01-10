@@ -692,6 +692,8 @@
 
 - Implementando o Root Entry Point da API
 
+- Implementando endpoint com links de recursos de estatísticas
+
 - 
 
 ## Documentação da API
