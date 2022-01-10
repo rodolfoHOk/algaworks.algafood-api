@@ -684,6 +684,8 @@
 
 - Adicionando links para recurso de foto de produto
 
+- Adicionando hypermedia nos recursos de grupos
+
 - 
 
 ## Documentação da API
