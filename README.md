@@ -688,6 +688,8 @@
 
 - Adicionando links de associação de grupos com permissões
 
+- Adicionando links de associação de usuários com grupos
+
 -
 
 ## Documentação da API

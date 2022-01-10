@@ -1,5 +1,6 @@
 package com.algaworks.algafood.api;
 
+
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
@@ -93,6 +94,10 @@ public class AlgaLinks {
 	public Link linkToGrupos(String rel) {
 		return linkTo(GrupoController.class)
 				.withRel(rel);
+	}
+	
+	public Link linkToGruposUsuario(Long usuarioId) {
+		return linkToGruposUsuario(usuarioId, IanaLinkRelations.SELF_VALUE);
 	}
 	
 	public Link linkToGruposUsuario(Long usuarioId, String rel) {
@@ -251,6 +256,16 @@ public class AlgaLinks {
 	public Link linkToUsuario(Long usuarioId) {
 		return linkTo(methodOn(UsuarioController.class).buscar(usuarioId))
 				.withRel(IanaLinkRelations.SELF);
+	}
+	
+	public Link linkToUsuarioGrupoAssociar(Long usuarioId, String rel) {
+		return linkTo(methodOn(UsuarioGrupoController.class).associar(usuarioId, null))
+				.withRel(rel);
+	}
+	
+	public Link linkToUsuarioGrupoDesassociar(Long usuarioId, Long grupoId, String rel) {
+		return linkTo(methodOn(UsuarioGrupoController.class).desassociar(usuarioId, grupoId))
+				.withRel(rel);
 	}
 	
 	public Link linkToConfirmacaoPedido(String codigoPedido, String rel) {
