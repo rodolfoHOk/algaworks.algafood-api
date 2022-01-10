@@ -704,7 +704,9 @@
 
 - Corrigindo a paginação na documentação
 
--
+- Corrigindo a documentação dos endpoints de estados
+
+- 
 
 ## Documentação da API
 
