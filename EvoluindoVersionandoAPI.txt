@@ -39,6 +39,3 @@ G - As principais abordagens para manter a base de código de APIs versionadas
 3 - Mesmo projeto mas separando totalmente as camadas da api: camadas de domínio e infraestrutura compartilhadas
 	desvantagem: deve ser utilizada mesma stack de tecnologias da v1 na v2 e duplicação de código.
 	
-	
-
-

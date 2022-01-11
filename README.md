@@ -742,6 +742,8 @@
 
 - As principais abordagens para manter a base de código de APIs versionadas
 
+- Preparando o projeto para versionamento da API por Media Type
+
 - 
 
 ## Documentação da API
@@ -782,3 +784,7 @@ https://www.wireshark.org/
 ### HAL - Hypertext Application Language
 
 https://stateless.group/hal_specification.html
+
+### Componente para habilitar HAL para custom media type
+
+https://gist.github.com/thiagofa/8952d7fee7650c94bb116917d63c9ae6
