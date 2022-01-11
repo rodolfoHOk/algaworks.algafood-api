@@ -12,10 +12,10 @@ import lombok.Setter;
 @Setter
 public class FormaPagamentoModelOpenApi {
 
-	@ApiModelProperty(example = "1")
+	@ApiModelProperty(example = "2")
 	private Long id;
 	
-	@ApiModelProperty(example = "Cartão de Crédito")
+	@ApiModelProperty(example = "Cartão de Débito")
 	private String descricao;
 	
 	private Links _links;

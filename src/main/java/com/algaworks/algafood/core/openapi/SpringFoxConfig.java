@@ -28,6 +28,7 @@ import com.algaworks.algafood.api.model.CozinhaModel;
 import com.algaworks.algafood.api.model.EnderecoModel;
 import com.algaworks.algafood.api.model.EstadoModel;
 import com.algaworks.algafood.api.model.FormaPagamentoModel;
+import com.algaworks.algafood.api.model.FotoProdutoModel;
 import com.algaworks.algafood.api.model.GrupoModel;
 import com.algaworks.algafood.api.model.PedidoModel;
 import com.algaworks.algafood.api.model.PedidoResumoModel;
@@ -37,7 +38,6 @@ import com.algaworks.algafood.api.model.RestauranteApenasNomeModel;
 import com.algaworks.algafood.api.model.RestauranteBasicoModel;
 import com.algaworks.algafood.api.model.RestauranteModel;
 import com.algaworks.algafood.api.model.UsuarioModel;
-import com.algaworks.algafood.api.openapi.PermissoesModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.CidadeModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.CidadeResumoModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.CidadesModelOpenApi;
@@ -48,6 +48,7 @@ import com.algaworks.algafood.api.openapi.model.EstadoModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.EstadosModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.FormaPagamentoModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.FormasPagamentoModelOpenApi;
+import com.algaworks.algafood.api.openapi.model.FotoProdutoModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.GrupoModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.GruposModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.LinksModelOpenApi;
@@ -56,6 +57,7 @@ import com.algaworks.algafood.api.openapi.model.PedidoModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.PedidoResumoModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.PedidosResumoModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.PermissaoModelOpenApi;
+import com.algaworks.algafood.api.openapi.model.PermissoesModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.ProdutoModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.ProdutosModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.RestauranteApenasNomeModelOpenApi;
@@ -156,6 +158,7 @@ public class SpringFoxConfig {
 				.directModelSubstitute(PedidoModel.class, PedidoModelOpenApi.class)
 				.directModelSubstitute(PedidoResumoModel.class, PedidoResumoModelOpenApi.class)
 				.directModelSubstitute(ProdutoModel.class, ProdutoModelOpenApi.class)
+				.directModelSubstitute(FotoProdutoModel.class, FotoProdutoModelOpenApi.class)
 				.directModelSubstitute(RestauranteModel.class, RestauranteModelOpenApi.class)
 				.directModelSubstitute(RestauranteBasicoModel.class, RestauranteBasicoModelOpenApi.class)
 				.apiInfo(apiInfo())

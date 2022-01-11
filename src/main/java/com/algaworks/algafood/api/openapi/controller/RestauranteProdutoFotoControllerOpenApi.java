@@ -9,6 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.algaworks.algafood.api.exceptionhandler.Problem;
 import com.algaworks.algafood.api.model.FotoProdutoModel;
 import com.algaworks.algafood.api.model.input.FotoProdutoInput;
+import com.algaworks.algafood.api.openapi.model.FotoProdutoModelOpenApi;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -25,7 +26,7 @@ public interface RestauranteProdutoFotoControllerOpenApi {
 			produces = "application/json, image/jpeg, image/png")
 	@ApiResponses({
 		@ApiResponse(responseCode = "200", description = "OK", 
-				content = @Content(schema = @Schema(implementation = FotoProdutoModel.class), mediaType = "application/json")),
+				content = @Content(schema = @Schema(implementation = FotoProdutoModelOpenApi.class), mediaType = "application/json")),
 		@ApiResponse(responseCode = "200", description = "OK", content = @Content(mediaType = "image/png")),
 		@ApiResponse(responseCode = "200", description = "OK", content = @Content(mediaType = "image/jpeg")),
 		@ApiResponse(responseCode = "400", description = "ID do restaurante ou produto inválido", 

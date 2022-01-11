@@ -720,6 +720,8 @@
 
 - Removendo modelo de api inutilizado
 
+- Corrigindo a documentação dos endpoints de foto de produto
+
 ### 19 - Evoluindo e versionando a API
 
 - 

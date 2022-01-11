@@ -22,16 +22,18 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 public interface FormaPagamentoControllerOpenApi {
 
 	@ApiOperation(value = "Lista as formas de pagamento")
-	@io.swagger.annotations.ApiResponses(value = {
-			@io.swagger.annotations.ApiResponse(code = 200, message = "OK", response = FormasPagamentoModelOpenApi.class)
+	@ApiResponses({
+		@ApiResponse(responseCode = "200", description = "OK", 
+				content = @Content(schema = @Schema(implementation = FormasPagamentoModelOpenApi.class),
+				mediaType = "application/json"))
 	})
 	ResponseEntity<CollectionModel<FormaPagamentoModel>> listar(ServletWebRequest request);
 
 	@ApiOperation(value = "Busca uma forma de pagamento por ID")
-	@io.swagger.annotations.ApiResponses(value = {
-			@io.swagger.annotations.ApiResponse(code = 200, message = "OK", response = FormaPagamentoModelOpenApi.class)
-	})
 	@ApiResponses({
+		@ApiResponse(responseCode = "200", description = "OK",
+				content = @Content(schema = @Schema(implementation = FormaPagamentoModelOpenApi.class),
+				mediaType = "application/json")),
 		@ApiResponse(responseCode = "400", description = "ID de forma de pagamento inválido",
 				content = @Content(schema = @Schema(implementation = Problem.class))),
 		@ApiResponse(responseCode = "404", description = "Forma de pagamento não encontrada",
