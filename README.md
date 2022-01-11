@@ -746,6 +746,8 @@
 
 - Implementando o versionamento da API por Media Type
 
+- Definindo a versão padrão da API quando o Media Type não é informado
+
 - 
 
 ## Documentação da API
