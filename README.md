@@ -716,6 +716,12 @@
 
 - Corrigindo a documentação dos endpoints de restaurantes e usuários
 
+- Removendo modelo de representação inutilizado da documentação
+
+- Removendo modelo de api inutilizado
+
+### 19 - Evoluindo e versionando a API
+
 - 
 
 ## Documentação da API
