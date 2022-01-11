@@ -736,6 +736,12 @@
 
 - Evitando quebrar os clientes: alteração de URL de recurso
 
+- O que é e quando versionar uma API
+
+- As principais técnicas de versionamento de APIs
+
+- As principais abordagens para manter a base de código de APIs versionadas
+
 - 
 
 ## Documentação da API
