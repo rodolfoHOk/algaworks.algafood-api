@@ -708,6 +708,8 @@
 
 - Corrigindo a documentação dos endpoints de formas de pagamento
 
+- Corrigindo a documentação dos endpoints de grupos
+
 -
 
 ## Documentação da API
