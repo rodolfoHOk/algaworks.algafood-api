@@ -714,7 +714,9 @@
 
 - Corrigindo a documentação dos endpoints de produtos
 
--
+- Corrigindo a documentação dos endpoints de restaurantes e usuários
+
+- 
 
 ## Documentação da API
 

@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.algaworks.algafood.api.AlgaLinks;
 
+import springfox.documentation.annotations.ApiIgnore;
+
+@ApiIgnore
 @RestController
 @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 public class RootEntryPointController {

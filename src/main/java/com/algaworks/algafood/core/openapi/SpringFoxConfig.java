@@ -34,6 +34,8 @@ import com.algaworks.algafood.api.model.PedidoResumoModel;
 import com.algaworks.algafood.api.model.PermissaoModel;
 import com.algaworks.algafood.api.model.ProdutoModel;
 import com.algaworks.algafood.api.model.RestauranteApenasNomeModel;
+import com.algaworks.algafood.api.model.RestauranteBasicoModel;
+import com.algaworks.algafood.api.model.RestauranteModel;
 import com.algaworks.algafood.api.model.UsuarioModel;
 import com.algaworks.algafood.api.openapi.PermissoesModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.CidadeModelOpenApi;
@@ -57,7 +59,11 @@ import com.algaworks.algafood.api.openapi.model.PermissaoModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.ProdutoModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.ProdutosModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.RestauranteApenasNomeModelOpenApi;
+import com.algaworks.algafood.api.openapi.model.RestauranteBasicoModelOpenApi;
+import com.algaworks.algafood.api.openapi.model.RestauranteModelOpenApi;
+import com.algaworks.algafood.api.openapi.model.RestaurantesModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.UsuarioModelOpenApi;
+import com.algaworks.algafood.api.openapi.model.UsuariosModelOpenApi;
 import com.fasterxml.classmate.TypeResolver;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
@@ -150,11 +156,14 @@ public class SpringFoxConfig {
 				.directModelSubstitute(PedidoModel.class, PedidoModelOpenApi.class)
 				.directModelSubstitute(PedidoResumoModel.class, PedidoResumoModelOpenApi.class)
 				.directModelSubstitute(ProdutoModel.class, ProdutoModelOpenApi.class)
+				.directModelSubstitute(RestauranteModel.class, RestauranteModelOpenApi.class)
+				.directModelSubstitute(RestauranteBasicoModel.class, RestauranteBasicoModelOpenApi.class)
 				.apiInfo(apiInfo())
 				.alternateTypeRules(AlternateTypeRules.newRule(
 						typeResolver.resolve(PagedModel.class, CozinhaModel.class), CozinhasModelOpenApi.class))
 				.alternateTypeRules(AlternateTypeRules.newRule(
-						typeResolver.resolve(PagedModel.class, PedidoResumoModel.class), PedidosResumoModelOpenApi.class))
+						typeResolver.resolve(PagedModel.class, PedidoResumoModel.class), 
+						PedidosResumoModelOpenApi.class))
 				.alternateTypeRules(AlternateTypeRules.newRule(
 						typeResolver.resolve(CollectionModel.class, CidadeModel.class), CidadesModelOpenApi.class))
 				.alternateTypeRules(AlternateTypeRules.newRule(
@@ -165,9 +174,16 @@ public class SpringFoxConfig {
 				.alternateTypeRules(AlternateTypeRules.newRule(
 						typeResolver.resolve(CollectionModel.class, GrupoModel.class), GruposModelOpenApi.class))
 				.alternateTypeRules(AlternateTypeRules.newRule(
-						typeResolver.resolve(CollectionModel.class, PermissaoModel.class), PermissoesModelOpenApi.class))
+						typeResolver.resolve(CollectionModel.class, PermissaoModel.class), 
+						PermissoesModelOpenApi.class))
 				.alternateTypeRules(AlternateTypeRules.newRule(
 						typeResolver.resolve(CollectionModel.class, ProdutoModel.class), ProdutosModelOpenApi.class))
+				.alternateTypeRules(AlternateTypeRules.newRule(
+						typeResolver.resolve(CollectionModel.class, RestauranteBasicoModel.class),
+						RestaurantesModelOpenApi.class))
+				.alternateTypeRules(AlternateTypeRules.newRule(
+						typeResolver.resolve(CollectionModel.class, UsuarioModel.class),
+						UsuariosModelOpenApi.class))
 				.tags(new Tag("Cidades", "Gerencia as cidades"),
 						new Tag("Grupos", "Gerencia os grupos de usuários"),
 						new Tag("Cozinhas", "Gerencia as cozinhas"),
