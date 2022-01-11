@@ -2,25 +2,24 @@ package com.algaworks.algafood.api.openapi.model;
 
 import org.springframework.hateoas.Links;
 
-import com.algaworks.algafood.api.model.EstadoModel;
-
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-@ApiModel(value = "CidadeModel")
+@ApiModel("UsuarioModel")
 @Getter
 @Setter
-public class CidadeModelOpenApi {
-	
-	@ApiModelProperty(example = "1")
+public class UsuarioModelOpenApi {
+
+	@ApiModelProperty(example = "6")
 	private Long id;
 	
-	@ApiModelProperty(example = "Uberlândia")
+	@ApiModelProperty(example = "Débora Mendonça")
 	private String nome;
 	
-	private EstadoModel estado;
+	@ApiModelProperty(example = "deboramendonca@gmail.com")
+	private String email;
 	
 	private Links _links;
 	

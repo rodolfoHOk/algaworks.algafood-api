@@ -710,7 +710,9 @@
 
 - Corrigindo a documentação dos endpoints de grupos
 
--
+- Corrigindo a documentação dos endpoint de pedidos (paginação)
+
+- 
 
 ## Documentação da API
 
