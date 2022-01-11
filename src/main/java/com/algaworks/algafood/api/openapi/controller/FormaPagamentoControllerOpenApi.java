@@ -7,6 +7,8 @@ import org.springframework.web.context.request.ServletWebRequest;
 import com.algaworks.algafood.api.exceptionhandler.Problem;
 import com.algaworks.algafood.api.model.FormaPagamentoModel;
 import com.algaworks.algafood.api.model.input.FormaPagamentoInput;
+import com.algaworks.algafood.api.openapi.model.FormaPagamentoModelOpenApi;
+import com.algaworks.algafood.api.openapi.model.FormasPagamentoModelOpenApi;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -19,10 +21,16 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 @Api(tags = "Formas de Pagamento")
 public interface FormaPagamentoControllerOpenApi {
 
-	@ApiOperation("Lista as formas de pagamento")
+	@ApiOperation(value = "Lista as formas de pagamento")
+	@io.swagger.annotations.ApiResponses(value = {
+			@io.swagger.annotations.ApiResponse(code = 200, message = "OK", response = FormasPagamentoModelOpenApi.class)
+	})
 	ResponseEntity<CollectionModel<FormaPagamentoModel>> listar(ServletWebRequest request);
 
-	@ApiOperation("Busca uma forma de pagamento por ID")
+	@ApiOperation(value = "Busca uma forma de pagamento por ID")
+	@io.swagger.annotations.ApiResponses(value = {
+			@io.swagger.annotations.ApiResponse(code = 200, message = "OK", response = FormaPagamentoModelOpenApi.class)
+	})
 	@ApiResponses({
 		@ApiResponse(responseCode = "400", description = "ID de forma de pagamento inválido",
 				content = @Content(schema = @Schema(implementation = Problem.class))),

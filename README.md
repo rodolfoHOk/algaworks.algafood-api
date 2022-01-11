@@ -706,7 +706,9 @@
 
 - Corrigindo a documentação dos endpoints de estados
 
-- 
+- Corrigindo a documentação dos endpoints de formas de pagamento
+
+-
 
 ## Documentação da API
 
