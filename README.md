@@ -744,6 +744,8 @@
 
 - Preparando o projeto para versionamento da API por Media Type
 
+- Implementando o versionamento da API por Media Type
+
 - 
 
 ## Documentação da API
