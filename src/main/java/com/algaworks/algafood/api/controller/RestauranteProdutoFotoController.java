@@ -100,8 +100,6 @@ public class RestauranteProdutoFotoController implements RestauranteProdutoFotoC
 		
 		Produto produto = cadastroProduto.buscar(restauranteId, produtoId);
 		
-//		arquivo = fotoProdutoInput.getArquivo();
-		
 		FotoProduto foto = new FotoProduto();
 		foto.setProduto(produto);
 		foto.setDescricao(fotoProdutoInput.getDescricao());

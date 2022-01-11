@@ -724,6 +724,18 @@
 
 ### 19 - Evoluindo e versionando a API
 
+- Evoluindo a API com gestão de mudanças
+
+- Evitando quebrar os clientes: nova propriedade no modelo
+
+- Evitando quebrar os clientes: exclusão de propriedade do modelo
+
+- Evitando quebrar os clientes: alteração de tipo de propriedade do modelo
+
+- Evitando quebrar os clientes: alteração na estrutura de dados do modelo
+
+- Evitando quebrar os clientes: alteração de URL de recurso
+
 - 
 
 ## Documentação da API

@@ -15,8 +15,6 @@ import com.algaworks.algafood.domain.repository.UsuarioRepository;
 @Service
 public class CadastroUsuarioService {
 	
-//	private static final String MSG_USUARIO_EM_USO = "Usuário com o código %d não pode ser removido, pois está em uso";
-
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 	
@@ -68,19 +66,5 @@ public class CadastroUsuarioService {
 		
 		usuario.removerGrupo(grupo);
 	}
-	
-//	@Transactional
-//	public void excluir(Long usuarioId) {
-//		try {
-//			usuarioRepository.deleteById(usuarioId);
-//			usuarioRepository.flush();
-//		
-//		} catch (EmptyResultDataAccessException e) {
-//			throw new UsuarioNaoEncontradoException(usuarioId);
-//		
-//		} catch (DataIntegrityViolationException e) {
-//			throw new EntidadeEmUsoException(String.format(MSG_USUARIO_EM_USO, usuarioId));
-//		}
-//	}
 	
 }
