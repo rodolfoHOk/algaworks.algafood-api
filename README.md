@@ -712,7 +712,9 @@
 
 - Corrigindo a documentação dos endpoint de pedidos (paginação)
 
-- 
+- Corrigindo a documentação dos endpoints de produtos
+
+-
 
 ## Documentação da API
 

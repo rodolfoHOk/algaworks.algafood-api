@@ -32,6 +32,7 @@ import com.algaworks.algafood.api.model.GrupoModel;
 import com.algaworks.algafood.api.model.PedidoModel;
 import com.algaworks.algafood.api.model.PedidoResumoModel;
 import com.algaworks.algafood.api.model.PermissaoModel;
+import com.algaworks.algafood.api.model.ProdutoModel;
 import com.algaworks.algafood.api.model.RestauranteApenasNomeModel;
 import com.algaworks.algafood.api.model.UsuarioModel;
 import com.algaworks.algafood.api.openapi.PermissoesModelOpenApi;
@@ -53,6 +54,8 @@ import com.algaworks.algafood.api.openapi.model.PedidoModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.PedidoResumoModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.PedidosResumoModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.PermissaoModelOpenApi;
+import com.algaworks.algafood.api.openapi.model.ProdutoModelOpenApi;
+import com.algaworks.algafood.api.openapi.model.ProdutosModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.RestauranteApenasNomeModelOpenApi;
 import com.algaworks.algafood.api.openapi.model.UsuarioModelOpenApi;
 import com.fasterxml.classmate.TypeResolver;
@@ -146,6 +149,7 @@ public class SpringFoxConfig {
 				.directModelSubstitute(UsuarioModel.class, UsuarioModelOpenApi.class)
 				.directModelSubstitute(PedidoModel.class, PedidoModelOpenApi.class)
 				.directModelSubstitute(PedidoResumoModel.class, PedidoResumoModelOpenApi.class)
+				.directModelSubstitute(ProdutoModel.class, ProdutoModelOpenApi.class)
 				.apiInfo(apiInfo())
 				.alternateTypeRules(AlternateTypeRules.newRule(
 						typeResolver.resolve(PagedModel.class, CozinhaModel.class), CozinhasModelOpenApi.class))
@@ -162,6 +166,8 @@ public class SpringFoxConfig {
 						typeResolver.resolve(CollectionModel.class, GrupoModel.class), GruposModelOpenApi.class))
 				.alternateTypeRules(AlternateTypeRules.newRule(
 						typeResolver.resolve(CollectionModel.class, PermissaoModel.class), PermissoesModelOpenApi.class))
+				.alternateTypeRules(AlternateTypeRules.newRule(
+						typeResolver.resolve(CollectionModel.class, ProdutoModel.class), ProdutosModelOpenApi.class))
 				.tags(new Tag("Cidades", "Gerencia as cidades"),
 						new Tag("Grupos", "Gerencia os grupos de usuários"),
 						new Tag("Cozinhas", "Gerencia as cozinhas"),
