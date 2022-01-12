@@ -782,6 +782,8 @@
 
 - Adicionando segurança na API com Spring Security
 
+- Configurando Spring Security com HTTP Basic
+
 - 
 
 ## Documentação da API
