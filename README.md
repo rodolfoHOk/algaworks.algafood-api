@@ -752,6 +752,8 @@
 
 - Refatorando controladores para adicionar /v1 nas URIs
 
+- Adicionando os recursos de cozinhas na v2 da API
+
 - 
 
 ## Documentação da API
