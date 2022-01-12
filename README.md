@@ -774,7 +774,11 @@
 
 - Configurando o appender do Loggly no Logback
 
-- 
+- Configurando o Logback para alternar as configurações por Spring Profiles
+
+### 21 - 
+
+-
 
 ## Documentação da API
 
