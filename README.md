@@ -770,6 +770,10 @@
 
 - Registrando logs de exceptions não tratadas
 
+- Criando uma conta no Loggly: serviço de gerenciamento de logs na nuvem
+
+- Configurando o appender do Loggly no Logback
+
 - 
 
 ## Documentação da API
@@ -814,3 +818,7 @@ https://stateless.group/hal_specification.html
 ### Componente para habilitar HAL para custom media type
 
 https://gist.github.com/thiagofa/8952d7fee7650c94bb116917d63c9ae6
+
+### Documentação do Loggly
+
+https://documentation.solarwinds.com/en/success_center/loggly/content/admin/java-logback.htm?cshid=loggly_java-logback
