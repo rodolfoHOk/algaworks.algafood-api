@@ -760,7 +760,9 @@
 
 - Depreciando uma versão da API
 
--
+- Desligando uma versão da API
+
+- 
 
 ## Documentação da API
 

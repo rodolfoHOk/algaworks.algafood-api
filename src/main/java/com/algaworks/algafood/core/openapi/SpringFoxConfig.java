@@ -133,7 +133,7 @@ public class SpringFoxConfig {
 	    };
 	}
 	
-	@Bean
+//	@Bean
 	public Docket apiDocketV1() {
 		var typeResolver = new TypeResolver();
 		
