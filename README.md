@@ -754,6 +754,8 @@
 
 - Adicionando os recursos de cozinhas na v2 da API
 
+- Gerando documentação das versões da API com SpringFox e Swagger UI
+
 - 
 
 ## Documentação da API
