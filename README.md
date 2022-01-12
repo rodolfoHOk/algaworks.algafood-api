@@ -748,6 +748,8 @@
 
 - Definindo a versão padrão da API quando o Media Type não é informado
 
+- Implementando o versionamento da API por URI
+
 - 
 
 ## Documentação da API
