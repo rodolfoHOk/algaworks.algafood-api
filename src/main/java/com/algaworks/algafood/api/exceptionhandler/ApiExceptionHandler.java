@@ -33,6 +33,9 @@ import com.fasterxml.jackson.databind.JsonMappingException.Reference;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.fasterxml.jackson.databind.exc.PropertyBindingException;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @ControllerAdvice
 public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 
@@ -98,7 +101,7 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 				.userMessage(detail)
 				.build();
 		
-		ex.printStackTrace();
+		log.error(ex.getMessage(), ex);
 		
 		return handleExceptionInternal(ex, problem, new HttpHeaders(), status, request);
 	}

@@ -768,6 +768,8 @@
 
 - Introdução ao Logback e SLF4J
 
+- Registrando logs de exceptions não tratadas
+
 - 
 
 ## Documentação da API
