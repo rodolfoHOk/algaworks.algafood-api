@@ -784,6 +784,8 @@
 
 - Configurando Spring Security com HTTP Basic
 
+- Configurando autenticação de usuários em memória
+
 - 
 
 ## Documentação da API
