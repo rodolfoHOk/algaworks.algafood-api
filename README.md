@@ -758,7 +758,9 @@
 
 - Revisando documentação da v2 da API
 
-- 
+- Depreciando uma versão da API
+
+-
 
 ## Documentação da API
 
