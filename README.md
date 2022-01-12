@@ -750,6 +750,8 @@
 
 - Implementando o versionamento da API por URI
 
+- Refatorando controladores para adicionar /v1 nas URIs
+
 - 
 
 ## Documentação da API
