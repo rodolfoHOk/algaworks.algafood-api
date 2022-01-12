@@ -756,6 +756,8 @@
 
 - Gerando documentação das versões da API com SpringFox e Swagger UI
 
+- Revisando documentação da v2 da API
+
 - 
 
 ## Documentação da API
