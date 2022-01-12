@@ -762,6 +762,10 @@
 
 - Desligando uma versão da API
 
+- Voltando a versão v1 para continuar o curso
+
+### 20 - Logging
+
 - 
 
 ## Documentação da API
