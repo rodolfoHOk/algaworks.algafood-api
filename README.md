@@ -776,9 +776,13 @@
 
 - Configurando o Logback para alternar as configurações por Spring Profiles
 
-### 21 - 
+### 21 - Segurança com Spring Security e OAuth2
 
--
+- Introdução à segurança de REST APIs
+
+- Adicionando segurança na API com Spring Security
+
+- 
 
 ## Documentação da API
 
