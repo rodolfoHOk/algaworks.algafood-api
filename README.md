@@ -762,9 +762,11 @@
 
 - Desligando uma versão da API
 
-- Voltando a versão v1 para continuar o curso
+- Voltando a versão v1 para continuar com o curso
 
 ### 20 - Logging
+
+- Introdução ao Logback e SLF4J
 
 - 
 
