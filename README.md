@@ -794,6 +794,8 @@
 
 - [Criando o projeto do Authorization Server com Spring Security OAuth2](https://github.com/rodolfoHOk/algaworks.algafood-auth)
 
+- Configurando o Resource Server com a nova stack do Spring Security
+
 - 
 
 ## AlgaFood Authorization Server Repository
