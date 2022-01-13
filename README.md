@@ -796,6 +796,8 @@
 
 - Configurando o Resource Server com a nova stack do Spring Security
 
+- [Testando o fluxo Authorization Code com um client JavaScript](https://github.com/algaworks/curso-especialista-spring-rest/tree/master/22.19-testando-o-fluxo-authorization-code-com-um-client-javascript/foodanalytics)
+
 - 
 
 ## AlgaFood Authorization Server Repository
