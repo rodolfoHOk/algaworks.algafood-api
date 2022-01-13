@@ -1,6 +1,6 @@
 # AlgaFood API - Curso Especialista Spring Rest da AlgaWorks
 
-## Conteúdo (histórico de commits em ordem cronológica - temporário):
+## Conteúdo (histórico de commits em ordem cronológica):
 
 ### 1 - Spring e Injeção de Dependências:
 
@@ -786,7 +786,21 @@
 
 - Configurando autenticação de usuários em memória
 
+- Introdução ao OAuth2
+
+- Soluções para OAuth2: nova stack do Spring Security vs Spring Security OAuth
+
+- Conhecendo o fluxo Resource Owner Password Credentials Grant
+
+- [Criando o projeto do Authorization Server com Spring Security OAuth2](https://github.com/rodolfoHOk/algaworks.algafood-auth)
+
 - 
+
+## AlgaFood Authorization Server Repository
+
+### GitHub
+
+https://github.com/rodolfoHOk/algaworks.algafood-auth
 
 ## Documentação da API
 
@@ -834,3 +848,7 @@ https://gist.github.com/thiagofa/8952d7fee7650c94bb116917d63c9ae6
 ### Documentação do Loggly
 
 https://documentation.solarwinds.com/en/success_center/loggly/content/admin/java-logback.htm?cshid=loggly_java-logback
+
+### Especificação do OAuth 2.0
+
+https://datatracker.ietf.org/doc/html/rfc6749
