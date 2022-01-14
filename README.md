@@ -726,21 +726,13 @@
 
 - Evoluindo a API com gestão de mudanças
 
-- Evitando quebrar os clientes: nova propriedade no modelo
-
-- Evitando quebrar os clientes: exclusão de propriedade do modelo
-
-- Evitando quebrar os clientes: alteração de tipo de propriedade do modelo
-
-- Evitando quebrar os clientes: alteração na estrutura de dados do modelo
-
-- Evitando quebrar os clientes: alteração de URL de recurso
+- [Evitando quebrar os clientes](evoluindoVersionandoAPI.md)
 
 - O que é e quando versionar uma API
 
-- As principais técnicas de versionamento de APIs
+- [As principais técnicas de versionamento de APIs](evoluindoVersionandoAPI.md)
 
-- As principais abordagens para manter a base de código de APIs versionadas
+- [As principais abordagens para manter a base de código de APIs versionadas](evoluindoVersionandoAPI.md)
 
 - Preparando o projeto para versionamento da API por Media Type
 
@@ -796,7 +788,15 @@
 
 - Configurando o Resource Server com a nova stack do Spring Security
 
-- [Testando o fluxo Authorization Code com um client JavaScript](https://github.com/algaworks/curso-especialista-spring-rest/tree/master/22.19-testando-o-fluxo-authorization-code-com-um-client-javascript/foodanalytics)
+- [Testando o fluxo Authorization Code com um client JavaScript](https://github.com/rodolfoHOk/algaworks.foodanalytics-js-client)
+
+- [Mais em AlgaFood Authorization Server Repository](https://github.com/rodolfoHOk/algaworks.algafood-auth)
+
+### 22 - OAuth2 avançado com JWT e controle de acesso
+
+- 
+
+- [AlgaFood Authorization Server Repository](https://github.com/rodolfoHOk/algaworks.algafood-auth)
 
 - 
 
