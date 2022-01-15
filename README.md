@@ -798,6 +798,8 @@
 
 - Configurando o Resource Server para JWT assinado com chave simétrica
 
+- Configurando a validação de JWT no Resource Server com a chave pública
+
 - 
 
 ## AlgaFood Authorization Server Repository
