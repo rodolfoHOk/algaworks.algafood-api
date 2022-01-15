@@ -800,6 +800,8 @@
 
 - Configurando a validação de JWT no Resource Server com a chave pública
 
+- Refatorando serviços de usuários para usar BCrypt
+
 - 
 
 ## AlgaFood Authorization Server Repository
