@@ -794,9 +794,9 @@
 
 ### 22 - OAuth2 avançado com JWT e controle de acesso
 
-- 
-
 - [AlgaFood Authorization Server Repository](https://github.com/rodolfoHOk/algaworks.algafood-auth)
+
+- Configurando o Resource Server para JWT assinado com chave simétrica
 
 - 
 
