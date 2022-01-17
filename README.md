@@ -804,6 +804,8 @@
 
 - Obtendo usuário autenticado no Resource Server
 
+- Definindo e criando as permissões de acesso
+
 - 
 
 ## AlgaFood Authorization Server Repository
