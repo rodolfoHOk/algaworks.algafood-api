@@ -814,6 +814,8 @@
 
 - Simplificando o controle de acesso em métodos com meta-anotações
 
+- Carregando Granted Authorities dos escopos do OAuth2 no Resource Server
+
 - 
 
 ## AlgaFood Authorization Server Repository

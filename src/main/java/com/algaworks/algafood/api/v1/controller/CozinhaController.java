@@ -10,6 +10,7 @@ import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.PagedModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -49,11 +50,12 @@ public class CozinhaController implements CozinhaControllerOpenApi {
 	@Autowired
 	private PagedResourcesAssembler<Cozinha> pagedResourcesAssembler;
 	
-//	@PodeConsultarCozinhas
 	@CheckSecurity.Cozinhas.PodeConsultar
 	@Override
 	@GetMapping
 	public PagedModel<CozinhaModel> listar(@PageableDefault(size = 10) Pageable pageable) {
+//		System.out.println(SecurityContextHolder.getContext().getAuthentication().getAuthorities());
+		
 		Page<Cozinha> cozinhasPage = cozinhaRepository.findAll(pageable);
 		
 		PagedModel<CozinhaModel> cozinhasPagedModel = pagedResourcesAssembler
@@ -62,7 +64,6 @@ public class CozinhaController implements CozinhaControllerOpenApi {
 		return cozinhasPagedModel;
 	}
 	
-//	@PodeConsultarCozinhas
 	@CheckSecurity.Cozinhas.PodeConsultar
 	@Override
 	@GetMapping("/{cozinhaId}")
@@ -70,7 +71,6 @@ public class CozinhaController implements CozinhaControllerOpenApi {
 		return cozinhaModelAssembler.toModel(cadastroCozinha.buscar(cozinhaId));
 	}
 
-//	@PodeEditarCozinhas
 	@CheckSecurity.Cozinhas.PodeEditar
 	@Override
 	@PostMapping
@@ -80,7 +80,6 @@ public class CozinhaController implements CozinhaControllerOpenApi {
 		return cozinhaModelAssembler.toModel(cadastroCozinha.salvar(cozinha));
 	}
 	
-//	@PodeEditarCozinhas
 	@CheckSecurity.Cozinhas.PodeEditar
 	@Override
 	@PutMapping("/{cozinhaId}")
@@ -92,7 +91,6 @@ public class CozinhaController implements CozinhaControllerOpenApi {
 		return cozinhaModelAssembler.toModel(cadastroCozinha.salvar(cozinhaAtual));
 	}
 	
-//	@PodeEditarCozinhas
 	@CheckSecurity.Cozinhas.PodeEditar
 	@Override
 	@DeleteMapping("/{cozinhaId}")
