@@ -816,6 +816,8 @@
 
 - Carregando Granted Authorities dos escopos do OAuth2 no Resource Server
 
+- Restringindo acesso a endpoints por escopos do OAuth2
+
 - 
 
 ## AlgaFood Authorization Server Repository
