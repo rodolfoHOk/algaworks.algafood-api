@@ -806,6 +806,8 @@
 
 - Definindo e criando as permissões de acesso
 
+- Carregando as Granted Authorities e restringindo acesso a endpoints na API
+
 - 
 
 ## AlgaFood Authorization Server Repository
