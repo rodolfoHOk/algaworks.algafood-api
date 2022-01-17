@@ -818,6 +818,8 @@
 
 - Restringindo acesso a endpoints por escopos do OAuth2
 
+- Restringindo acesso dos endpoints de restaurantes
+
 - 
 
 ## AlgaFood Authorization Server Repository
