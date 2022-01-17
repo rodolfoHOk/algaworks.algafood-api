@@ -808,6 +808,10 @@
 
 - Carregando as Granted Authorities e restringindo acesso a endpoints na API
 
+- Method Security: Restringindo acesso com @PreAuthorize e SpEL
+
+- Tratando AccessDeniedException no ExceptionHandler
+
 - 
 
 ## AlgaFood Authorization Server Repository
