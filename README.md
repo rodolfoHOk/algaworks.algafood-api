@@ -802,6 +802,8 @@
 
 - Refatorando serviços de usuários para usar BCrypt
 
+- Obtendo usuário autenticado no Resource Server
+
 - 
 
 ## AlgaFood Authorization Server Repository

@@ -28,6 +28,7 @@ import com.algaworks.algafood.api.v1.model.input.PedidoInput;
 import com.algaworks.algafood.api.v1.openapi.controller.PedidoControllerOpenApi;
 import com.algaworks.algafood.core.data.PageWrapper;
 import com.algaworks.algafood.core.data.PageableTranslator;
+import com.algaworks.algafood.core.security.AlgaSecurity;
 import com.algaworks.algafood.domain.exception.EntidadeNaoEncontradaException;
 import com.algaworks.algafood.domain.exception.NegocioException;
 import com.algaworks.algafood.domain.filter.PedidoFilter;
@@ -58,6 +59,9 @@ public class PedidoController implements PedidoControllerOpenApi {
 	
 	@Autowired
 	private PagedResourcesAssembler<Pedido> pagedResourcesAssembler;
+	
+	@Autowired
+	private AlgaSecurity algaSecurity;
 
 	@Override
 	@GetMapping
@@ -83,8 +87,9 @@ public class PedidoController implements PedidoControllerOpenApi {
 	public PedidoModel emitir(@RequestBody @Valid PedidoInput pedidoInput) {
 		try {
 			Pedido pedido = pedidoInputDisassembler.toDomainObject(pedidoInput);
-			pedido.setCliente(new Usuario()); // será pego o usuário autenticado
-			pedido.getCliente().setId(1L); // será pego o usuário autenticado
+			
+			pedido.setCliente(new Usuario());
+			pedido.getCliente().setId(algaSecurity.getUsuarioId());
 		
 			return pedidoModelAssembler.toModel(emissaoPedido.emitir(pedido));
 		
