@@ -812,6 +812,8 @@
 
 - Tratando AccessDeniedException no ExceptionHandler
 
+- Simplificando o controle de acesso em métodos com meta-anotações
+
 - 
 
 ## AlgaFood Authorization Server Repository
