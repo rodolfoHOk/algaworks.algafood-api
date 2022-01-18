@@ -840,6 +840,8 @@
 
 - [Configurando os clientes OAuth2 em um banco de dados SQL](https://github.com/rodolfoHOk/algaworks.algafood-auth)
 
+- Cadastrando clientes OAuth2 no banco de dados e testando a emissão de tokens
+
 - 
 
 ## AlgaFood Authorization Server Repository
