@@ -814,6 +814,8 @@
 
 - Simplificando o controle de acesso em métodos com meta-anotações
 
+- Entendendo os escopos do OAuth2
+
 - Carregando Granted Authorities dos escopos do OAuth2 no Resource Server
 
 - Restringindo acesso a endpoints por escopos do OAuth2
@@ -821,6 +823,8 @@
 - Restringindo acesso dos endpoints de restaurantes
 
 - Restringindo acessos de forma contextual (sensível à informação)
+
+- Restringindo acessos com @PostAuthorize
 
 - 
 
