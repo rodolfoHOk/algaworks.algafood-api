@@ -48,10 +48,6 @@ public @interface CheckSecurity {
 	
 	public @interface Pedidos {
 		
-//		@PreAuthorize("hasAuthority('SCOPE_READ') and "
-//				+ "(hasAuthority('CONSULTAR_PEDIDOS') or "
-//				+ "@algaSecurity.clienteDoPedido(#codigoPedido) or"
-//				+ "@algaSecurity.gerenciaRestauranteDoPedido(#codigoPedido))")
 		@PreAuthorize("hasAuthority('SCOPE_READ') and isAuthenticated()")
 		@PostAuthorize("hasAuthority('CONSULTAR_PEDIDOS') or "
 				+ "@algaSecurity.getUsuarioId() == returnObject.cliente.id or"
@@ -60,13 +56,39 @@ public @interface CheckSecurity {
 		@Target(METHOD)
 		public @interface PodeBuscar { }
 		
-		@PreAuthorize("hasAuthority('SCOPE_READ') and isAuthenticated()")
+		@PreAuthorize("hasAuthority('SCOPE_WRITE') and isAuthenticated()")
+		@Retention(RUNTIME)
+		@Target(METHOD)
+		public @interface PodeCriar { }
+		
+		@PreAuthorize("hasAuthority('SCOPE_WRITE') and isAuthenticated() and "
+				+ "(hasAuthority('GERENCIAR_PEDIDOS') or "
+				+ "@algaSecurity.gerenciaRestauranteDoPedido(#codigoPedido))")
+		@Retention(RUNTIME)
+		@Target(METHOD)
+		public @interface PodeGerenciarPedidos { }
+		
+		@PreAuthorize("hasAuthority('SCOPE_READ') and isAuthenticated()" )
 		@PostAuthorize("hasAuthority('CONSULTAR_PEDIDOS') or "
 				+ "@algaSecurity.getUsuarioId() == #filtro.clienteId or "
 				+ "@algaSecurity.gerenciaRestaurante(#filtro.restauranteId)")
 		@Retention(RUNTIME)
 		@Target(METHOD)
 		public @interface PodePesquisar { }
+		
+	}
+	
+	public @interface FormasPagamento {
+		
+		@PreAuthorize("hasAuthority('SCOPE_READ') and isAuthenticated()")
+		@Retention(RUNTIME)
+		@Target(METHOD)
+		public @interface PodeConsultar { }
+		
+		@PreAuthorize("hasAuthority('SCOPE_WRITE') and hasAuthority('EDITAR_FORMAS_PAGAMENTO')")
+		@Retention(RUNTIME)
+		@Target(METHOD)
+		public @interface PodeEditar { }
 		
 	}
 	

@@ -828,6 +828,10 @@
 
 - Restringindo acessos ao endpoint de pesquisa de pedidos
 
+- Restringindo acessos aos endpoints de transição de status de pedidos
+
+- Restringindo acessos aos endpoints de formas de pagamentos
+
 - 
 
 ## AlgaFood Authorization Server Repository

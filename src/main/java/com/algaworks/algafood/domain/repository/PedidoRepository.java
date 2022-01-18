@@ -15,5 +15,7 @@ public interface PedidoRepository extends JpaRepository<Pedido, Long>, JpaSpecif
 	List<Pedido> findAll();
 	
 	Optional<Pedido> findByCodigo(String codigo);
+	
+	boolean isResponsavelDoRestauranteDoPedido(String codigoPedido, Long usuarioId);
 
 }

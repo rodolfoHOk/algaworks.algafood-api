@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.algaworks.algafood.api.v1.openapi.controller.FluxoPedidoControllerOpenApi;
+import com.algaworks.algafood.core.security.CheckSecurity;
 import com.algaworks.algafood.domain.service.FluxoPedidoService;
 
 @RestController
@@ -18,6 +19,7 @@ public class FluxoPedidoController implements FluxoPedidoControllerOpenApi {
 	@Autowired
 	private FluxoPedidoService fluxoPedido;
 	
+	@CheckSecurity.Pedidos.PodeGerenciarPedidos
 	@Override
 	@PutMapping("/confirmacao")
 	public ResponseEntity<Void> confirmar(@PathVariable String codigoPedido) {
@@ -26,6 +28,7 @@ public class FluxoPedidoController implements FluxoPedidoControllerOpenApi {
 		return ResponseEntity.noContent().build();
 	}
 	
+	@CheckSecurity.Pedidos.PodeGerenciarPedidos
 	@Override
 	@PutMapping("/cancelamento")
 	public ResponseEntity<Void> cancelar(@PathVariable String codigoPedido) {
@@ -34,6 +37,7 @@ public class FluxoPedidoController implements FluxoPedidoControllerOpenApi {
 		return ResponseEntity.noContent().build();
 	}
 	
+	@CheckSecurity.Pedidos.PodeGerenciarPedidos
 	@Override
 	@PutMapping("/entregue")
 	public ResponseEntity<Void> entregue(@PathVariable String codigoPedido) {

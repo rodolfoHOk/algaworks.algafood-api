@@ -275,7 +275,7 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 		return handleExceptionInternal(ex, problem, headers, status, request);
 	}
 	
-private Problem createProblemWithBindingResults(BindingResult bindingResult, HttpStatus status) {
+	private Problem createProblemWithBindingResults(BindingResult bindingResult, HttpStatus status) {
 		
 		ProblemType problemType = ProblemType.DADOS_INVALIDOS;
 		String detail = "Um ou mais campos estão inválidos. Faça o preenchimento correto e tente novamente.";
