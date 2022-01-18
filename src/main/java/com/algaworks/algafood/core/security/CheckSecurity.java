@@ -11,6 +11,20 @@ import org.springframework.security.access.prepost.PreAuthorize;
 
 public @interface CheckSecurity {
 	
+	public @interface Cidades {
+		
+		@PreAuthorize("hasAuthority('SCOPE_READ') and isAuthenticated()")
+		@Retention(RUNTIME)
+		@Target(METHOD)
+		public @interface PodeConsultar { }
+		
+		@PreAuthorize("hasAuthority('SCOPE_WRITE') and hasAuthority('EDITAR_CIDADES')")
+		@Retention(RUNTIME)
+		@Target(METHOD)
+		public @interface PodeEditar { }
+		
+	}
+	
 	public @interface Cozinhas {
 		
 		@PreAuthorize("hasAuthority('SCOPE_READ') and isAuthenticated()")
@@ -25,24 +39,31 @@ public @interface CheckSecurity {
 		
 	}
 	
-	public @interface Restaurantes {
+	public @interface Estados {
 		
 		@PreAuthorize("hasAuthority('SCOPE_READ') and isAuthenticated()")
 		@Retention(RUNTIME)
 		@Target(METHOD)
 		public @interface PodeConsultar { }
 		
-		@PreAuthorize("hasAuthority('SCOPE_WRITE') and hasAuthority('EDITAR_RESTAURANTES')")
+		@PreAuthorize("hasAuthority('SCOPE_WRITE') and hasAuthority('EDITAR_ESTADOS')")
 		@Retention(RUNTIME)
 		@Target(METHOD)
-		public @interface PodeGerenciarCadastro { }
+		public @interface PodeEditar { }
 		
-		@PreAuthorize("hasAuthority('SCOPE_WRITE') and "
-				+ "(hasAuthority('EDITAR_RESTAURANTES') or "
-				+ "@algaSecurity.gerenciaRestaurante(#restauranteId))")
+	}
+	
+	public @interface FormasPagamento {
+		
+		@PreAuthorize("hasAuthority('SCOPE_READ') and isAuthenticated()")
 		@Retention(RUNTIME)
 		@Target(METHOD)
-		public @interface PodeGerenciarFuncionamento { }
+		public @interface PodeConsultar { }
+		
+		@PreAuthorize("hasAuthority('SCOPE_WRITE') and hasAuthority('EDITAR_FORMAS_PAGAMENTO')")
+		@Retention(RUNTIME)
+		@Target(METHOD)
+		public @interface PodeEditar { }
 		
 	}
 	
@@ -78,17 +99,24 @@ public @interface CheckSecurity {
 		
 	}
 	
-	public @interface FormasPagamento {
+	public @interface Restaurantes {
 		
 		@PreAuthorize("hasAuthority('SCOPE_READ') and isAuthenticated()")
 		@Retention(RUNTIME)
 		@Target(METHOD)
 		public @interface PodeConsultar { }
 		
-		@PreAuthorize("hasAuthority('SCOPE_WRITE') and hasAuthority('EDITAR_FORMAS_PAGAMENTO')")
+		@PreAuthorize("hasAuthority('SCOPE_WRITE') and hasAuthority('EDITAR_RESTAURANTES')")
 		@Retention(RUNTIME)
 		@Target(METHOD)
-		public @interface PodeEditar { }
+		public @interface PodeGerenciarCadastro { }
+		
+		@PreAuthorize("hasAuthority('SCOPE_WRITE') and "
+				+ "(hasAuthority('EDITAR_RESTAURANTES') or "
+				+ "@algaSecurity.gerenciaRestaurante(#restauranteId))")
+		@Retention(RUNTIME)
+		@Target(METHOD)
+		public @interface PodeGerenciarFuncionamento { }
 		
 	}
 	

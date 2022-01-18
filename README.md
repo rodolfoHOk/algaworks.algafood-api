@@ -832,6 +832,8 @@
 
 - Restringindo acessos aos endpoints de formas de pagamentos
 
+- Restringindo acessos aos endpoints de cidades e estados
+
 - 
 
 ## AlgaFood Authorization Server Repository
