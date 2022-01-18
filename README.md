@@ -836,6 +836,8 @@
 
 - Restringindo acessos aos endpoints de usuários, grupos e permissões
 
+- Restringindo acessos aos endpoints de estatísticas
+
 - 
 
 ## AlgaFood Authorization Server Repository
