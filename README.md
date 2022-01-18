@@ -838,6 +838,8 @@
 
 - Restringindo acessos aos endpoints de estatísticas
 
+- [Configurando os clientes OAuth2 em um banco de dados SQL](https://github.com/rodolfoHOk/algaworks.algafood-auth)
+
 - 
 
 ## AlgaFood Authorization Server Repository
