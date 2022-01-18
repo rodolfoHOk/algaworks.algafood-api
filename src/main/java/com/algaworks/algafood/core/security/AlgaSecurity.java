@@ -24,10 +24,6 @@ public class AlgaSecurity {
 		return jwt.getClaim("usuario_id");
 	}
 	
-	private Authentication getAuthentication() {
-		return SecurityContextHolder.getContext().getAuthentication();
-	}
-	
 	public boolean gerenciaRestaurante(Long restauranteId) {
 		if (restauranteId == null) return false;
 		
@@ -35,9 +31,87 @@ public class AlgaSecurity {
 	}
 	
 	public boolean gerenciaRestauranteDoPedido(String codigoPedido) {
-		System.out.println(codigoPedido);
-		System.out.println(getUsuarioId());
 		return pedidoRepository.isResponsavelDoRestauranteDoPedido(codigoPedido, getUsuarioId());
+	}
+	
+	public boolean usuarioAutenticadoIgual(Long usuarioId) {
+		return getUsuarioId() != null && usuarioId != null && getUsuarioId().equals(usuarioId);
+	}
+	
+	public boolean podeConsultarCidades() {
+		return hasEscopoLeitura() && isAutenticado();
+	}
+	
+	public boolean podeConsultarCozinhas() {
+		return hasEscopoLeitura() && isAutenticado();
+	}
+	
+	public boolean podeConsultarEstados() {
+		return hasEscopoLeitura() && isAutenticado();
+	}
+	
+	public boolean podeConsultarEstatisticas() {
+		return hasEscopoLeitura() && hasAuthority("GERAR_RELATORIOS");
+	}
+	
+	public boolean podeConsultarFormasPagamento() {
+		return hasEscopoLeitura() && isAutenticado();
+	}
+	
+	public boolean podeConsultarRestaurantes() {
+		return hasEscopoLeitura() && isAutenticado();
+	}
+	
+	public boolean podeConsultarUsuariosGruposPermissoes() {
+		return hasEscopoLeitura() && hasAuthority("CONSULTAR_USUARIOS_GRUPOS_PERMISSOES");
+	}
+	
+	public boolean podeEditarUsuariosGruposPermissoes() {
+		return hasEscopoEscrita() && hasAuthority("EDITAR_USUARIOS_GRUPOS_PERMISSOES");
+	}
+		
+	public boolean podeGerenciarCadastroRestaurantes() {
+		return hasEscopoEscrita() && hasAuthority("EDITAR_RESTAURANTES");
+	}
+	
+	public boolean podeGerenciarFuncionamentoRestaurante(Long restauranteId) {
+		return hasEscopoEscrita() && (hasAuthority("EDITAR_RESTAURANTES") ||
+				gerenciaRestaurante(restauranteId));
+	}
+	
+	public boolean podeGerenciarPedidos(String codigoPedido) {
+		return hasEscopoEscrita() && (hasAuthority("GERENCIAR_PEDIDOS") || 
+				gerenciaRestauranteDoPedido(codigoPedido));
+	}
+	
+	public boolean podePesquisarPedidos(Long clienteId, Long restauranteId) {
+		return hasEscopoLeitura() && (hasAuthority("CONSULTAR_PEDIDOS") ||
+				usuarioAutenticadoIgual(clienteId) || gerenciaRestaurante(restauranteId));
+	}
+	
+	public boolean podePesquisarPedidos() {
+		return hasEscopoLeitura() && isAutenticado();
+	}
+	
+	private Authentication getAuthentication() {
+		return SecurityContextHolder.getContext().getAuthentication();
+	}
+	
+	private boolean isAutenticado() {
+		return getAuthentication().isAuthenticated();
+	}
+	
+	private boolean hasAuthority(String authorityName) {
+		return getAuthentication().getAuthorities().stream()
+				.anyMatch(authority -> authority.getAuthority().equals(authorityName));
+	}
+	
+	private boolean hasEscopoEscrita() {
+		return hasAuthority("SCOPE_WRITE");
+	}
+	
+	private boolean hasEscopoLeitura() {
+		return hasAuthority("SCOPE_READ");
 	}
 	
 }

@@ -842,6 +842,12 @@
 
 - Cadastrando clientes OAuth2 no banco de dados e testando a emissão de tokens
 
+- Corrigindo lógica de restrição de acessos para Client Credentials Flow
+
+- Gerando links do HAL dinamicamente de acordo com permissões do usuário
+
+- Gerando links do HAL dinamicamente de acordo com permissões
+
 - 
 
 ## AlgaFood Authorization Server Repository
