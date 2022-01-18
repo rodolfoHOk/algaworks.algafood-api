@@ -27,5 +27,7 @@ extends CustomJpaRepository<Restaurante, Long>, RestauranteRepositoryQueries, Jp
 	int countByCozinhaId(Long cozinhaId);
 	
 	Optional<Restaurante> findFirstByNomeContaining(String nome);
+	
+	boolean existsResponsavel(Long restauranteId, Long usuarioId);
 
 }

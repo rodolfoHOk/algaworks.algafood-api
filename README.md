@@ -820,6 +820,8 @@
 
 - Restringindo acesso dos endpoints de restaurantes
 
+- Restringindo acessos de forma contextual (sensível à informação)
+
 - 
 
 ## AlgaFood Authorization Server Repository
