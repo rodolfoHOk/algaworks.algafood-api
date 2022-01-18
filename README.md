@@ -834,6 +834,8 @@
 
 - Restringindo acessos aos endpoints de cidades e estados
 
+- Restringindo acessos aos endpoints de usuários, grupos e permissões
+
 - 
 
 ## AlgaFood Authorization Server Repository
