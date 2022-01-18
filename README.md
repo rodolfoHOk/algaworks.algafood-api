@@ -826,6 +826,8 @@
 
 - Restringindo acessos com @PostAuthorize
 
+- Restringindo acessos ao endpoint de pesquisa de pedidos
+
 - 
 
 ## AlgaFood Authorization Server Repository
