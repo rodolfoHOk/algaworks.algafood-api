@@ -848,7 +848,9 @@
 
 - Gerando links do HAL dinamicamente de acordo com permissões
 
-- 
+- Juntando o Resource Server com o Authorization Server no mesmo projeto
+
+-
 
 ## AlgaFood Authorization Server Repository
 
