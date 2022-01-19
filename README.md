@@ -854,6 +854,8 @@
 
 - Customizando a página de login
 
+- Customizando a página de OAuth2 Approval
+
 - 
 
 ## AlgaFood Authorization Server Repository
