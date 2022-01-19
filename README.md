@@ -850,7 +850,9 @@
 
 - Juntando o Resource Server com o Authorization Server no mesmo projeto
 
--
+- Ajustando a documentação da API para suporte a OAuth2
+
+- 
 
 ## AlgaFood Authorization Server Repository
 
