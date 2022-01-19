@@ -856,6 +856,8 @@
 
 - Customizando a página de OAuth2 Approval
 
+- Implementando o endpoint do JSON Web Key Set (JWKS)
+
 - 
 
 ## AlgaFood Authorization Server Repository
@@ -918,3 +920,7 @@ https://datatracker.ietf.org/doc/html/rfc6749
 ### Template da página de login com Bootstrap
 
 https://gist.github.com/thiagofa/9b5cb7db488ca9b4ae123661a8087a9f#file-login-html
+
+### RFC-7517 - JSON Web Key (JWK)
+
+https://datatracker.ietf.org/doc/html/rfc7517
