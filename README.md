@@ -858,7 +858,11 @@
 
 - Implementando o endpoint do JSON Web Key Set (JWKS)
 
-- 
+- Externalizando o KeyStore: criando um ProtocolResolver para Base64
+
+### 23 - 
+
+-
 
 ## AlgaFood Authorization Server Repository
 
