@@ -852,6 +852,8 @@
 
 - Ajustando a documentação da API para suporte a OAuth2
 
+- Customizando a página de login
+
 - 
 
 ## AlgaFood Authorization Server Repository
@@ -910,3 +912,7 @@ https://documentation.solarwinds.com/en/success_center/loggly/content/admin/java
 ### Especificação do OAuth 2.0
 
 https://datatracker.ietf.org/doc/html/rfc6749
+
+### Template da página de login com Bootstrap
+
+https://gist.github.com/thiagofa/9b5cb7db488ca9b4ae123661a8087a9f#file-login-html
