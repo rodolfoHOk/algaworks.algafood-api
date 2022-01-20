@@ -75,7 +75,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	}
 	
 	@Bean
-	public JWKSet jwk() {
+	public JWKSet jwkSet() {
 		RSAKey.Builder builder = new RSAKey.Builder((RSAPublicKey) keyPair().getPublic())
 				.keyUse(KeyUse.SIGNATURE)
 				.algorithm(JWSAlgorithm.RS256)

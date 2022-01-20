@@ -860,9 +860,29 @@
 
 - Externalizando o KeyStore: criando um ProtocolResolver para Base64
 
-### 23 - 
+### 23 - Dockerizando a aplicação
 
--
+- Conhecendo o Docker
+
+- Instalando o Docker
+
+- Executando um container
+
+- Gerenciando melhor os containers
+
+- Conhecendo a arquitetura do Docker
+
+- Entendendo o que são as imagens e o Docker Hub
+
+- Gerenciando imagens
+
+- Executando um container do MySQL
+
+- Construindo a imagem da aplicação com Dockerfile
+
+- Criando uma network e conectando dois containers
+
+- 
 
 ## AlgaFood Authorization Server Repository
 
