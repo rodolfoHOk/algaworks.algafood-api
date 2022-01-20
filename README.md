@@ -882,6 +882,10 @@
 
 - Criando uma network e conectando dois containers
 
+- Construindo a imagem Docker pelo Maven
+
+- Disponibilizando a imagem da aplicação no Docker Hub
+
 - 
 
 ## AlgaFood Authorization Server Repository
@@ -948,3 +952,7 @@ https://gist.github.com/thiagofa/9b5cb7db488ca9b4ae123661a8087a9f#file-login-htm
 ### RFC-7517 - JSON Web Key (JWK)
 
 https://datatracker.ietf.org/doc/html/rfc7517
+
+### Dockerfile Maven Plugin
+
+https://github.com/spotify/dockerfile-maven
