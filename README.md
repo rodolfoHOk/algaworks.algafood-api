@@ -886,6 +886,16 @@
 
 - Disponibilizando a imagem da aplicação no Docker Hub
 
+- Conhecendo e usando Docker Compose
+
+- Controlando a ordem de inicialização com wait-for-it.sh
+
+- Escalando um serviço com Docker Compose
+
+- Entendendo o Poor Man's Load Balancer (DNS Round Robin)
+
+- Configurando um proxy reverso com Nginx
+
 - 
 
 ## AlgaFood Authorization Server Repository
@@ -956,3 +966,11 @@ https://datatracker.ietf.org/doc/html/rfc7517
 ### Dockerfile Maven Plugin
 
 https://github.com/spotify/dockerfile-maven
+
+### Documentação dos comandos do docker-compose
+
+https://docs.docker.com/compose/reference/
+
+### Repositório no GitHub do wait-for-it (para aguardar a inicialização do banco de dados antes de iniciar a api)
+
+https://github.com/vishnubob/wait-for-it
