@@ -896,7 +896,15 @@
 
 - Configurando um proxy reverso com Nginx
 
-- 
+- Entendendo o problema da HTTP Session no Authorization Server
+
+- Adicionando um container do Redis no arquivo do Docker Compose
+
+- Configurando o Spring Session Data Redis
+
+- Resolvendo problemas com storage de Authorization Codes
+
+### 24 - 
 
 ## AlgaFood Authorization Server Repository
 
