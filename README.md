@@ -906,11 +906,23 @@
 
 ### 24 - Deploy em containers Docker na Amazon
 
+- Introdução ao deployment em produção
+
 - [Deploy](deploy-prod.md)
 
 - Mais organização das propriedades do projeto com Spring Profiles
 
 - Dependência de JavaMailSender não satisfeita: melhorando o uso da herança
+
+- Conhecendo a Amazon Web Services (AWS)
+
+- Entendendo alguns conceitos fundamentais da nuvem da AWS
+
+- Monitorando e criando um alerta de orçamento da AWS
+
+- Criando o bucket no Amazon S3
+
+- Criando uma instância do MySQL no Amazon RDS
 
 - 
 
