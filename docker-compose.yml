@@ -11,7 +11,7 @@ services:
   algafood-mysql:
     image: mysql:8.0
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_ROOT_PASSWORD: "mysqladmin"
     ports:
       - "3306:3306"
     networks:
