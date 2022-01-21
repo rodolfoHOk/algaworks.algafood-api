@@ -910,6 +910,8 @@
 
 - Mais organização das propriedades do projeto com Spring Profiles
 
+- Dependência de JavaMailSender não satisfeita: melhorando o uso da herança
+
 - 
 
 ## AlgaFood Authorization Server Repository

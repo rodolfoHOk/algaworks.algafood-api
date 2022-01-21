@@ -11,7 +11,7 @@ services:
   algafood-mysql:
     image: mysql:8.0
     environment:
-      MYSQL_ROOT_PASSWORD: "mysqladmin"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     ports:
       - "3306:3306"
     networks:
@@ -29,11 +29,11 @@ services:
     command: ["/wait-for-it.sh", "algafood-mysql:3306", "-t", "30", "--", "java", "-jar", "api.jar"]
     environment:
       DB_HOST: algafood-mysql
-      ALGAFOOD_JWT_KEYSTORE_PASSWORD: "123456"
       SPRING_SESSION_STORE_TYPE: redis
       SPRING_REDIS_HOST: algafood-redis
+      SPRING_PROFILES_ACTIVE: development
     networks:
-     - algafood-network
+      - algafood-network
     depends_on:
       - algafood-mysql
       
