@@ -904,7 +904,13 @@
 
 - Resolvendo problemas com storage de Authorization Codes
 
-### 24 - 
+### 24 - Deploy em containers Docker na Amazon
+
+- [Deploy](deploy-prod.md)
+
+- Mais organização das propriedades do projeto com Spring Profiles
+
+- 
 
 ## AlgaFood Authorization Server Repository
 
