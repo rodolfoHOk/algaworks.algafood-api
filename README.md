@@ -908,8 +908,6 @@
 
 - Introdução ao deployment em produção
 
-- [Deploy](deploy-prod.md)
-
 - Mais organização das propriedades do projeto com Spring Profiles
 
 - Dependência de JavaMailSender não satisfeita: melhorando o uso da herança
@@ -924,7 +922,21 @@
 
 - Criando uma instância do MySQL no Amazon RDS
 
+- Criando schema e usuário da aplicação
+
+- Conhecendo e criando uma conta no Redislabs
+
+- Criando uma instância do Redis na nuvem
+
+- Conhecendo o Amazon Elastic Container Service (ECS) e AWS Fargate
+
+- Subindo a imagem Docker para o Amazon Elastic Container Registry (ECR)
+
+- Organizando as variáveis de ambiente do container da aplicação
+
 - 
+
+- [Deploy MarkDown](deploy-prod.md)
 
 ## AlgaFood Authorization Server Repository
 
