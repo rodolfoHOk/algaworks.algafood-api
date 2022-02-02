@@ -1,16 +1,82 @@
-# AlgaFood API
+## Conteúdo do curso Especialista Spring Rest da AlgaWorks
 
-> Projeto Principal do Curso Especialista Spring Rest da AlgaWorks
+### 1 - Introdução
 
-## Conteúdo (histórico de commits em ordem cronológica):
+- Por que desenvolver REst APIs?
 
-### 1 - Spring e Injeção de Dependências:
+- Conhecendo o modelo de domínio do projeto do curso
 
-- Conteúdo no repositório: https://github.com/rodolfoHOk/algaworks.esr.injecaodependencias
+- Preparando o ambiente de desenvolvimento: JDK e STS for Eclipse IDE
 
-### 2 - Introdução ao JPA e Hibernate:
+### 2 - Spring e Injeção de Dependências
 
-- Adicionando JPA e configurando o Data SourceMapeando entidades com JP
+- Por que aprender a usar Spring?
+
+- Conhecendo o ecossistema Spring
+
+- Spring vs Jakarta EE
+
+- Conhecendo o Spring Boot
+
+- Criando um projeto Spring Boot com Spring Initializr
+
+- Conhecendo o Maven e o pom.xml de um projeto Spring Boot
+
+- Criando um controller com Spring MVC
+
+- Restart mais rápido da aplicação com DevTools
+
+- O que é injeção de dependências?
+
+- Conhecendo o IoC Container do Spring
+
+- Definindo beans com @Component
+
+- Injetando dependências (beans Spring) via construtor
+
+- Usando @Configuration e @Bean para definir beans
+
+- Conhecendo os pontos de injeção e a anotação @Autowired
+
+- Dependência opcional com @Autowired
+
+- Ambiguidade de beans e injeção de lista de beans
+
+- Desambiguação de beans com @Primary
+
+- Desambiguação de beans com @Qualifier
+
+- Desambiguação de beans com anotação customizada
+
+- Mudando o comportamento da aplicação com Spring Profiles @Profile
+
+- Criando métodos de callback do ciclo de vida dos beans @PostConstruct @PreDestroy
+
+- Criando métodos de callback do ciclo de vida dos beans @Bean(initMethod, destroyMethod)
+
+- Publicando e consumindo eventos customizados ApplicationEventPublisher @EventListener
+
+- Configurando projetos Spring Boot com o application.properties
+
+- Substituindo propriedades via linha de comando e variáveis de ambiente
+
+- Criando e acessando propriedades customizadas com @Value
+
+- Acessando propriedades com @ConfigurationProperties
+
+- Alterando a configuração do projeto dependendo do ambiente (com Spring Profiles)
+
+- Ativando o Spring Profile por linha de comando e variável de ambiente
+
+### 3 - Introdução ao JPA e Hibernate:
+
+- Instalando o MySQL Server e o MySQL Workbench
+
+- O que é JPA e Hibernate?
+
+- Adicionando JPA e configurando o Data Source
+
+- Mapeando entidades com JPA
 
 - Criando as tabelas do banco a partir das entidades
 
@@ -28,11 +94,13 @@
 
 - Excluindo um objeto do banco de dados
 
-- Conhecendo e implementando o padrão Repository - Orientado a persistencia
+- Conhecendo o padrão Aggregate do DDD
 
-- Conhecendo e implementando o padrão Repository - Orientado a colecao
+- Conhecendo e implementando o padrão Repository - Orientado a persistência
 
-- Conhecendo e implementando o padrão Repository - retornando a orientado a persistencia
+- Conhecendo e implementando o padrão Repository - Orientado a coleção
+
+- Conhecendo e implementando o padrão Repository - retornando a orientado a persistência
 
 - Conhecendo e usando o Lombok
 
@@ -42,14 +110,36 @@
 
 - A anotação @JoinColumn
 
+- Propriedade nullable de @Column e @JoinColumn
+
 - Mapeando entidades FormaPagamento Permissao Estado Cidade
 
 
-### 3 - REST com Spring:
+### 4 - REST com Spring:
+
+- O que é REST?
+
+- Conhecendo as constraints do REST
+
+- Diferenças entre REST e RESTFul
+
+- Desenvolvesores de REST APIs puristas e pragmáticos
+
+- Conhecendo o protocolo HTTP
+
+- Usando o protocolo HTTP
+
+- Instalando e testando o Postman
+
+- Entendendo o que são Recursos REST
+
+- Identificando Recursos REST
 
 - Modelando e requisitando um Collection Resource com GET
 
 - Collection resource de estados
+
+- Representações de recursos e content negotiation
 
 - Implementando content negotiation para retornar JSON ou XML - no metodo exemplo json e xml
 
@@ -63,13 +153,21 @@
 
 - Customizando a representação em XML com Wrapper e anotações do Jackson
 
+- Conhecendo os métodos HTTP
+
+- Conhecendo os códigos de status HTTP
+
 - Definindo o status da resposta HTTP com @ResponseStatus
 
 - Manipulando a resposta HTTP com ResponseEntity
 
 - Corrigindo o Status HTTP para resource inexistente
 
+- Status HTTP para collection resouce vazia: qual usar?
+
 - Modelando e implementando a inclusão de recursos com POST
+
+- Negociando o media type do payload do POST com Content-Type
 
 - Modelando e implementando a atualização de recursos com PUT
 
@@ -77,7 +175,7 @@
 
 - Implementando a camada de domain services (e a importância da linguagem ubíqua)
 
-- Refatorando a exclusão de cozinhas para usar domain services
+- Refatorando a exclusão de cozinhas para usar domain services	
 
 - Refatorando a atualizacao de cozinha para usar domain services
 
@@ -87,19 +185,33 @@
 
 - Modelando e implementando a atualização de recursos de restaurantes
 
+- Implementando serviços REST de cidades e estados
+
 - Analisando solução para atualização parcial de recursos com PATCH
 
 - Finalizando a atualização parcial com a API de Reflections do Spring
 
-- Implementando serviços REST de cidades e estados
+- Introdução ao Modelo de Maturidade de Richardson (RMM)
 
-### 4 - Super poderes do Spring Data JPA:
+- Conhecendo o nível 0 do RMM
+
+- Conhecendo o nível 1 do RMM
+
+- Conhecendo o nível 2 do RMM
+
+- Conhecendo o nível 3 do RMM
+
+### 5 - Super poderes do Spring Data JPA:
 
 - Implementando consultas JPQL em repositórios - nome = :nome
 
 - Implementando consultas JPQL em repositórios - nome like :nome
 
-- Criando um repositório com Spring Data JPA e Refatorando o código
+- Conhecendo o projeto Spring Data JPA (SDJ)
+
+- Criando um repositório com Spring Data JPA 
+
+- Refatorando o código do projeto para usar o repositório do SDJ
 
 - Refatorando todos os repositórios para usar Spring Data JPA
 
@@ -129,7 +241,9 @@
 
 - Tornando a consulta com Criteria API com filtros dinâmicos
 
-- Specifications (DDD) com SDJ e Implementando Specifications
+- Specifications (DDD) com SDJ 
+
+- Implementando Specifications
 
 - Criando uma fábrica de Specifications
 
@@ -137,8 +251,7 @@
 
 - Estendendo o JpaRepository para customizar o repositório base
 
-
-### 5 - Explorando mais do JPA e Hibernate:
+### 6 - Explorando mais do JPA e Hibernate:
 
 - Mapeando relacionamento bidirecional com @OneToMany
 
@@ -158,6 +271,10 @@
 
 - Mapeando relacionamentos muitos-para-muitos - Grupo Permissao e Usuario Permissao
 
+- Entendendo o Eager Loading
+
+- Entendendo o Lazy Loading
+
 - Alterando a estratégia de fetching para Lazy Loading - Exemplo no RestauranteController da busca Lazy
 
 - Alterando a estratégia de fetching para Lazy Loading - @JsonIgnoreProperties({"hibernateLazyInitializer"})
@@ -168,11 +285,17 @@
 
 - Resolvendo o Problema do N+1 com fetch join na JPQL
 
-### 6 - Pool de conexões e Flyway:
+### 7 - Pool de conexões e Flyway:
+
+- Entendendo o funcionamento de um poll de conexões
+
+- Conhecendo o Hikari: a solução padrão de poll de conexões no Spring Boot
 
 - Configurando o pool de conexões do Hikari
 
-- Adicionando o Flyway, ferramenta de versionamento de schemas de banco de dados, no projeto
+- Schema generation em produção não é uma boa prática
+
+- Flyway, ferramenta de versionamento de schemas de banco de dados - adicionando ao projeto
 
 - Criando a primeira migração
 
@@ -188,7 +311,9 @@
 
 - Criando migrações e mapeando as entidades Pedido e ItemPedido
 
-### 7 - Tratamento e modelagem de erros da API 
+### 8 - Tratamento e modelagem de erros da API 
+
+- Introdução ao tratamento e modelagem de erros
 
 - Lançando exceções customizadas anotadas com @ResponseStatus
 
@@ -199,6 +324,8 @@
 - Simplificando o código com o uso de @ResponseStatus em exceptions
 
 - Refatorando os serviços REST
+
+- Analisando os impactos da refatoração
 
 - Criando a exception NegocioException
 
@@ -217,6 +344,8 @@
 - Criando um exception handler global com ResponseEntityExceptionHandler
 
 - Customizando o corpo da resposta padrão de ResponseEntityExceptionHandler
+
+- Conhecendo a RFC 7807 (Problem Details for HTTP APIs)
 
 - Padronizando o formato de problemas no corpo de respostas com a RFC 7807
 
@@ -242,7 +371,9 @@
 
 - Estendendo o formato do problema para todos os handles
 
-### 8 - Validações com Bean Validation
+### 10 - Validações com Bean Validation
+
+- Validação do Modelo com Bean Validation
 
 - Adicionando o spring-boot-starter-validation
 
@@ -284,7 +415,11 @@
 
 - Tratando a exception customizada de validações programáticas
 
-### 9 - Testes de integração
+### 10 - Testes de integração
+
+- Introdução aos Testes de Integração e Testes de APIs
+
+- Preparando o projeto para testes de integração
 
 - Criando e rodando um teste de integração com Spring Boot, JUnit e AssertJ
 
@@ -316,7 +451,7 @@
 
 - Escrevendo testes de API
 
-### 10 - Boas práticas e técnicas para APIs
+### 11 - Boas práticas e técnicas para APIs
 
 - Analisando e definindo melhor o escopo das transações - usar @Transactional em métodos com mais de uma alteração no banco de dados
 
@@ -325,6 +460,8 @@
 - Criando classes de mixin para usar as anotações do Jackson
 
 - Usando @JsonIgnoreProperties e Jackson Mixin
+
+- Relembrando aulas de geografia e entendendo os fusos horários
 
 - Boas práticas para trabalhar com data e hora em REST APIs
 
@@ -346,6 +483,8 @@
 
 - Adicionando e usando o ModelMapper
 
+- Entendendo a estratégia padrão do ModelMapper para correspondência de propriedades
+
 - Customizando o mapeamento de propriedades com ModelMapper
 
 - Mapeando para uma instância destino (e não um tipo) com ModelMapper
@@ -358,7 +497,13 @@
 
 - Corrigindo bug de tratamento de exception de integridade de dados com flush do JPA
 
-### 11 - Modelagem avançada e implementação da API 
+### 12 - Modelagem avançada e implementação da API 
+
+- Modelando sub-recursos para relacionamentos
+
+- Granularidade de recursos: Chatty vs Chunky APIs
+
+- Modelando conceitos abstratos de negócio e ações não-CRUD como recursos
 
 - Implementando os endpoints de ativação e inativação de restaurantes
 
@@ -402,7 +547,7 @@
 
 - Usando IDs vs UUIDs nas URIs de recursos
 
-### 12 - Modelagem de projeções, pesquisas e relatórios
+### 13 - Modelagem de projeções, pesquisas e relatórios
 
 - Fazendo projeção de recursos com @JsonView do Jackson
 
@@ -426,19 +571,23 @@
 
 - Implementando um conversor de propriedades de ordenação
 
+- Discutindo sobre onde implementar as consultas com dados agregadosx
+
 - Modelando endpoints e implementando consulta com dados agregados (ideal para gráficos e dashboards) vendas diárias
 
 - Adicionando os filtros na consulta de vendas diárias
 
 - Tratando time offset na agregação de vendas diárias por data
 
-- [Conhecendo o JasperSoft Studio e Criando um layout do relatório JasperReports de vendas diárias](https://github.com/rodolfoHOk/algaworks.algafood-reports)
+- Conhecendo o JasperSoft Studio 
+
+- Criando um layout do relatório JasperReports de vendas diárias
 
 - Estruturando endpoint e serviço de emissão de relatório em PDF
 
 - Preenchendo um relatório JasperReports com JavaBeans e gerando bytes do PDF
 
-### 13 - Upload e download de arquivos
+### 14 - Upload e download de arquivos
 
 - Conhecendo soluções para upload de arquivos em REST APIs
 
@@ -472,6 +621,12 @@
 
 - Corrigindo exception handler de media type não aceita
 
+- Amazon S3: conhecendo o serviço de storage da AWS
+
+- Criando usuário com permissões para adicionar objetos na Amazon S3
+
+- Criando chaves de acesso para a API da AWS
+
 - Criando bean de propriedades de configuração dos serviços de storage
 
 - Adicionando o SDK Java da Amazon S3 no projeto e criando classe do serviço de storage
@@ -488,7 +643,9 @@
 
 - Adicionando condição para a criação do bean amazonS3 para não serem necessárias id-chave-acesso e chave-acesso-secreta quando em armazenamento local
 
-### 14 - E-mails transacionais e Domain Events
+### 15 - E-mails transacionais e Domain Events
+
+- Conhecendo soluções para envio de e-mails transacionais
 
 - Configurando o projeto para envio de e-mails usando servidor SMTP
 
@@ -516,7 +673,7 @@
 
 - Enviando e-mails no cancelamento de pedidos
 
-### 15 - CORS e consumo da API com JavaScript e Java
+### 16 - CORS e consumo da API com JavaScript e Java
 
 - [Implementando uma chamada na REST API com JavaScript](https://github.com/rodolfoHOk/algaworks.algafood-js-client)
 
@@ -530,15 +687,29 @@
 
 - Habilitando CORS globalmente no projeto da API
 
+- Implementando uma requisição GET com JavaScript
+
+- Implementando um formulário de cadastro e fazendo requisição POST com JavaScript
+
+- Implementando uma requisição DELETE com JavaScript
+
 - [Implementando um client da REST API com Java e Spring (RestTemplate)](https://github.com/rodolfoHOk/algaworks.algafood-java-client)
 
-### 16 - Cache de HTTP
+- Tratando respostas com código de erro no client Java
+
+- Implementando uma requisição POST no client Java
+
+### 17 - Cache de HTTP
+
+- Introdução ao Cache de HTTP
 
 - Habilitando o cache com o cabeçalho Cache-Control e a diretiva max-age
 
 - Adicionando o cabeçalho Cache-Control na resposta
 
-- Entendendo a validação de representações em cache com ETags e Implementando requisições condicionais com Shallow ETags
+- Entendendo a validação de representações em cache com ETags 
+
+- Implementando requisições condicionais com Shallow ETags
 
 - Adicionando outras diretivas de Cache-Control na resposta HTTP
 
@@ -550,7 +721,7 @@
 
 - Implementando requisições condicionais com Deep ETags no recurso único
 
-### 17 - Documentação da API com OpenAPI, Swagger UI e SpringFox
+### 18 - Documentação da API com OpenAPI, Swagger UI e SpringFox
 
 - Gerando a definição OpenAPI em JSON com SpringFox
 
@@ -628,7 +799,7 @@
 
 - Descrevendo documentação de endpoint de estatísticas
 
-### 18 - Discoverability e HATEOAS: A Glória do REST
+### 19 - Discoverability e HATEOAS: A Glória do REST
 
 - Adicionando a URI do recurso criado no header da resposta
 
@@ -724,7 +895,7 @@
 
 - Corrigindo a documentação dos endpoints de foto de produto
 
-### 19 - Evoluindo e versionando a API
+### 20 - Evoluindo e versionando a API
 
 - Evoluindo a API com gestão de mudanças
 
@@ -758,7 +929,7 @@
 
 - Voltando a versão v1 para continuar com o curso
 
-### 20 - Logging
+### 21 - Logging
 
 - Introdução ao Logback e SLF4J
 
@@ -770,7 +941,7 @@
 
 - Configurando o Logback para alternar as configurações por Spring Profiles
 
-### 21 - Segurança com Spring Security e OAuth2
+### 22 - Segurança com Spring Security e OAuth2
 
 - Introdução à segurança de REST APIs
 
@@ -794,7 +965,7 @@
 
 - [Mais em AlgaFood Authorization Server Repository](https://github.com/rodolfoHOk/algaworks.algafood-auth)
 
-### 22 - OAuth2 avançado com JWT e controle de acesso
+### 23 - OAuth2 avançado com JWT e controle de acesso
 
 - [AlgaFood Authorization Server Repository](https://github.com/rodolfoHOk/algaworks.algafood-auth)
 
@@ -862,7 +1033,7 @@
 
 - Externalizando o KeyStore: criando um ProtocolResolver para Base64
 
-### 23 - Dockerizando a aplicação
+### 24 - Dockerizando a aplicação
 
 - Conhecendo o Docker
 
@@ -906,7 +1077,7 @@
 
 - Resolvendo problemas com storage de Authorization Codes
 
-### 24 - Deploy em containers Docker na Amazon
+### 25 - Deploy em containers Docker na Amazon
 
 - Introdução ao deployment em produção
 
@@ -963,90 +1134,3 @@
 - Testando a API em produção
 
 - Conclusão e próximos passos
-
-- [Guia de Deploy na Amazon Web Services - AWS](deploy-prod.md)
-
-## Certificado de conclusão do curso
-
-<img src="https://raw.githubusercontent.com/rodolfoHOk/portfolio-img/main/images/certificado-algaworks-esr.png" alt="AlgaWorks Certificado ESR" width="450"/>
-
-
-## URL da Documentação da API
-
-http://localhost:8080/swagger-ui/index.html
-
-## Repositórios dos projetos do curso
-
-[Injeção de dependências com Spring IoC](https://github.com/rodolfoHOk/algaworks.esr.injecaodependencias)
-
-[AlgaFood API](https://github.com/rodolfoHOk/algaworks.algafood-api)
-
-[AlgaFood Relatórios com JasperReport](https://github.com/rodolfoHOk/algaworks.algafood-reports)
-
-[AlgaFood Authorization Server](https://github.com/rodolfoHOk/algaworks.algafood-auth)
-
-## Links úteis: 
-
-### Documentação do Spring Data JPA: Keywords de query methods:
-
-https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation
-
-### Estrutura do arquivo orm.xml
-
-https://gist.github.com/thiagofa/35d5a651a39cb0b26f050dc3b1ce8f9b
-
-### Constraints do Bean Validation
-
-https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#section-builtin-constraints
-
-### Lazy loading com mapeamento OneToOne
-
-https://blog.algaworks.com/lazy-loading-com-mapeamento-onetoone/
-
-### Boas práticas de HTML para e-mails
-
-https://ajuda.locaweb.com.br/wiki/boas-praticas-de-html-para-email-marketing-ajuda-locaweb/
-
-### Definição de requisição simples, de acordo com CORS
-
-https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests
-
-### Wireshark - software para análise de tráfego de rede
-
-https://www.wireshark.org/
-
-### HAL - Hypertext Application Language
-
-https://stateless.group/hal_specification.html
-
-### Componente para habilitar HAL para custom media type
-
-https://gist.github.com/thiagofa/8952d7fee7650c94bb116917d63c9ae6
-
-### Documentação do Loggly
-
-https://documentation.solarwinds.com/en/success_center/loggly/content/admin/java-logback.htm?cshid=loggly_java-logback
-
-### Especificação do OAuth 2.0
-
-https://datatracker.ietf.org/doc/html/rfc6749
-
-### Template da página de login com Bootstrap
-
-https://gist.github.com/thiagofa/9b5cb7db488ca9b4ae123661a8087a9f#file-login-html
-
-### RFC-7517 - JSON Web Key (JWK)
-
-https://datatracker.ietf.org/doc/html/rfc7517
-
-### Dockerfile Maven Plugin
-
-https://github.com/spotify/dockerfile-maven
-
-### Documentação dos comandos do docker-compose
-
-https://docs.docker.com/compose/reference/
-
-### Repositório no GitHub do wait-for-it (para aguardar a inicialização do banco de dados antes de iniciar a api)
-
-https://github.com/vishnubob/wait-for-it
