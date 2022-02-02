@@ -732,7 +732,7 @@
 
 - O que é e quando versionar uma API
 
-- [As principais técnicas de versionamento de APIs](evoluindoVersionandoAPI.md)
+- [As principais técnicas de versionamento de APIs](evoluindo-versionando-api.md)
 
 - [As principais abordagens para manter a base de código de APIs versionadas](evoluindoVersionandoAPI.md)
 
@@ -984,6 +984,12 @@ http://localhost:8080/swagger-ui/index.html
 [AlgaFood Relatórios com JasperReport](https://github.com/rodolfoHOk/algaworks.algafood-reports)
 
 [AlgaFood Authorization Server](https://github.com/rodolfoHOk/algaworks.algafood-auth)
+
+[AlgaFood JavaScript Client](https://github.com/rodolfoHOk/algaworks.algafood-js-client)
+
+[AlgaFood JavaClient](https://github.com/rodolfoHOk/algaworks.algafood-java-client)
+
+[FoodAnalytics JavaScript Client](https://github.com/rodolfoHOk/algaworks.foodanalytics-js-client)
 
 ## Links úteis: 
 

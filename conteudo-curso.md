@@ -18,7 +18,7 @@
 
 - Conhecendo o Spring Boot
 
-- Criando um projeto Spring Boot com Spring Initializr
+- [Criando um projeto Spring Boot com Spring Initializr](https://github.com/rodolfoHOk/algaworks.esr.injecaodependencias)
 
 - Conhecendo o Maven e o pom.xml de um projeto Spring Boot
 
@@ -581,7 +581,7 @@
 
 - Conhecendo o JasperSoft Studio 
 
-- Criando um layout do relatório JasperReports de vendas diárias
+- [Criando um layout do relatório JasperReports de vendas diárias](https://github.com/rodolfoHOk/algaworks.algafood-reports)
 
 - Estruturando endpoint e serviço de emissão de relatório em PDF
 
@@ -723,6 +723,10 @@
 
 ### 18 - Documentação da API com OpenAPI, Swagger UI e SpringFox
 
+- Introdução à documentação de REST APIs
+
+- Conhecendo a OpenAPI (antes Swagger)
+
 - Gerando a definição OpenAPI em JSON com SpringFox
 
 - Gerando a documentação da API em HTML com Swagger UI e SpringFox
@@ -801,9 +805,15 @@
 
 ### 19 - Discoverability e HATEOAS: A Glória do REST
 
+- Introdução à Discoverability e HATEOAS
+
 - Adicionando a URI do recurso criado no header da resposta
 
 - Adicionando o Spring HATEOAS no projeto
+
+- Resolvendo conflito de dependências com Spring HATEOAS e SpringFox (nas versões que utilizei não foi necessário)
+
+- Conhecendo especificações para formatos Hypermedia
 
 - Adicionando hypermedia na representação de recurso único com HAL
 
@@ -899,13 +909,21 @@
 
 - Evoluindo a API com gestão de mudanças
 
-- [Evitando quebrar os clientes](evoluindoVersionandoAPI.md)
+- [Evitando quebrar os clientes: nova propriedade no modelo](evoluindo-versionando-api.md)
+
+- Evitando quebrar os clientes: exclusão de propriedade do modelo
+
+- Evitando quebrar os clientes: alteração de tipo de propriedade do modelo
+
+- Evitando quebrar os clientes: alteração na estrutura de dados do modelo
+
+- Evitando quebrar os clientes: alteração de URL de recurso
 
 - O que é e quando versionar uma API
 
-- [As principais técnicas de versionamento de APIs](evoluindoVersionandoAPI.md)
+- [As principais técnicas de versionamento de APIs](evoluindo-versionando-api.md)
 
-- [As principais abordagens para manter a base de código de APIs versionadas](evoluindoVersionandoAPI.md)
+- As principais abordagens para manter a base de código de APIs versionadas
 
 - Preparando o projeto para versionamento da API por Media Type
 
@@ -959,21 +977,79 @@
 
 - [Criando o projeto do Authorization Server com Spring Security OAuth2](https://github.com/rodolfoHOk/algaworks.algafood-auth)
 
+- Configurando o fluxo Authorization Server com Password Credentials e Opaque Tokens
+
+- Configurando o endpoint de introspecção de tokens no Authorization Server
+
 - Configurando o Resource Server com a nova stack do Spring Security
+
+- Conhecendo o fluxo para emitir e usar Refresh Tokens
+
+- Configurando o Refresh Token Grant Type no Authorization Server
+
+- Configurando a validade e não reutilização de Refresh Tokens
+
+- Conhecendo o fluxo Client Credentials
+
+- Configurando o Client Credentials Grant Type no Authorization Server
+
+- Conhecendo o fluxo Authorization Code
+
+- Configurando o Authorization Code Grant Type
 
 - [Testando o fluxo Authorization Code com um client JavaScript](https://github.com/rodolfoHOk/algaworks.foodanalytics-js-client)
 
-- [Mais em AlgaFood Authorization Server Repository](https://github.com/rodolfoHOk/algaworks.algafood-auth)
+- Conhecendo o fluxo Implicit
+
+- Configurando o fluxo Implicit Grant Type
+
+- Mais segurança com PKCE e Authorization Code Grant
+
+- Corrigindo CorsConfig
+
+- Implementando o suporte a PKCE com o fluxo Authorization Code
+
+- Testando o fluxo Authorization Code com PKCE com o método plain
+
+- Testando o fluxo Authorization Code com PKCE com o método SHA-256
+
+- [Testando um client JavaScript com PKCE e Authorization Code](https://github.com/rodolfoHOk/algaworks.foodanalytics-js-client)
+
+- [Decidindo qual fluxo OAuth2 usar](decidindo-fluxo-oauth2.md)
 
 ### 23 - OAuth2 avançado com JWT e controle de acesso
 
-- [AlgaFood Authorization Server Repository](https://github.com/rodolfoHOk/algaworks.algafood-auth)
+- Armazenando tokens no Redis: um banco de dados NoSQL
+
+- Configurando o RedisTokenStore
+
+- Entendendo a diferença entre Stateful e Stateless Authentication
+
+- Transparent Tokens: conhecendo o JSON Web Tokens (JWT)
+
+- Gerando JWT com chave simétrica (HMAC SHA-256) no Authorization Server
 
 - Configurando o Resource Server para JWT assinado com chave simétrica
 
+- Entendendo a diferença entre assinatura com chave simétrica e assimétrica
+
+- Gerando um par de chaves com keytool
+
+- Assinando o JWT com RSA SHA-256 (chave assimétrica)
+
+- Criando bean de propriedades de configuração do KeyStore
+
+- Extraindo a chave pública no formato PEM
+
 - Configurando a validação de JWT no Resource Server com a chave pública
 
+- Revisando o fluxo de aprovação do Authorization Code com JWT
+
+- Autenticando usuário com dados do banco de dados
+
 - Refatorando serviços de usuários para usar BCrypt
+
+- Adicionando claims customizadas no payload do JWT
 
 - Obtendo usuário autenticado no Resource Server
 
@@ -1011,7 +1087,7 @@
 
 - Restringindo acessos aos endpoints de estatísticas
 
-- [Configurando os clientes OAuth2 em um banco de dados SQL](https://github.com/rodolfoHOk/algaworks.algafood-auth)
+- Configurando os clientes OAuth2 em um banco de dados SQL
 
 - Cadastrando clientes OAuth2 no banco de dados e testando a emissão de tokens
 
