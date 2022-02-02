@@ -956,9 +956,13 @@
 
 - Configurando certificado TLS (HTTPS) com AWS Certificate Manager
 
-- 
+- Configurando o protocolo HTTPS nos links da API com HATEOAS
 
-- [Deploy MarkDown](deploy-prod.md)
+- Testando a API em produção
+
+- Conclusão e próximos passos
+
+- [Guia de Deploy na Amazon Web Services - AWS](deploy-prod.md)
 
 ## AlgaFood Authorization Server Repository
 

@@ -1332,3 +1332,52 @@ testando
 				
 	testar no Postman ou Insomnia como sempre
 	
+### Subindo atualização de Docker Image da aplicação para AWS
+
+	Página da conta -> pesquisar ecr -> Services - Elastic Comtainer Registry
+	
+		selecionar algafood-api -> View push commands
+		
+			obs: seguir os comandos no terminal da máquina
+			
+		-> algafood-api 
+			
+			selecionar <untagged> -> Delete
+			
+		SideBar -> Amazon ECS
+		
+			SideBar -> Clusters
+			
+				-> algafood Cluster
+				
+					aba Services -> selecionar algafood-api-service -> Update
+					
+						selecionar Force new deployment
+						
+						-> Next
+						
+						-> Next
+						
+						-> Next
+						 
+						-> Update Service
+						
+						-> View Service
+						
+					aba Tasks
+					
+						obs: dá para visualizar as tasks novas subindo e removendo as antigas
+						
+testando
+
+	Testar no Postman ou Insomnia como sempre
+	
+### Testando a API em Produção
+
+	1 - Verificar no Loggly se estão sendo feitos os logs da api em produção (testa os logs na nuvem)
+	
+	2 - Testar o login com o fluxo Authorization Code + PKCE (testa o redis)
+	
+	3 - Cadastrar produto, Adicionar uma foto ao produto e Buscar a foto do produto (testa o S3)
+	
+	4 - Confirmar um pedido (testa o envio de emails)
