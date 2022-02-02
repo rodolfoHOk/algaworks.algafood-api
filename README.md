@@ -934,6 +934,28 @@
 
 - Organizando as variáveis de ambiente do container da aplicação
 
+- Gerenciando as configurações com AWS Systems Manager Parameter Store
+
+- Configurando Amazon ECS para rodar nossa aplicação
+
+- Permitindo a leitura de parâmetros do Parameter Store pelo serviço do Amazon ECS
+
+- Permitindo o acesso ao MySQL pelo Security Group do serviço do Amazon ECS
+
+- Inserindo dados no banco de dados de produção
+
+- Conhecendo o Elastic Load Balancing da Amazon
+
+- Configurando e provisionando um Load Balancer na Amazon
+
+- Configurando o balanceamento de carga no serviço do Amazon ECS
+
+- Registrando um domínio de internet no Registro.br
+
+- Configurando o domínio para o Application Load Balancer
+
+- Configurando certificado TLS (HTTPS) com AWS Certificate Manager
+
 - 
 
 - [Deploy MarkDown](deploy-prod.md)

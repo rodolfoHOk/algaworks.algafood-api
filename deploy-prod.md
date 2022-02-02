@@ -784,3 +784,551 @@ ALGAFOOD_STOGARE_S3_BUCKET = algafood-photos-production
 ALGAFOOD_STOGARE_S3_REGIAO = us-east-1
 
 ### Gerenciando as configurações com AWS Systems Manager Parameter Store
+
+	Página da conta -> pesquisar Systems Manager -> Services -> Systems Manager
+		
+		SideBar - Application Manager -> Parameter Store
+		
+			-> Create Parameter
+				
+				Name: (/prod/servico-teste/senha-db)
+				
+				Tier: (Standard)
+				
+				Type: (SecureString)
+				
+				Value: (teste123)
+				
+				-> Create Parameter
+				
+/prod/algafood-api-service/DB_HOST = RDS > Database > algafood-mysql -> Connectivity & security - EndPoint e Port
+
+/prod/algafood-api-service/SPRING_DATASOURCE_USERNAME = algafood-api
+
+/prod/algafood-api-service/SPRING_DATASOURCE_PASSWORD = colar a senha copiada
+
+/prod/algafood-api-service/ALGAFOOD_JWT_KEYSTORE_JKS_LOCATION = gerar novo com cmd keytool > encodar jks em base64 > colar "base64:" + "jks-encodado" tudo junto
+
+/prod/algafood-api-service/ALGAFOOD_JWT_KEYSTORE_PASSWORD = senha usada na hora de gerar novo
+
+/prod/algafood-api-service/ALGAFOOD_JWT_KEYSTORE_KEYPAIR_ALIAS = alias usado na hora de gerar novo (algafood)
+
+/prod/algafood-api-service/SPRING_REDIS_HOST = Redislabs > Databases -> algafood-redis - Endpoint - retirar a porta
+
+/prod/algafood-api-service/SPRING_REDIS_PORT = Redislabs > Databases -> algafood-redis - Endpoint - somente a porta
+
+/prod/algafood-api-service/SPRING_REDIS_PASSWORD = Redislabs > Databases -> algafood-redis - Access Control & security -> Visibility
+
+/prod/algafood-api-service/LOGGING_LOGGLY_TOKEN = Loggly -> Source Setup -> Customer Tokens - Customer Token
+
+/prod/algafood-api-service/ALGAFOOD_EMAIL_REMETENTE = AlgaFood <testes.dev.hiok@gmail.com>
+
+/prod/algafood-api-service/SPRING_MAIL_HOST = smtp.sendgrid.net
+
+/prod/algafood-api-service/SPRING_MAIL_PORT = 587
+
+/prod/algafood-api-service/SPRING_MAIL_USERNAME = apikey
+
+/prod/algafood-api-service/SPRING_MAIL_PASSWORD = sendgrid -> settings -> api_keys -> Create API Key - Api Key Name (AlgaFood Production), (Restricted Access), Mail Send (Full) -> Create and View - copiar e colar
+
+/prod/algafood-api-service/ALGAFOOD_STOGARE_S3_ID_CHAVE_ACESSO = IAM -> Users -> algafood-photos-production-s3 - Access key ID
+
+/prod/algafood-api-service/ALGAFOOD_STOGARE_S3_CHAVE_ACESSO_SECRETA = colar a senha guardada
+
+/prod/algafood-api-service/ALGAFOOD_STOGARE_S3_BUCKET = algafood-photos-production
+
+/prod/algafood-api-service/ALGAFOOD_STOGARE_S3_REGIAO = us-east-1
+
+### Configurando Amazon ECS para rodar nossa aplicação
+
+	Página da conta -> pesquisar ecs ->	Services -> Elastic Container Service
+	
+		SideBar -> Task Definitions	-> Create new Task Definition
+		
+			-> Fargate
+				
+				Task definition name: (algafood-api-taskdef)
+				
+				Task memory: (1G)
+				
+				Task CPU: (0.5 vCPU)
+				
+				-> Add Container
+				
+					Container name: (algafood-api-container)
+					
+					Image: (*.amazonaws.com/algafood-api)
+					
+					Port mapping: 8080
+					
+					Environment Variables: 
+						
+						Key: (SPRING_DATASOURCE_USERNAME) (ValueFrom) Value: 
+															(/prod/algafood-api-service/SPRING_DATASOURCE_USERNAME)
+						Key: (SPRING_DATASOURCE_PASSWORD) (ValueFrom) Value: 
+															(/prod/algafood-api-service/SPRING_DATASOURCE_PASSWORD)
+						.
+						.
+						.
+						
+						Key: (SPRING_PROFILES_ACTIVE) (Value) Value: (production)
+						
+					-> ADD
+					
+				-> Create
+				
+		SideBar -> Clusters -> Algafood-cluster
+		
+			-> aba Services -> Create
+			
+				Launch type: (Fargate)
+				
+				Task definition: algafood-api-taskdef
+				
+				Cluster: algafood-cluster
+				
+				Service name: algafood-api-service
+				
+				Number of tasks: 1
+				
+				-> Next Step
+				
+					Cluster VPC: (a existente)
+					
+					Subnets: (a primeira) (a segunda)
+					
+					Security Groups: -> Edit
+					
+						Assigned security groups: (create new security group)
+						
+						Security group name: (algafood-api-service-sg)
+						
+						Type: (Custom TCP) Port range: (8080) Source: (Anywhere)
+						
+						-> Save
+						
+					-> Next Step
+					
+						-> Next Step
+						
+							-> Create Service
+							
+								-> View service
+								
+			-> aba Tasks -> [Task id] 
+			
+				-> View logs in CloudWatch
+				
+				Stopped reason [Error - AccessDeniedException]
+				
+### Permitindo a leitura de parâmetros do Parameter Store pelo serviço do Amazon ECS
+					:	Página da conta -> pesquisar iam -> Services - IAM
+					
+		SideBar -> Roles
+		
+			-> pesquisar ecs -> ecsTaskExecutionRole
+				
+				aba Permissions -> Add inline policy
+				
+					Service: (Systems Manager)
+					
+					Actions - Access level -> Read: (GetParameter, GetParameters, GetParameterByPath)
+					
+					Resources: (Specific)
+						
+						-> Add ARN
+							
+							Region: (Any)
+							
+							Account: (já existente)
+							
+							Fully qualified parameter name: prod/*
+							
+							-> Add
+							
+					-> Review Policy
+					
+						Name: ParameterStoreReadOnly
+						
+						-> Create Policy
+						
+	Página da conta -> pesquisar ecs -> Services - Elastic Container Service
+	
+		aba service -> selecionar algafood-api-service -> Update
+		
+			Force new deployment
+			
+			-> Next step
+			
+				-> Next step
+				
+					-> Next step
+					
+						-> Update Service
+						
+		aba Tasks -> [Update]
+		
+			-> [task id criada]
+			
+				-> View logs in CloudWatch	
+					Error: CommunicationsException
+					
+### Permitindo o acesso ao MySQL pelo Security Group do serviço do Amazon ECS
+
+	Página da conta -> pesquisar vpc -> Services - VPC
+	
+		SideBar -> Security Groups -> id do algafood-mysql-sg
+		
+			-> Edit inbound rules
+			
+				-> Add Rule
+				
+				Type: (MYSQL) Source: (algafood-api-service-sg)
+				
+				-> Save rules
+				
+	Página da conta -> pesquisar ecs -> Services - Elastic Container Service
+	
+		SideBar -> Clusters
+		
+			aba Services -> selecionar algafood-api-service -> Update
+			
+				Force new deployment
+			
+				-> Next step
+				
+					-> Next step
+					
+						-> Next step
+						
+							-> Update Service
+							
+			aba Tasks -> [Update]
+		
+				-> [task id criada]
+				
+					copiar e guardar o Public IP
+				
+					-> View logs in CloudWatch
+					
+						-> Resume
+						
+							obs: Ok está rodando a aplicação
+	
+	Minha Máquina -> MySQL Workbench
+	
+		-> Algafood-production
+		
+			obs: estão criadas as tabelas
+			
+### Inserindo dados no banco de dados de produção
+
+	copiar os dados que queremos do afterMigrate.sql
+	
+	no MySQL Workbench -> Algafood-production
+	
+		SideBar -> algafood botão direito Default Schema
+	
+			colar os dados na janela Query e executar (safe mode)
+			
+		Menu preferences -> SQL Editor -> desmarcar Safe Updates
+		
+			fechar janela do Algafood-production (fechar a conexão) e conectar novamente (abrir novamente)
+		
+			executar novamente as queries
+			
+	no Postman ou Insomnia podemos testar a aplicação
+	
+		usando o Public IP guardado:
+		
+			gerar o access token pelo password flow e copiar
+			
+			usar o token para testar a aplicação
+			
+### Configurando e provisionando um Load Balancer na Amazon
+
+	Página da conta -> pesquisar elb -> Features - Load balancers
+	
+		obs: cai na página do EC2 no SideBar tem menu do Load balancing caso necessite usar
+		
+		-> Create Load Balancer
+		
+			Application load balancer -> Create
+			
+				Step 1
+				
+					Name: (algafood-lb)
+					
+					Scheme: (internet-facing)
+					
+					Listeners: Protocol: (HTTP) Port(80)
+					
+					Availability Zones: VPC:(selectonar existente) Zones: (us-east-1a, us-east-1b)
+					
+					-> Next: ...
+					
+				Step 2
+				
+					-> Next: ...
+					
+				Step 3
+				
+					Assign a security group -> Create a new security group
+					
+						 Security group name: (algafood-lb-sg)
+						 
+					-> Next: ...
+					
+				Step 4
+				
+					Target group: (New target group)
+					
+					Name: (algafood-api-service-tg)
+					
+					Target type: (IP)
+					
+					Health ckecks
+					
+						Path: /v1
+						
+						Healthy threshold: 2
+						
+						Unhealthy threshold: 2
+						
+						Timeout: 10
+						
+						Interval: 30
+						
+						Success codes: 200
+					
+					-> Next: ...
+					
+				Step 5
+				
+					-> Next: ...
+						
+				Step 6
+				
+					-> Create
+					
+	selecionando o load balance criado
+		
+		aba Description
+
+			copiar o DNS name
+			
+### Configurando o balanceamento de carga no serviço do Amazon ECS
+
+	Página da conta -> pesquisar ecs -> Services - Elastic Container Service
+	
+		SideBar -> Clusters -> algafood-cluster
+		
+			aba Services 
+				
+				-> selecionar algafood-api-service -> Delete
+				
+				-> Create
+				
+					repetir processo de [###Configurando Amazon ECS para rodar nossa aplicação] mudando:
+					
+						Number of tasks: (2)
+						
+							-> Next Step
+						
+						Subnets: (selecionar as mesmas do load balancer)
+						
+						Security groups: (selecionar algafood-api-service-sg)
+						
+						Health check grace pediod: 150
+						
+						Load Balancer
+						
+							Load Balancer Type: (Application Load Balancer)
+							
+							Load Balance Name: (algafood-lb)
+							
+							Container name: (selecionar algafood-api-container:8080) -> Add to load balancer
+							
+								Production listener port: (80:HTTP)
+								
+								Target group name: (algafood-api-service-tg)
+								
+							-> Next Step
+						
+						-> Create Service				
+						
+						-> View Service
+						
+	Página da conta -> pesquisar ec2 -> Services - EC2
+	
+		SideBar -> Target Groups -> algafood-api-service-tg
+		
+			Registered targets -> refresh
+			
+				obs: irá aparecer os targets (containers)
+				
+testando
+				
+	Minha máquina no Postman ou Insomnia
+		
+		usar o DNS name do load balancer criado na url para testar
+		
+			url/hostcheck -> obs: vemos o balanceamento sendo feito
+			
+não permitir o tráfego direto sem passar no load balancer
+
+	Página da conta -> pesquisar vpc -> Services - VPC
+	
+		SideBar -> Security Groups -> algafood-api-service-sg
+		
+			-> Edit inbound rules
+			
+				-> Delete
+				
+			-> Edit inbound rules
+			
+				Type: (Custom TCP) Port: (8080) Source: (algafood-lb-sg)
+				
+				-> Save rules
+				
+### Registrando um domínio de internet no Registro.br
+
+	criar uma conta no Registro.br
+	
+	clicar em Registre
+	
+	verificar o disponibilidade de um domínio e registar qual estiver disponível
+	
+	aguardar o email para efetuar o pagamento
+	
+	compensando o pagamento o registro estará pronto	
+	
+				
+### Configurando o domínio para o Application Load Balancer
+
+configurando um serviço de DNS: usaremos do Registro.br
+
+	no site Registro.br logar
+	
+	no meu "painel"
+	
+	selecionar aba Domínios
+	
+	selecionar o domínio
+	
+		DNS -> Editar zona
+		
+			-> Nova Entrada
+			
+				(api).meu-dominio.com.br (cname) (DNS name do load balance da AWS)
+				
+				-> Adicionar
+				
+					-> Salvar
+					
+testar o dominio pode demorar dias para funcionar
+
+	Minha máquina no Postman ou Insomnia
+	
+		usar o domínio registrado na url e testar como sempre
+		
+para funcionar somente pelo dominio registrado
+	
+	Página da conta -> pesquisar ec2 -> Services - EC2
+	
+		SideBar -> Load Balancer
+		
+			aba Listeners -> View/edit rules
+			
+				aba adicionar[+]
+				
+					insert rule
+					
+						Add Condition: (Host header is api.meu-dominio.com.br) 
+						
+						Add Action: (Forward to algafood-api-service-tg)
+						
+						-> Ok[check]
+					
+					-> Save
+					
+				aba editar[pencil]
+				
+					selecionar o antigo
+					
+						then -> Delete[trash] substituir (fixed response 503)
+		
+						-> Ok[check]
+				
+					-> Update
+					
+### Configurando certificado TLS (HTTPS) com AWS Certificate Manager
+
+emitindo um certificado
+
+	Página da conta -> pesquisar cerfificate manager -> Services - Certificate Manager
+	
+		Provision Certificates -> Get started
+		
+			Selecionar Request a public certificate
+			
+				-> Request a certificate
+				
+					Domain name: (*.meu-dominio.com.br)
+					
+					-> Next
+					
+					Selecionar Email validation
+					
+					-> Next
+					
+					-> Review
+					
+					-> confirm request
+					
+					-> continue
+
+utilizando o certificado
+					
+	Página da conta -> pesquisar ec2 -> Services - EC2
+	
+		SideBar -> Load Balancer	
+		
+			aba Listeners -> Add listener
+				
+					Protocol: (HTTPS):(443)
+					
+					Default action: (fixed response 503) -> Ok[check]
+					
+					Default SSL certificate: (From ACM) (*.meu-dominio.com.br)
+					
+					-> Add listener
+				
+				HTTPS:443 -> View/edit rules
+				
+					-> Insert rule
+					
+						Add condition: (host header is api.meu-dominio.com.br) -> Ok[check]
+						
+						Add action: (forward to algafood-api-services-tg) -> Ok[check]
+						
+						-> Save
+						
+				HTTP:80 -> Delete
+				
+	EC2 > Security Groups
+	
+		-> id do algafood-lb-sg
+		
+			-> Edit rules
+			
+				Alterar Type: (HTTPS) ... 
+				
+				Alterar Type: (HTTPS) ...
+				
+				-> Save rules
+
+testando
+				
+	testar no Postman ou Insomnia como sempre
+	
