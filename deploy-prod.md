@@ -6,7 +6,7 @@
 
 - Rodar o jar em uma máquina
 
-CMD: java -jar target/algafood-api-0.0.1-SNAPSHOT.jar
+	CMD: java -jar target/algafood-api-0.0.1-SNAPSHOT.jar
 
 - Rodar em containers e orquestradores de containers
 

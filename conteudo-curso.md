@@ -2,7 +2,7 @@
 
 ### 1 - Introdução
 
-- Por que desenvolver REst APIs?
+- Por que desenvolver REST APIs?
 
 - Conhecendo o modelo de domínio do projeto do curso
 
@@ -18,7 +18,7 @@
 
 - Conhecendo o Spring Boot
 
-- [Criando um projeto Spring Boot com Spring Initializr](https://github.com/rodolfoHOk/algaworks.esr.injecaodependencias)
+- [Criando um projeto Spring Boot com Spring Initializer](https://github.com/rodolfoHOk/algaworks.esr.injecaodependencias)
 
 - Conhecendo o Maven e o pom.xml de um projeto Spring Boot
 
@@ -249,7 +249,7 @@
 
 - Injetando o próprio repositório na implementação customizada e a anotação @Lazy
 
-- Estendendo o JpaRepository para customizar o repositório base
+- Extendendo o JpaRepository para customizar o repositório base
 
 ### 6 - Explorando mais do JPA e Hibernate:
 
@@ -263,7 +263,7 @@
 
 - Testando e analisando o impacto da incorporação de classe na REST API
 
-- Mapeando propriedades com @CreationTimestamp e @UpdateTimestampI
+- Mapeando propriedades com @CreationTimestamp e @UpdateTimestamp
 
 - Mapeando relacionamento muitos-para-um - Produto Restaurante
 
@@ -319,7 +319,7 @@
 
 - Lançando exceções do tipo ResponseStatusException
 
-- Estendendo ResponseStatusException
+- Extendendo ResponseStatusException
 
 - Simplificando o código com o uso de @ResponseStatus em exceptions
 
@@ -1209,4 +1209,4 @@
 
 - Testando a API em produção
 
-- Conclusão e próximos passos
+- [Guia de deploy da aplicação](deploy-prod.md)
