@@ -6,8 +6,10 @@ import com.algaworks.algafood.api.v1.model.CidadeModel;
 import com.algaworks.algafood.api.v1.model.input.CidadeInput;
 
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @SecurityRequirement(name = "security_auth")
+@Tag(name = "Cidades")
 public interface CidadeControllerOpenApi {
 
 	CollectionModel<CidadeModel> listar();
