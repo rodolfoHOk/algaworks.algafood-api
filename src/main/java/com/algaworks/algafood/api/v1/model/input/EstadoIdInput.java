@@ -11,7 +11,7 @@ import lombok.Setter;
 public class EstadoIdInput {
 
 	@NotNull
-	@Schema(example = "1")
+	@Schema(example = "1", required = true)
 	private Long id;
 	
 }
