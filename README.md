@@ -458,6 +458,8 @@ http://localhost:8080/swagger-ui/index.html
 
 [Repositório no GitHub do wait-for-it (para aguardar a inicialização do banco de dados antes de iniciar a api)](https://github.com/vishnubob/wait-for-it)
 
+[SpringDoc Documentação](https://springdoc.org/)
+
 ### Authorization Server
 
 [Especificação do OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749)
