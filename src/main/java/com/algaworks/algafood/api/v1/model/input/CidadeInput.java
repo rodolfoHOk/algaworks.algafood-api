@@ -13,12 +13,11 @@ import lombok.Setter;
 public class CidadeInput {
 
 	@NotBlank
-	@Schema(example = "Santos", required = true)
+	@Schema(example = "Santos")
 	private String nome;
 	
 	@Valid
 	@NotNull
-	@Schema(required = true)
 	private EstadoIdInput estado;
 	
 }
