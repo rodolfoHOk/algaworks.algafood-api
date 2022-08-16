@@ -7,6 +7,9 @@ import org.springframework.web.context.request.ServletWebRequest;
 import com.algaworks.algafood.api.v1.model.FormaPagamentoModel;
 import com.algaworks.algafood.api.v1.model.input.FormaPagamentoInput;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+
+@SecurityRequirement(name = "security_auth")
 public interface FormaPagamentoControllerOpenApi {
 
 	ResponseEntity<CollectionModel<FormaPagamentoModel>> listar(ServletWebRequest request);
