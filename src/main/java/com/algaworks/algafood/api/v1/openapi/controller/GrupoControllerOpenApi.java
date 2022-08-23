@@ -47,10 +47,10 @@ public interface GrupoControllerOpenApi {
 	})
 	GrupoModel atualizar(
 			@Parameter(description = "ID de um grupo", example="1", required = true) Long grupoId, 
-			@RequestBody(description = "Requesentação de um novo grupo", required = true) GrupoInput grupoInput);
+			@RequestBody(description = "Requesentação de um grupo com dados atualizados", required = true) GrupoInput grupoInput);
 
 	@Operation(summary = "Remove um grupo por ID", responses = {
-			@ApiResponse(responseCode = "204"),
+			@ApiResponse(responseCode = "204", description = "Sem conteúdo"),
 			@ApiResponse(responseCode = "400", description = "ID do grupo inválido",
 				content = @Content(schema = @Schema(ref = "Problema"))),
 			@ApiResponse(responseCode = "404", description = "Grupo não encontrado",

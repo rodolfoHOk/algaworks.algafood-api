@@ -40,18 +40,18 @@ public interface CidadeControllerOpenApi {
 			@ApiResponse(responseCode = "400", description = "ID da cidade inválido",
 				content = @Content(schema = @Schema(ref = "Problema"))),
 			@ApiResponse(responseCode = "404", description = "Cidade não encontrada",
-					content = @Content(schema = @Schema(ref = "Problema")))
+				content = @Content(schema = @Schema(ref = "Problema")))
 	})
 	CidadeModel atualizar(
 			@Parameter(description = "ID de uma cidade", example = "1", required = true) Long cidadeId,
 			@RequestBody(description = "Representação de uma cidade com dados atualizados", required = true) CidadeInput cidadeInput);
 	
 	@Operation(summary = "Remove uma cidade por ID", responses = {
-			@ApiResponse(responseCode = "204"),
+			@ApiResponse(responseCode = "204", description = "Sem conteúdo"),
 			@ApiResponse(responseCode = "400", description = "ID da cidade inválido",
 				content = @Content(schema = @Schema(ref = "Problema"))),
 			@ApiResponse(responseCode = "404", description = "Cidade não encontrada",
-					content = @Content(schema = @Schema(ref = "Problema")))
+				content = @Content(schema = @Schema(ref = "Problema")))
 	})
 	void remover(
 			@Parameter(description = "ID de uma cidade", example = "1", required = true) Long cidadeId);
