@@ -40,8 +40,6 @@ public interface GrupoControllerOpenApi {
 
 	@Operation(summary = "Atualiza um grupo por ID", responses = {
 			@ApiResponse(responseCode = "200"),
-			@ApiResponse(responseCode = "400", description = "ID do grupo inválido",
-				content = @Content(schema = @Schema(ref = "Problema"))),
 			@ApiResponse(responseCode = "404", description = "Grupo não encontrado",
 				content = @Content(schema = @Schema(ref = "Problema")))
 	})
@@ -51,8 +49,6 @@ public interface GrupoControllerOpenApi {
 
 	@Operation(summary = "Remove um grupo por ID", responses = {
 			@ApiResponse(responseCode = "204", description = "Sem conteúdo"),
-			@ApiResponse(responseCode = "400", description = "ID do grupo inválido",
-				content = @Content(schema = @Schema(ref = "Problema"))),
 			@ApiResponse(responseCode = "404", description = "Grupo não encontrado",
 				content = @Content(schema = @Schema(ref = "Problema")))
 	})

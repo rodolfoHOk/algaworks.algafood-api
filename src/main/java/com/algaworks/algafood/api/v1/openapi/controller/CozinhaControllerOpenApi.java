@@ -42,8 +42,6 @@ public interface CozinhaControllerOpenApi {
 
 	@Operation(summary = "Atualiza uma cozinha por ID", responses = {
 			@ApiResponse(responseCode = "200"),
-			@ApiResponse(responseCode = "400", description = "ID da cozinha inválido",
-				content = @Content(schema = @Schema(ref = "Problema"))),
 			@ApiResponse(responseCode = "404", description = "Cozinha não encrontrada",
 				content = @Content(schema = @Schema(ref = "Problema"))),
 	})
@@ -53,8 +51,6 @@ public interface CozinhaControllerOpenApi {
 
 	@Operation(summary = "Remove uma cozinha por ID", responses = {
 			@ApiResponse(responseCode = "204", description = "Sem conteúdo"),
-			@ApiResponse(responseCode = "400", description = "ID da cozinha inválido",
-				content = @Content(schema = @Schema(ref = "Problema"))),
 			@ApiResponse(responseCode = "404", description = "Cozinha não encrontrada",
 				content = @Content(schema = @Schema(ref = "Problema"))),
 	})
