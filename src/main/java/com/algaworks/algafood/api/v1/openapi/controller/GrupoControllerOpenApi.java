@@ -32,8 +32,8 @@ public interface GrupoControllerOpenApi {
 	GrupoModel buscar(
 			@Parameter(description = "ID de um grupo", example="1", required = true) Long grupoId);
 
-	@Operation(summary = "Adiciona um grupo", responses = {
-			@ApiResponse(responseCode = "201", description = "Criado")
+	@Operation(summary = "Cadastra um novo grupo", responses = {
+			@ApiResponse(responseCode = "201", description = "Grupo cadastrado")
 	})
 	GrupoModel adicionar(
 			@RequestBody(description = "Requesentação de um novo grupo", required = true) GrupoInput grupoInput);

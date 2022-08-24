@@ -16,7 +16,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
-@Tag(name = "Forma de pagamento")
+@Tag(name = "Formas de pagamento")
 @SecurityRequirement(name = "security_auth")
 public interface FormaPagamentoControllerOpenApi {
 
@@ -35,7 +35,7 @@ public interface FormaPagamentoControllerOpenApi {
 			@Parameter(hidden = true) ServletWebRequest request);
 
 	@Operation(summary = "Cadastra uma nova forma de pagamento", responses = {
-			@ApiResponse(responseCode = "201", description = "Forma de pagamento criada")
+			@ApiResponse(responseCode = "201", description = "Forma de pagamento cadastrada")
 	})
 	FormaPagamentoModel adicionar(
 			@RequestBody(description = "Representação de uma nova forma de pagamento", required = true) FormaPagamentoInput formaPagamentoInput);
