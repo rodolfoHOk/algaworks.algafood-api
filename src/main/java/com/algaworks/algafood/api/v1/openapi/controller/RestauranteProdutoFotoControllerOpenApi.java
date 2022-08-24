@@ -4,14 +4,15 @@ import java.io.IOException;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.HttpMediaTypeNotAcceptableException;
-import org.springframework.web.multipart.MultipartFile;
 
 import com.algaworks.algafood.api.v1.model.FotoProdutoModel;
 import com.algaworks.algafood.api.v1.model.input.FotoProdutoInput;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 
@@ -27,7 +28,12 @@ public interface RestauranteProdutoFotoControllerOpenApi {
 	})
 	ResponseEntity<?> buscar(Long restauranteId, Long produtoId, String acceptHeader) throws HttpMediaTypeNotAcceptableException;
 
-	FotoProdutoModel atualizarFoto(Long restauranteId, Long produtoId, FotoProdutoInput fotoProdutoInput, MultipartFile arquivo) throws IOException;
+	@Operation(summary = "Atualiza a foto do produto de um restaurante")
+	FotoProdutoModel atualizarFoto(
+			@Parameter(description = "Id de um restaurante", example = "1", required = true) Long restauranteId, 
+			@Parameter(description = "Id de um produto", example = "2", required = true) Long produtoId,
+			@RequestBody(required = true) FotoProdutoInput fotoProdutoInput
+	) throws IOException;
 
 	void excluir(Long restauranteId, Long produtoId);
 
