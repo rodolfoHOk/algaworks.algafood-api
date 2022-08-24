@@ -16,8 +16,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 	schema = @Schema(type = "integer", defaultValue = "0"))
 @Parameter(in = ParameterIn.QUERY, name="size", description = "Quantidade de elementos por página",
 	schema = @Schema(type = "integer", defaultValue = "10"))
-@Parameter(in = ParameterIn.QUERY, name="sort", description = "Critério de ordenação: propriedade(asc|desc)",
-	schema = @Schema(type = "string"),
+@Parameter(in = ParameterIn.QUERY, name="sort", description = "Critério de ordenação: propriedade,asc|desc",
+	schema = @Schema(type = "string", example="nome_da_propriedade,desc"),
 	examples = {
 		@ExampleObject("nome"),
 		@ExampleObject("nome,asc"),
