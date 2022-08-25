@@ -48,7 +48,7 @@ public interface RestauranteControllerOpenApi {
 	RestauranteModel adicionar(
 		@RequestBody(description = "Representação de um novo restaurante", required = true) RestauranteInput restauranteInput);
 
-	@Operation(summary = "Buscar um restaturante por ID", responses = {
+	@Operation(summary = "Atualiza um restaturante por ID", responses = {
 		@ApiResponse(responseCode = "200"),
 		@ApiResponse(responseCode = "404", description = "Restaurante não encontrado",
 			content = @Content(schema = @Schema(ref = "Problema"))),
@@ -57,7 +57,7 @@ public interface RestauranteControllerOpenApi {
 		@Parameter(description = "ID de um restaurante", example = "1", required = true) Long restauranteId,
 		@RequestBody(description = "Representação de um restaurante com dados atualizados", required = true) RestauranteInput restauranteInput);
 
-	@Operation(summary = "Buscar um restaturante por ID", responses = {
+	@Operation(summary = "Remove um restaturante por ID", responses = {
 		@ApiResponse(responseCode = "204", description = "Sem conteúdo"),
 		@ApiResponse(responseCode = "404", description = "Restaurante não encontrado",
 			content = @Content(schema = @Schema(ref = "Problema"))),
