@@ -10,7 +10,7 @@ import com.algaworks.algafood.domain.model.Usuario;
 import lombok.Getter;
 
 @Getter
-public class AuthUser extends User{
+public class AuthUser extends User {
 
 	private static final long serialVersionUID = 1L;
 	
