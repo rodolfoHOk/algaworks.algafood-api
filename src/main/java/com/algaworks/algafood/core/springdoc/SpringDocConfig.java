@@ -66,6 +66,7 @@ public class SpringDocConfig {
 						new Tag().name("Cidades").description("Gerencia as cidades"),
 						new Tag().name("Cozinhas").description("Gerencia as cozinhas"),
 						new Tag().name("Estados").description("Gerencia os estados"),
+						new Tag().name("Estatísticas").description("Estatísticas da AlgaFood"),
 						new Tag().name("Formas de pagamento").description("Gerencia as formas de pagamento"),
 						new Tag().name("Grupos").description("Gerencia os grupos"),
 						new Tag().name("Pedidos").description("Gerencia os pedidos"),
