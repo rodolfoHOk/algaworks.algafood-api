@@ -70,7 +70,8 @@ public class SpringDocConfig {
 						new Tag().name("Grupos").description("Gerencia os grupos"),
 						new Tag().name("Pedidos").description("Gerencia os pedidos"),
 						new Tag().name("Produtos").description("Gerencia os produtos de um restaurante"),
-						new Tag().name("Restaurantes").description("Gerencia os restaurantes")
+						new Tag().name("Restaurantes").description("Gerencia os restaurantes"),
+						new Tag().name("Usuários").description("Gerencia os usuários")
 				)).components(new Components()
 						.schemas(gerarSchemas())
 						.responses(gerarResponses())
