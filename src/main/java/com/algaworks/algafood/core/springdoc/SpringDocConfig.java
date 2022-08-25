@@ -70,6 +70,7 @@ public class SpringDocConfig {
 						new Tag().name("Formas de pagamento").description("Gerencia as formas de pagamento"),
 						new Tag().name("Grupos").description("Gerencia os grupos"),
 						new Tag().name("Pedidos").description("Gerencia os pedidos"),
+						new Tag().name("Permissões").description("Gerencia as permissões"),
 						new Tag().name("Produtos").description("Gerencia os produtos de um restaurante"),
 						new Tag().name("Restaurantes").description("Gerencia os restaurantes"),
 						new Tag().name("Usuários").description("Gerencia os usuários")
