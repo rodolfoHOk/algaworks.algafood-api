@@ -15,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
+@Tag(name = "Produtos")
 @SecurityRequirement(name = "security_auth")
 public interface RestauranteProdutoFotoControllerOpenApi {
 
@@ -24,17 +26,35 @@ public interface RestauranteProdutoFotoControllerOpenApi {
 			@Content(mediaType = "application/json", schema = @Schema(implementation = FotoProdutoModel.class)),
 			@Content(mediaType = "image/jpeg", schema = @Schema(type = "string", format = "binary")),
 			@Content(mediaType = "image/png", schema = @Schema(type = "string", format = "binary"))
-		})
+		}),
+		@ApiResponse(responseCode = "400", description = "ID de restaurante ou produto inválido",
+			content = @Content(schema = @Schema(ref = "Problema"))),
+		@ApiResponse(responseCode = "404", description = "Foto do produto não encontrada",
+				content = @Content(schema = @Schema(ref = "Problema")))
 	})
-	ResponseEntity<?> buscar(Long restauranteId, Long produtoId, String acceptHeader) throws HttpMediaTypeNotAcceptableException;
+	ResponseEntity<?> buscar(
+			@Parameter(description = "Id de um restaurente", example = "1", required = true) Long restauranteId,
+			@Parameter(description = "Id de um produto", example = "1", required = true) Long produtoId,
+			@Parameter(description = "Media type requerido", example = "image/png") String acceptHeader) throws HttpMediaTypeNotAcceptableException;
 
-	@Operation(summary = "Atualiza a foto do produto de um restaurante")
+	@Operation(summary = "Atualiza a foto do produto de um restaurante", responses = {
+			@ApiResponse(responseCode = "200"),
+			@ApiResponse(responseCode = "404", description = "Foto do produto não encontrada",
+					content = @Content(schema = @Schema(ref = "Problema")))
+	})
 	FotoProdutoModel atualizarFoto(
 			@Parameter(description = "Id de um restaurante", example = "1", required = true) Long restauranteId, 
 			@Parameter(description = "Id de um produto", example = "2", required = true) Long produtoId,
 			@RequestBody(required = true) FotoProdutoInput fotoProdutoInput
 	) throws IOException;
 
-	void excluir(Long restauranteId, Long produtoId);
+	@Operation(summary = "Exclui a foto do produto de um restaurante", responses = {
+			@ApiResponse(responseCode = "204", description = "Foto excluída com sucesso"),
+			@ApiResponse(responseCode = "404", description = "Foto do produto não encontrada",
+					content = @Content(schema = @Schema(ref = "Problema")))
+	})
+	void excluir(
+			@Parameter(description = "Id de um restaurante", example = "1", required = true) Long restauranteId,
+			@Parameter(description = "Id de um produto", example = "2", required = true) Long produtoId);
 
 }
