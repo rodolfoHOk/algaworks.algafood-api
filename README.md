@@ -483,3 +483,5 @@ http://localhost:8080/swagger-ui/index.html
 [Bcrypt Generator](https://bcrypt-generator.com/)
 
 [DDL da tabela de clientes OAuth2](https://gist.github.com/thiagofa/7b1792745d4de64bd86b230d0e3a381d)
+
+[Spring Authorization Server Github](https://github.com/spring-projects/spring-authorization-server)
