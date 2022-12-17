@@ -1210,3 +1210,137 @@
 - Testando a API em produção
 
 - [Guia de deploy da aplicação](deploy-prod.md)
+
+## Atualizações
+
+### 26 - Documentação da API com SpringDoc
+
+- Conhecendo o SpringDoc
+
+- Removendo o SpringFox do projeto
+
+- Adicionando o SpringDoc no projeto
+
+- Configurando múltiplas documentações em um só projeto
+
+- Ajustando a documentação da API para suporte a OAuth2
+
+- Descrevendo tags na documentação e associando com controllers
+
+- Descrevendo as operações de endpoints na documentação
+
+- Descrevendo parâmetros de entrada na documentação
+
+- Descrevendo modelos de representações e suas propriedades
+
+- Descrevendo restrições de validação de propriedades do modelo
+
+- Descrevendo códigos de status de respostas de forma global
+
+- Descrevendo códigos de status de respostas em endpoints específicos
+
+- Descrevendo códigos de status de respostas de forma global para cada tipo de método HTTP
+
+- Descrevendo o modelo de representação de problema
+
+- Referenciando modelo de representação de problema com códigos de status de erro1
+
+- Desafio: descrevendo documentação de endpoints de grupos
+
+- Corrigindo documentação com substituição de Pageable
+
+- Desafio: descrevendo documentação de endpoints de cozinhas
+
+- Desafio: descrevendo documentação de endpoints de formas de pagamento
+
+- Desafio: descrevendo documentação de endpoints de pedidos
+
+- Descrevendo parâmetros de projeções em endpoints de consultas
+
+- Descrevendo media type da resposta nos endpoints
+
+- Corrigindo documentação no Swagger UI para upload de arquivos
+
+- Desafio: descrevendo documentação de endpoints de restaurantes
+
+- Desafio: descrevendo documentação de endpoints de estados
+
+- Desafio: descrevendo documentação de endpoints de fluxo de pedidos
+
+- Desafio: descrevendo documentação de endpoints de associação de restaurantes com formas de pagamento
+
+- Desafio: descrevendo documentação de endpoints de associação de restaurantes com usuários
+
+- Desafio: descrevendo documentação de endpoints de produtos
+
+- Desafio: descrevendo documentação de endpoints de fotos de produtos
+
+- Desafio: descrevendo documentação de endpoints de associação de permissões com grupos
+
+- Desafio: descrevendo documentação de endpoints de usuários
+
+- Desafio: descrevendo documentação de endpoints de associação de grupos com usuários
+
+- Desafio: descrevendo documentação de endpoint de estatísticas
+
+- Desafio: descrevendo documentação de endpoint de permissões
+
+- Corrigindo documentação ocultando o Root Entry Point
+
+### 27 - Spring Authorization Server
+
+- O que é o Spring Authorization Server?
+
+- Removendo o Authorization Server antigo do projeto
+
+- Configuração inicial do Authorization Server com Access Token opaco
+
+- Testando com fluxo Client Credentials com Postman
+
+- Inspecionando token opaco usando o endpoint OAuth2 Introspect
+
+- Configurando o Resource Server com token opaco
+
+- Armazenando autorizações no banco de dados
+
+- Revogando o Access Token com OAuth2 Revoke
+
+- Configurando a geração de Access Token JWT no Authorization Server6m
+
+- Configurando o Resource Server com token JWT
+
+- Implementando um cliente com o fluxo Authorization Code
+
+- Testando o fluxo Authorization Code + PKCE + S256 e corrigindo problemas
+
+- Implementando um cliente com o fluxo Refresh Token
+
+- Customizando o token JWT com dados do usuário
+
+- Lendo informações customizadas do JWT no Resource Server
+
+- Implementado Repository de Clients do OAuth2 via JDBC
+
+- Customizando a página de login do Authorization Server
+
+- Customizando a página de consentimento do OAuth2
+
+- Armazenando autorizações de consentimento no banco de dados
+
+- Criando uma página de listagem dos clientes com consentimentos permitidos
+
+- Revogando consentimentos e autorizações dos clientes
+
+### 28 - Spring Boot 3
+
+- As principais mudanças do Spring Boot
+
+- Removendo componentes incompatíveis
+
+- Atualização a dependências e componentes do Spring
+
+- Alterações do Jakarta EE e Jakarta Persistence 3.0
+
+- Atualizando o Spring Doc
+
+- Atualizando o Spring Authorization Server
