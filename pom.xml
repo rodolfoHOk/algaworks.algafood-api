@@ -22,7 +22,7 @@
 		<logback-ext-loggly.version>0.1.5</logback-ext-loggly.version>
 		<dockerfile-maven-version>1.4.13</dockerfile-maven-version>
 		<springdoc.version>2.0.0</springdoc.version>
-		<spring-auth-server.version>0.3.1</spring-auth-server.version>
+		<spring-auth-server.version>1.0.0</spring-auth-server.version>
 	</properties>
 	
 	<dependencies>
