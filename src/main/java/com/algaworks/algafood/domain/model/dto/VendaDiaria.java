@@ -8,7 +8,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-@AllArgsConstructor
 @Getter
 @Setter
 public class VendaDiaria {
@@ -21,5 +20,10 @@ public class VendaDiaria {
 	
 	@Schema(example = "12345.67")
 	private BigDecimal totalFaturado;
-	
+
+	public VendaDiaria(java.sql.Date data, Long totalVendas, BigDecimal totalFaturado) {
+		this.data = new Date(data.getTime());
+		this.totalVendas = totalVendas;
+		this.totalFaturado = totalFaturado;
+	}
 }

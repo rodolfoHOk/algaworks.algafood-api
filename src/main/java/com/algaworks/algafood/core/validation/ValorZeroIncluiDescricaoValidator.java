@@ -3,9 +3,9 @@ package com.algaworks.algafood.core.validation;
 import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
-import javax.validation.ValidationException;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
+import jakarta.validation.ValidationException;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;

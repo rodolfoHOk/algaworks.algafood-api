@@ -7,7 +7,7 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 
 // Na versão do spring boot 2.6.1 não é necessária esta configuração.
-// O messages.properties já aceitava por padrão os javax.validation.constraints.
+// O messages.properties já aceitava por padrão os jakarta.validation.constraints.
 @Configuration
 public class ValidationConfig {
 	

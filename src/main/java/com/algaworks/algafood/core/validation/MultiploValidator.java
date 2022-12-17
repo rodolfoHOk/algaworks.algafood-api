@@ -2,8 +2,8 @@ package com.algaworks.algafood.core.validation;
 
 import java.math.BigDecimal;
 
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
 
 public class MultiploValidator implements ConstraintValidator<Multiplo, Number>{
 
